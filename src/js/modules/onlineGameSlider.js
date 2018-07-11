@@ -36,6 +36,7 @@ let onlineGameSlider = {
       slidesToScroll: 1,
       verticalSwiping: true,
       centerMode: true,
+      variableWidth: true,
       // mobileFirst: true,
       responsive: [
         {
@@ -47,7 +48,7 @@ let onlineGameSlider = {
             slidesToShow: 2,
             slidesToScroll: 1,
             verticalSwiping: true,
-            centerMode: true,
+            centerMode: false,
           }
         },
         {
@@ -59,7 +60,7 @@ let onlineGameSlider = {
             verticalSwiping: false,
             vertical: false,
             arrows: false,
-            centerMode: true,
+            centerMode: false,
           }
         },
         {
@@ -71,7 +72,7 @@ let onlineGameSlider = {
             verticalSwiping: false,
             vertical: false,
             arrows: false,
-            centerMode: true,
+            centerMode: false,
             variableWidth: true,
           }
         },

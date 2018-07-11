@@ -21,7 +21,7 @@ let jackpotSlider = {
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -30,7 +30,7 @@ let jackpotSlider = {
         }
       },
       {
-        breakpoint: 320,
+        breakpoint: 319,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

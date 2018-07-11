@@ -3,7 +3,7 @@
   padding: 60px 20px 1px;
   margin-bottom: 60px;
   color: #b8cde1;
-  @include media('>320px','<768px') {
+  @include media('>319px','<768px') {
     padding: 30px 20px 20px;
     overflow: hidden;
     margin: 0;
@@ -28,14 +28,10 @@
     }
   }
   .slick-list {
-    // height: 927px !important;
-    // padding: 90px 0px !important;
-    // background: goldenrod;
     overflow: initial !important;
   }
   .slick-slide {
     opacity: 0.3;
-    // height: 340px !important;
     margin: 0 15px !important;
   }
   .slick-active {
@@ -76,10 +72,6 @@
 }
 
 .jackpot-area {
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
   margin: 60px 0;
   overflow: hidden;
   padding: 40px 0;

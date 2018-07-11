@@ -7,7 +7,7 @@
     &--item {
       flex: 0 0 49%;
       display: flex;
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         flex: 0 0 100%;
       }
     }
@@ -25,7 +25,7 @@
   &__versus {
     .global__item-style {
       &--title {
-        @include media('<768px') {
+        @include media('>319px','<768px') {
           display: none;
          }
       }
@@ -42,7 +42,7 @@
   display: none;
   justify-content: space-between;
   align-items: flex-end;
-  @include media('<768px') {
+  @include media('>319px','<768px') {
    display: flex;
   }
   &--item {
@@ -67,7 +67,7 @@
   }
   &--area {
     .global__item-style {
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         border-top: 0;
         border-left: 1px solid #eef2f3;
         border-right: 1px solid #eef2f3;

@@ -1,18 +1,12 @@
-// body {
-
-// }
 .wrapper {
   max-width: 1040px;
   margin: 0 auto;
   overflow: hidden;
-  // padding: 0 20px;
-  @include media('<1040px') {
-    // padding: 0 20px;
-  }
+  position: relative;
 }
 .inner__container {
   padding: 0 20px 60px 20px;
-  @include media('>320px','<768px') {
+  @include media('>319px','<768px') {
     padding: 0 20px 60px 20px;
   }
 }
@@ -38,7 +32,7 @@
   font-size: 24px;
   font-weight: 900;
   text-align: center;
-  @include media('>320px','<768px') {
+  @include media('>319px','<768px') {
     font-size: 16px;
   }
 }
@@ -72,7 +66,7 @@
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 20px;
-    @include media('>320px','<768px') {
+    @include media('>319px','<768px') {
       padding: 0 0 0 85px;
     }
   }
@@ -98,7 +92,7 @@
 .img-area {
   flex: 0 0 auto;
   margin-right: 20px;
-  @include media('>320px','<768px') {
+  @include media('>319px','<768px') {
     margin-right: 0;
     position: absolute;
    }
@@ -121,6 +115,7 @@
   }
 }
 
+.read__more-btn,
 .play-game {
   outline: none;
   border: none;
@@ -154,6 +149,21 @@
     border-color: #0076b2;
   }
 }
+.read__more-btn {
+  display: none;
+  background: #373a46;
+  color: #b8cde1;
+  text-transform: capitalize;
+  font-weight: 400;
+  &:hover {
+    background: #373a46;
+    color: #b8cde1;
+    border-color: #b8cde1;
+  }
+  @include media('>319px','<768px') {
+    display: block;
+  }
+}
 
 .read__more {
   text-decoration: none;
@@ -171,17 +181,17 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 40px;
-  @include media('>320px','<768px') {
+  @include media('>319px','<768px') {
     margin-bottom: 0;
   }
   &--item {
     flex: 0 0 49%;
     display: flex;
-    @include media('>320px','<768px') {
+    @include media('>319px','<768px') {
       flex: 0 0 100%;
     }
     &:not(:last-child) {
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         margin-bottom: 20px;
       }
     }
@@ -191,7 +201,7 @@
     @include media('>=768px','<=1024px') {
       min-height: 293px
     }
-    @include media('>320px','<768px') {
+    @include media('>319px','<768px') {
       min-height: 293px
     }
   }
@@ -211,16 +221,43 @@
   margin: 20px auto 0;
 }
 
-
-// .showInMobile {
-//   display: none  !important;;
-//   @include media('<1120px') {
-//     display: block  !important;;
-//   }
-// }
-// .hideInMobile {
-//   display: block  !important;;
-//   @include media('<1120px') {
-//     display: none !important;
-//   }
-// }
+.in-this-guide {
+  position: absolute;
+  width: 320px;
+  background: #fff;
+  padding: 40px;
+  z-index: 999;
+  display: none;
+  .title-h3 {
+    margin-bottom: 10px;
+    position: relative;
+    .fa-angle-down {
+      position: absolute;
+      right: 0;
+      color: #006fae;
+      @include media('>319px','<768px') {
+        display: block;
+      }
+    }
+  }
+  .in-this-guide-list {
+    list-style: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  .fa-angle-right {
+    font-size: 14px;
+    color: #006fae;
+    margin-right: 12px;
+  }
+  .in-this-guide-list-title {
+    font-weight: 900;
+  }
+  .under-list {
+    display: none;
+    list-style: none;
+    padding: 0 0 0 19px;
+  }
+}

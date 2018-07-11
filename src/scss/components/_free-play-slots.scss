@@ -1,8 +1,4 @@
 .sorting__area {
-  // margin: 0 -20px;
-  // @include media('<1024px') {
-  //   margin: 0;
-  // }
   &--panel {
     display: flex;
     align-items: center;
@@ -21,7 +17,7 @@
     border: 1px solid #ecf0f1;
     margin: 0 -20px 20px;
     padding: 0 20px;
-    @include media('>320px','<768px') {
+    @include media('>319px','<768px') {
       flex-direction: column;
       padding: 0;
       overflow: hidden;
@@ -36,7 +32,7 @@
       flex: 0 0 806px;
       flex-wrap: wrap;
       margin-left: -20px;
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         flex: 0 1 auto;
         margin-bottom: 50px;
         margin-left: 20px;
@@ -51,7 +47,7 @@
         border-top: 46px solid transparent;
         border-left: 27px solid #f3f3f3;
         border-bottom: 46px solid transparent;
-        @include media('>320px','<768px') {
+        @include media('>319px','<768px') {
           right: 0;
           bottom: -218px;
           -ms-transform: rotate(90deg);
@@ -87,7 +83,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     overflow: hidden;
-    @include media('>320px','<768px') {
+    @include media('>319px','<768px') {
       justify-content: center;
     }
     &--item {
@@ -95,7 +91,7 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 20px;
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         flex: 0 0 280px;
       }
     }

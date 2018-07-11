@@ -29,7 +29,7 @@ var main = {
     //     $(".mobile__tab--content").show();
     //   }
     // };
-    if(windowWidth <= 768) {
+    if(windowWidth <= 767) {
       $(".mobile__tab--content").hide();
       $(".mobile__tab--content:first").show();
 
@@ -78,8 +78,18 @@ var main = {
         // centerMode: true,
       });
 
+      $('.glossary__area--items').hide();
+      $('.glossary__area--items:nth-child(1)').show();
+      $('.glossary__area--items:nth-child(2)').show();
+      $('.glossary__area--items:nth-child(3)').show();
+
+      $('.read__more-btn').on('click', function() {
+        $('.glossary__area--items').slideToggle();
+      });
+
     } else {
       $(".mobile__tab--content-paylines").show();
+      $('.glossary__area--items').show();
       // $('.tab-carousel').slick({
       //   settings: 'unslick'
       // });
@@ -105,6 +115,15 @@ var main = {
     //   theme: 'tooltipster-light',
     //   side: ['bottom']
     // });
+
+    $(".under-list:first").show();
+    $('.in-this-guide-list-title').on('click', function(e) {
+      $(this).siblings('.under-list').slideToggle();
+    });
+
+    $('.this-guide-open-mobile').on('click', function(e) {
+      $(this).siblings('.in-this-guide-list').slideToggle();
+    });
 
   }
 };

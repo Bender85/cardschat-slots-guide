@@ -48,8 +48,7 @@
       width: 66px;
       flex: 0 0 auto;
       text-align: center;
-      @include media('>320px','<768px') {
-        // margin: 0 -20px;
+      @include media('>319px','<768px') {
         position: inherit;
       }
     }
@@ -62,7 +61,7 @@
       flex: 0 0 49%;
       display: flex;
       flex-direction: column;
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         flex: 0 0 100%;
       }
     }
@@ -82,7 +81,7 @@
       }
     }
     &--game {
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         margin: 0 -20px;
       }
     }

@@ -5,7 +5,7 @@
   text-align: center;
   padding: 35px;
   margin-bottom: 60px;
-  @include media('>320px','<768px') {
+  @include media('>319px','<768px') {
    padding: 30px;
   }
   &--info {

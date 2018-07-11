@@ -1,7 +1,7 @@
 .slot-tournament {
   .global__item-style {
     &--title {
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         padding: 0;
       }
     }
@@ -22,7 +22,7 @@
     }
     &--item {
       align-items: flex-start;
-      @include media('>320px','<768px') {
+      @include media('>319px','<768px') {
         align-items: center;
       }
     }
