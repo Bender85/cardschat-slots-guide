@@ -23,7 +23,6 @@
     @include media('>320px','<768px') {
       height: auto !important;
       padding: 0 0 !important;
-      background: firebrick;
     }
   }
   .slick-slide {

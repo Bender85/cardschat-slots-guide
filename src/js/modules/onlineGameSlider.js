@@ -65,13 +65,14 @@ let onlineGameSlider = {
         {
           breakpoint: 320,
           settings: {
-            infinite: true,
+            // infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             verticalSwiping: false,
             vertical: false,
             arrows: false,
             centerMode: true,
+            variableWidth: true,
           }
         },
       ]

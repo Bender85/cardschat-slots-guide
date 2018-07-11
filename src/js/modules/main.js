@@ -69,12 +69,30 @@ var main = {
         // ]
       });
 
+      $('.qwerty__slide').slick({
+        slidesToShow: 1,
+        dots: true,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: false,
+        // centerMode: true,
+      });
+
     } else {
       $(".mobile__tab--content-paylines").show();
       // $('.tab-carousel').slick({
       //   settings: 'unslick'
       // });
     }
+
+    // $('.qwerty__slide').slick({
+    //   slidesToShow: 1,
+    //   dots: true,
+    //   slidesToScroll: 1,
+    //   variableWidth: true,
+    //   arrows: false,
+    //   // centerMode: true,
+    // });
 
   //   trigger showHide
     // $('.openTrigger').on('click', function () {
