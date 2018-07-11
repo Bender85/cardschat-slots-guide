@@ -1,0 +1,165 @@
+.jackpot-slots {
+  background: #222533;
+  margin: 0 -20px;
+  padding: 60px 20px 40px;
+  margin-bottom: 60px;
+  color: #b8cde1;
+  @include media('>320px','<768px') {
+    padding: 30px 20px 20px;
+    overflow: hidden;
+    margin: 0;
+  }
+  .title-h2,
+  .title-h3,
+  .title-h4 {
+    color: #fff;
+  }
+  .jackpot-slots__massive-winners {
+    .global__item-style {
+      background: #fff;
+      color: #595f68;
+    }
+    .recomendation__area {
+      &--text {
+        min-height: 120px;
+      }
+    }
+  }
+  .slick-list {
+    // height: 927px !important;
+    // padding: 90px 0px !important;
+    // background: goldenrod;
+    overflow: initial !important;
+  }
+  .slick-slide {
+    opacity: 0.3;
+    // height: 340px !important;
+    margin: 0 15px !important;
+  }
+  .slick-active {
+    opacity: 1;
+  }
+  .slick-dots {
+    bottom: 0;
+    li {
+      background: #373a46;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      button {
+        &:before {
+          content: none;
+        }
+      }
+    }
+    .slick-active {
+      background: #0076b2;
+    }
+  }
+}
+
+.top-line,
+.bottom-line {
+  width: 1080px;
+  height: 2px;
+  background: #373a46;
+  margin: 0 -20px;
+  position: relative;
+}
+.bottom-line {
+  bottom: 16px;
+}
+.top-line {
+  top: 40px;
+}
+
+.jackpot-area {
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+  margin: 60px 0;
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+  &--item {
+    flex: 0 0 306px;
+    background: #fff;
+    position: relative;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-active {
+      background: #0076b2;
+      .jackpot-area {
+        &--title {
+          color: #fff;
+        }
+      }
+      .jackpot {
+        &:before {
+          color: #fff;
+        }
+      }
+      .dot {
+        color: #fff;
+      }
+    }
+  }
+  &-logo {
+    width: 206px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    top: -40px;
+    img {
+      margin: 0 auto;
+    }
+  }
+  &--title {
+    color: #595f68;
+    font-size: 21px;
+    text-align: center;
+  }
+}
+.jackpot {
+  list-style: none;
+  margin: 15px 0 20px 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:before {
+    content: "$";
+    font-size: 18px;
+    font-weight: 900;
+    color: #0865a0;
+    margin: 0 8px 0 0;
+  }
+  &-item {
+    border: 1px solid #dee9ed;
+    background: #fff;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #0865a0;
+    margin: 0 0px 0 5px;
+    &:nth-child(3),
+    &:nth-child(7) {
+      margin: 0;
+    }
+  }
+  .dot {
+    width: 10px;
+    text-align: center;
+    color: #0865a0;
+    font-size: 20px;
+  }
+}

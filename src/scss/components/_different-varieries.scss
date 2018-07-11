@@ -1,0 +1,20 @@
+.different-varieties {
+  .global__item-style {
+    &--title {
+      padding: 0;
+    }
+  }
+}
+.different-varieties__versus {
+  .global__list {
+    padding: 0 0 0 40px;
+    &--item {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .global__item-style {
+    padding: 40px 40px 30px 40px;
+  }
+}

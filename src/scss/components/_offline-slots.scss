@@ -1,0 +1,78 @@
+.slots-play {
+  .recomendation__area {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &--item {
+      flex: 0 0 49%;
+      display: flex;
+      @include media('>320px','<768px') {
+        flex: 0 0 100%;
+      }
+    }
+    img {
+      flex: 0 1 100%;
+    }
+    .center__bottom {
+      &--line {
+        &:after {
+          margin: 20px 0 0;
+        }
+      }
+    }
+  }
+  &__versus {
+    .global__item-style {
+      &--title {
+        @include media('<768px') {
+          display: none;
+         }
+      }
+    }
+  }
+}
+
+.slots-play__vegas {
+  .global__item-style {
+    padding: 0;
+  }
+}
+.mobile__tabs {
+  display: none;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include media('<768px') {
+   display: flex;
+  }
+  &--item {
+    flex: 0 0 50%;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #f3f3f3;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    background: #f3f3f3;
+    color: #595f68;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    &-active {
+      background: #fff;
+      color: #222533;
+      height: 70px;
+      line-height: 70px;
+      padding: 0;
+    }
+  }
+  &--area {
+    .global__item-style {
+      @include media('>320px','<768px') {
+        border-top: 0;
+        border-left: 1px solid #eef2f3;
+        border-right: 1px solid #eef2f3;
+        border-bottom: 1px solid #eef2f3;
+      }
+    }
+  }
+}

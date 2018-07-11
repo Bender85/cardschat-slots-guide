@@ -1,0 +1,77 @@
+.slots-cheats {
+  background: #222533;
+  color: #b8cde1;
+  margin-bottom: 60px;
+  padding: 60px 20px;
+  .title-h2,
+  .title-h3 {
+    color: #fff;
+  }
+  &--text {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex: 0 0 73%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media('>320px','<768px') {
+      order: 2;
+      padding: 0;
+      flex: 0 0 100%;
+    }
+    @include media('>=768px', '<=1024px') {
+      flex: 0 0 58%;
+    }
+    .center__bottom {
+      &--line {
+        &::after {
+          margin: 20px 0 0;
+        }
+      }
+    }
+  }
+  &--avatar {
+    flex: 1 0 auto;
+    margin-left: 20px;
+    @include media('>320px','<768px') {
+      order: 1;
+      margin-left: 0;
+      width: 65px;
+      height: 65px;
+      position: absolute;
+      overflow: hidden;
+    }
+  }
+  .cheats__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 60px 0;
+  }
+  .cheats__list--item {
+    background: #fff;
+    color: #595f68;
+    border: 2px solid #eef2f3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  .global__list {
+    &--item {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .global__item-style {
+    &--title {
+      @include media('>=768px', '<=1024px') {
+       padding: 0;
+      }
+    }
+  }
+}

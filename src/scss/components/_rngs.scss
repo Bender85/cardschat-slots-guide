@@ -1,0 +1,195 @@
+.random-number {
+  background: #222533;
+  color: #b8cde1;
+  padding: 60px 20px;
+  margin-bottom: 60px;
+  .title-h2,
+  .title-h3 {
+    color: #fff;
+  }
+  .what__video-poker {
+    color: #595f68;
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.step__work {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+  // flex-wrap: wrap;
+  @include media('>320px','<768px') {
+   flex-direction: column;
+  }
+  &--item {
+    width: 345px;
+    height: 200px;
+    background: #222533;
+    position: relative;
+    @include media('>320px','<768px') {
+      width: 100%;
+    }
+    &:nth-child(1) {
+      border-left: 2px solid #373a46;
+      overflow: hidden;
+      padding: 20px 25px 20px 20px;
+      @include media('>320px','<768px') {
+        margin-bottom: 20px;
+        border-left: 0;
+        border-top: 2px solid #373a46;
+      }
+      &:after,
+      &:before {
+        left: -13px;
+        @include media('>320px','<768px') {
+          left: 0;
+          // background: rebeccapurple;
+          bottom: 20px;
+          transform: skew(0deg, 12deg);
+          border-right: 0;
+        }
+      }
+      &:after {
+        @include media('>320px','<768px') {
+          left: auto;
+          right: 1px;
+          // background: red;
+          top: -20px;
+          transform: skew(0deg, -12deg);
+          border-bottom: 2px solid #373a46;
+          border-top: 0;
+          border-left: 0;
+          border-right: 2px solid #373a46;
+        }
+      }
+    }
+    &:nth-child(2) {
+      padding: 20px 25px 20px 30px;
+      @include media('>320px','<768px') {
+        margin-bottom: -20px;
+      }
+      &:after,
+      &:before {
+        left: 0;
+        @include media('>320px','<768px') {
+          left: 0;
+          // background: rebeccapurple;
+          bottom: 20px;
+          transform: skew(0deg, 12deg);
+          border-right: 0;
+          border-top: 2px solid #373a46;
+        }
+      }
+      &:after {
+        @include media('>320px','<768px') {
+          left: auto;
+          right: 1px;
+          // background: red;
+          top: -20px;
+          transform: skew(0deg, -12deg);
+          border-bottom: 2px solid #373a46;
+          border-top: 2px solid #373a46;
+          border-left: 0;
+          border-right: 2px solid #373a46;
+        }
+      }
+    }
+    &:nth-child(3) {
+      border-right: 2px solid #373a46;
+      overflow: hidden;
+      padding: 20px 25px 20px 40px;
+      @include media('>320px','<768px') {
+        border-right: 0;
+        border-bottom: 2px solid #373a46;
+        padding: 53px 25px 20px 40px;
+        &:after,
+        &:before {
+          left: auto;
+        }
+      }
+      &:after,
+      &:before {
+        left: 13px;
+        @include media('>320px','<768px') {
+          left: 0;
+          // background: rebeccapurple;
+          bottom: -22px;
+          transform: skew(0deg, 12deg);
+          border-right: 0;
+          border-top: 2px solid #373a46;
+        }
+      }
+      &:after {
+        @include media('>320px','<768px') {
+          left: auto;
+          right: 1px;
+          // background: red;
+          top: 22px;
+          transform: skew(0deg, -12deg);
+          border-bottom: 2px solid #373a46;
+          border-top: 2px solid #373a46;
+          border-left: 0;
+          border-right: 2px solid #373a46;
+        }
+      }
+    }
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50%;
+      width: 100%;
+      background: #222533;
+      transform: skew(13deg, 0deg);
+      border-top: 2px solid #373a46;
+      border-left: 2px solid #373a46;
+      border-right: 2px solid #373a46;
+      border-bottom: 0;
+      z-index: 9;
+      @include media('>320px','<768px') {
+        height: 100%;
+        width: 50%;
+        transform: skew(0deg, 0deg);
+      }
+    }
+    &:before {
+      bottom: 0;
+      top: auto;
+      transform: skew(-13deg, 0deg);
+      border-bottom: 2px solid #373a46;
+      border-top: 0;
+      @include media('>320px','<768px') {
+        transform: skew(0deg, 0deg);
+        right: 0;
+      }
+    }
+  }
+  &--img {
+    margin-right: 20px;
+  }
+  &--content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    // background: firebrick;
+    .title-h4 {
+      margin-bottom: 20px;
+      text-align: left;
+      color: #fff;
+    }
+    .center__bottom {
+      &--line {
+        &:after {
+          margin: 20px 0 0;
+        }
+      }
+    }
+  }
+}

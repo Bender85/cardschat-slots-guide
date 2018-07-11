@@ -1,0 +1,22 @@
+.bonus-games {
+  .recomendation__area {
+    &--text {
+      min-height: 147px;
+    }
+  }
+  .global__item-style {
+    &--title {
+      padding: 0;
+    }
+  }
+}
+.bonus-games__slots {
+  .recomendation__area {
+    &--text {
+      min-height: 220px;
+      @include media('>=768px','<=1024px') {
+        min-height: 270px
+      }
+    }
+  }
+}

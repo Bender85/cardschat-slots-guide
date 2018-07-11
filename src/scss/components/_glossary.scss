@@ -1,0 +1,41 @@
+.glossary {
+  background: #222533;
+  color: #b8cde1;
+  padding: 60px 20px 60px 20px;
+  &__area,
+  .mobile-more {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    &--items {
+      cursor: pointer;
+      padding: 13px;
+      border:2px solid #373a46;
+      font-weight: 900;
+      color: #fff;
+      margin: 0 10px 10px 0;
+      transition: all 0.3s ease-in;
+      &:hover {
+        background: #0076b2;
+        border-color: #0076b2;
+      }
+    }
+  }
+  .mobile-more {
+    flex: 0 1 74%;
+  }
+  .title-h2 {
+    color: #fff;
+  }
+}
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
+  background: #ffffff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
+  color: #595f68;
+  padding: 20px;
+}

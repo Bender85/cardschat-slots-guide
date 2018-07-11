@@ -1,0 +1,30 @@
+.slot-tournament {
+  .global__item-style {
+    &--title {
+      @include media('>320px','<768px') {
+        padding: 0;
+      }
+    }
+  }
+}
+.slots-tips__tournaments-work {
+  background: #f3f3f3;
+  margin: 0 -20px;
+  padding: 40px 20px 20px 20px;
+  p {
+    margin: 0;
+  }
+  .slots-play__similar {
+    &--area {
+      background: url('../images/tournament_bg.jpg') no-repeat;
+      background-size: cover;
+      margin-bottom: 40px;
+    }
+    &--item {
+      align-items: flex-start;
+      @include media('>320px','<768px') {
+        align-items: center;
+      }
+    }
+  }
+}

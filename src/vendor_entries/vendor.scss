@@ -1,0 +1,11 @@
+// All imports in this file will be compiled into vendors.css file.
+//
+// Note: You can import SCSS and CSS files as well.
+
+@import '../../node_modules/normalize.css/normalize';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import '../../node_modules/tooltipster/dist/css/tooltipster.main.css';
+@import '../../node_modules/tooltipster/dist/css/tooltipster.bundle.css';
+// @import '../../node_modules/fixto/css/style.css';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';

@@ -1,0 +1,19 @@
+.top__section {
+  background: url("../images/top_slots_bg.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 35px;
+  margin-bottom: 60px;
+  @include media('>320px','<768px') {
+   padding: 30px;
+  }
+  &--info {
+    font-size: 18px;
+    color: #b8cde1;
+    margin-bottom: 30px;
+  }
+  &--text-area {
+    text-align: left;
+  }
+}
