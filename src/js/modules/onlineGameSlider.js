@@ -36,48 +36,58 @@ let onlineGameSlider = {
       slidesToScroll: 1,
       verticalSwiping: true,
       centerMode: true,
-      variableWidth: true,
-      // mobileFirst: true,
-      responsive: [
-        {
-          breakpoint: 980,
-          settings: {
-            infinite: true,
-            arrows: true,
-            vertical: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            verticalSwiping: true,
-            centerMode: false,
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            verticalSwiping: false,
-            vertical: false,
-            arrows: false,
-            centerMode: false,
-          }
-        },
-        {
-          breakpoint: 320,
-          settings: {
-            // infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            verticalSwiping: false,
-            vertical: false,
-            arrows: false,
-            centerMode: false,
-            variableWidth: true,
-          }
-        },
-      ]
+      mobileFirst: true,
+      draggable: true,
+      autoplay:true,
+      autoplaySpeed:1500,
+      // responsive: [
+      //   {
+      //     breakpoint: 1024,
+      //     settings: {
+      //       infinite: true,
+      //       arrows: true,
+      //       vertical: true,
+      //       slidesToShow: 2,
+      //       slidesToScroll: 1,
+      //       verticalSwiping: true,
+      //       centerMode: false,
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 768,
+      //     settings: {
+      //       infinite: true,
+      //       slidesToShow: 1,
+      //       slidesToScroll: 1,
+      //       verticalSwiping: false,
+      //       vertical: false,
+      //       arrows: false,
+      //       centerMode: false,
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 320,
+      //     settings: {
+      //       infinite: true,
+      //       slidesToShow: 1,
+      //       slidesToScroll: 1,
+      //       verticalSwiping: false,
+      //       vertical: false,
+      //       arrows: false,
+      //       centerMode: false,
+      //       variableWidth: true,
+      //     }
+      //   },
+      // ]
     });
+
+    // $(window).resize(function(){
+    //   $('.game-slider').slick('resize');
+    // });
+
+    // $(window).on('orientationchange', function() {
+    //   $('.game-slider').slick('reinit');
+    // });
   }
 };
 

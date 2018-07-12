@@ -3,6 +3,12 @@
 var main = {
   mainFunc: function () {
     var windowWidth = $(window).width();
+    $(window).on('resize', function(){
+      var win = $(this); //this = window
+      // console.log(win);
+      // if (win.height() >= 820) { /* ... */ }
+      // if (win.width() >= 1280) { /* ... */ }
+    });
     $('.tooltip').tooltipster({
       theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
       side: 'bottom'
@@ -29,7 +35,7 @@ var main = {
     //     $(".mobile__tab--content").show();
     //   }
     // };
-    if(windowWidth <= 767) {
+    if(windowWidth <= 768) {
       $(".mobile__tab--content").hide();
       $(".mobile__tab--content:first").show();
 
@@ -54,6 +60,14 @@ var main = {
         $(this).addClass("mobile__tabs-paylines--item-active");
       });
 
+      $('.tab__container--content').show();
+      $('.tab__container').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.tab-carousel'
+      });
       $('.tab-carousel').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -61,6 +75,9 @@ var main = {
         mobileFirst: true,
         arrows: false,
         dots: false,
+        variableWidth: true,
+        focusOnSelect: true,
+        asNavFor: '.tab__container',
         // responsive: [
         //   {
         //     breakpoint: 768,
@@ -68,15 +85,20 @@ var main = {
         //   }
         // ]
       });
-
-      $('.qwerty__slide').slick({
-        slidesToShow: 1,
-        dots: true,
-        slidesToScroll: 1,
-        variableWidth: true,
-        arrows: false,
-        // centerMode: true,
+      $('.tab-carousel').on('swipe', function(event, slick, direction){
+        // console.log(direction);
+        $('.jackpot-area--item').removeClass('jackpot-area--item-active');
+        $('.slick-center').prev('.slick-active').find('.jackpot-area--item').addClass('jackpot-area--item-active');
       });
+
+      // $('.qwerty__slide').slick({
+      //   slidesToShow: 1,
+      //   dots: true,
+      //   slidesToScroll: 1,
+      //   variableWidth: true,
+      //   arrows: false,
+      //   // centerMode: true,
+      // });
 
       $('.glossary__area--items').hide();
       $('.glossary__area--items:nth-child(1)').show();
@@ -95,14 +117,14 @@ var main = {
       // });
     }
 
-    // $('.qwerty__slide').slick({
-    //   slidesToShow: 1,
-    //   dots: true,
-    //   slidesToScroll: 1,
-    //   variableWidth: true,
-    //   arrows: false,
-    //   // centerMode: true,
-    // });
+    $('.qwerty__slide').slick({
+      slidesToShow: 1,
+      dots: true,
+      slidesToScroll: 1,
+      variableWidth: true,
+      arrows: false,
+      // centerMode: true,
+    });
 
   //   trigger showHide
     // $('.openTrigger').on('click', function () {

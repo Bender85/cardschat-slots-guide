@@ -130,6 +130,8 @@
   margin-top: 10px;
   transition: all 0.2s ease-in;
   border: 1px solid transparent;
+  display: block;
+  text-decoration: none;
   &:hover {
     background: #fff;
     color: #f08e00;
@@ -223,18 +225,23 @@
 
 .in-this-guide {
   position: absolute;
+  right: 0;
   width: 320px;
-  background: #fff;
+  background: #ccc;
   padding: 40px;
   z-index: 999;
-  display: none;
+  // display: none;
   .title-h3 {
     margin-bottom: 10px;
     position: relative;
+    @include media('>319px','<768px') {
+      cursor: pointer;
+    }
     .fa-angle-down {
       position: absolute;
       right: 0;
       color: #006fae;
+      display: none;
       @include media('>319px','<768px') {
         display: block;
       }

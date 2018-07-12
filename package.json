@@ -18,6 +18,7 @@
     "browserify": "^14.0.0",
     "del": "^2.2.2",
     "files-exist": "^1.0.2",
+    "flipclock": "^0.8.2",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -43,6 +44,7 @@
     "node-notifier": "^5.0.2",
     "path": "^0.12.7",
     "run-sequence": "^1.2.2",
+    "slick": "^1.12.2",
     "slick-carousel": "^1.8.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
