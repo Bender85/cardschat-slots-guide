@@ -15,7 +15,6 @@ import jackpotSlider from './modules/jackpotSlider';
 
   // When DOM is ready
   $(() => {
-    // DE.dotsEffect();
     // calculator.calc();
     customSelect.selectFunc();
     onlineGameSlider.gameSlider();

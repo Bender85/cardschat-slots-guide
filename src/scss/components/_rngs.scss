@@ -165,6 +165,10 @@
   }
   &--img {
     margin-right: 20px;
+    @include media('>319px','<769px') {
+      position: absolute;
+      margin-right: 0;
+    }
   }
   &--content {
     position: relative;
@@ -175,6 +179,10 @@
       margin-bottom: 20px;
       text-align: left;
       color: #fff;
+      @include media('>319px','<=768px') {
+        padding-left: 85px;
+        margin-bottom: 25px;
+      }
     }
     .center__bottom {
       &--line {

@@ -17,11 +17,11 @@ $select-height: 48px;
   color: $select-color;
   width: $select-width;
   height: $select-height;
-  @include media('>320px','<769px') {
+  @include media('>319px','<768px') {
     width: 100%;
   }
   &:not(:last-child) {
-    @include media('>320px','<769px') {
+    @include media('>319px','<768px') {
       margin-bottom: 20px;
       width: 100%;
     }
@@ -35,7 +35,6 @@ $select-height: 48px;
   left: 0;
   background-color: $select-background;
   padding: 12px 15px;
-  // @include transition(all 0.2s ease-in);
   &:after {
     content:"";
     width: 0;
@@ -74,7 +73,6 @@ $select-height: 48px;
     padding: 12px 0;
     text-indent: 15px;
     border-top: 1px solid darken($select-background, 10);
-    // @include transition(all 0.15s ease-in);
     &:hover {
       color: $select-background;
       background: $select-color;

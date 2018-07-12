@@ -240,11 +240,21 @@
     .fa-angle-down {
       position: absolute;
       right: 0;
+      top: 3px;
       color: #006fae;
+      transform: rotate(180deg);
       display: none;
       @include media('>319px','<768px') {
         display: block;
       }
+    }
+    .fa-angle-down-active {
+      transform: rotate(0);
+    }
+  }
+  .center__bottom--line-active {
+    &:after {
+      content: none;
     }
   }
   .in-this-guide-list {

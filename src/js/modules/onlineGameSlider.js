@@ -36,49 +36,54 @@ let onlineGameSlider = {
       slidesToScroll: 1,
       verticalSwiping: true,
       centerMode: true,
-      mobileFirst: true,
+      // mobileFirst: true,
       draggable: true,
       autoplay:true,
       autoplaySpeed:1500,
-      // responsive: [
-      //   {
-      //     breakpoint: 1024,
-      //     settings: {
-      //       infinite: true,
-      //       arrows: true,
-      //       vertical: true,
-      //       slidesToShow: 2,
-      //       slidesToScroll: 1,
-      //       verticalSwiping: true,
-      //       centerMode: false,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 768,
-      //     settings: {
-      //       infinite: true,
-      //       slidesToShow: 1,
-      //       slidesToScroll: 1,
-      //       verticalSwiping: false,
-      //       vertical: false,
-      //       arrows: false,
-      //       centerMode: false,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 320,
-      //     settings: {
-      //       infinite: true,
-      //       slidesToShow: 1,
-      //       slidesToScroll: 1,
-      //       verticalSwiping: false,
-      //       vertical: false,
-      //       arrows: false,
-      //       centerMode: false,
-      //       variableWidth: true,
-      //     }
-      //   },
-      // ]
+      responsive: [
+        // {
+        //   breakpoint: 1024,
+        //   settings: {
+        //     infinite: true,
+        //     arrows: true,
+        //     vertical: true,
+        //     slidesToShow: 2,
+        //     slidesToScroll: 1,
+        //     verticalSwiping: true,
+        //     centerMode: true,
+        //     mobileFirst: true,
+        //     draggable: true,
+        //     autoplay:true,
+        //     autoplaySpeed:1500,
+        //   }
+        // },
+        {
+          breakpoint: 768,
+          settings: {
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            verticalSwiping: true,
+            vertical: true,
+            arrows: true,
+            centerMode: true,
+          }
+        },
+        {
+          breakpoint: 320,
+          settings: {
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            verticalSwiping: false,
+            vertical: false,
+            arrows: false,
+            centerMode: false,
+            variableWidth: true,
+            mobileFirst: true,
+          }
+        },
+      ]
     });
 
     // $(window).resize(function(){

@@ -35,7 +35,7 @@ var main = {
     //     $(".mobile__tab--content").show();
     //   }
     // };
-    if(windowWidth <= 768) {
+    if(windowWidth < 768) {
       $(".mobile__tab--content").hide();
       $(".mobile__tab--content:first").show();
 
@@ -87,18 +87,19 @@ var main = {
       });
       $('.tab-carousel').on('swipe', function(event, slick, direction){
         // console.log(direction);
-        $('.jackpot-area--item').removeClass('jackpot-area--item-active');
-        $('.slick-center').prev('.slick-active').find('.jackpot-area--item').addClass('jackpot-area--item-active');
+        $('.recomendation__area--item').removeClass('recomendation__area--item-active');
+        $('.slick-center').prev('.slick-active').find('.recomendation__area--item').addClass('recomendation__area--item-active');
       });
 
-      // $('.qwerty__slide').slick({
-      //   slidesToShow: 1,
-      //   dots: true,
-      //   slidesToScroll: 1,
-      //   variableWidth: true,
-      //   arrows: false,
-      //   // centerMode: true,
-      // });
+      $('.qwerty__slide').slick({
+        slidesToShow: 1,
+        dots: true,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: false,
+        infinite: true,
+        // centerMode: true,
+      });
 
       $('.glossary__area--items').hide();
       $('.glossary__area--items:nth-child(1)').show();
@@ -117,14 +118,14 @@ var main = {
       // });
     }
 
-    $('.qwerty__slide').slick({
-      slidesToShow: 1,
-      dots: true,
-      slidesToScroll: 1,
-      variableWidth: true,
-      arrows: false,
-      // centerMode: true,
-    });
+    // $('.qwerty__slide').slick({
+    //   slidesToShow: 1,
+    //   dots: true,
+    //   slidesToScroll: 1,
+    //   variableWidth: true,
+    //   arrows: false,
+    //   // centerMode: true,
+    // });
 
   //   trigger showHide
     // $('.openTrigger').on('click', function () {
@@ -144,7 +145,12 @@ var main = {
     });
 
     $('.this-guide-open-mobile').on('click', function(e) {
+      if($(this).hasClass('center__bottom--line')) {
+        $(this).toggleClass('center__bottom--line-active');
+      }
+      // $('.this').find('.center__bottom--line').toggleClass('center__bottom--line-active');
       $(this).siblings('.in-this-guide-list').slideToggle();
+      $(this).find('.fa-angle-down').toggleClass('fa-angle-down-active');
     });
 
   }

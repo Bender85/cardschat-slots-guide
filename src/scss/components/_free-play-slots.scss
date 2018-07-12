@@ -35,7 +35,7 @@
       @include media('>319px','<768px') {
         flex: 0 1 auto;
         margin-bottom: 50px;
-        margin-left: 20px;
+        margin-left: -1px;
         width: 100%;
       }
       &:before {

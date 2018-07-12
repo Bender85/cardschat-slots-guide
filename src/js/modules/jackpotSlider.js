@@ -94,9 +94,9 @@ let jackpotSlider = {
       }
     });
 
-    $('.jackpot-area').on('init', function(event, slick){
-      console.log('slider was initialized');
-    });
+    // $('.jackpot-area').on('init', function(event, slick){
+    //   console.log('slider was initialized');
+    // });
 
     $('.jackpot-area').slick({
      dots: true,
