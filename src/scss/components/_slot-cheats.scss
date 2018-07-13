@@ -3,6 +3,10 @@
   color: #b8cde1;
   margin-bottom: 60px;
   padding: 60px 20px;
+  @include media('>319px','<768px') {
+    padding: 30px 20px 30px 20px;
+    margin-bottom: 30px;
+  }
   .title-h2,
   .title-h3 {
     color: #fff;

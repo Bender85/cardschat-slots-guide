@@ -26,16 +26,23 @@
         background: #0076b2;
         box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.37);
         color: #fff;
+        position: relative;
+        &:after,
         &:before {
           content: "";
           position: absolute;
-          right: -27px;
-          width: 0;
-          height: 0;
-          border-top: 102px solid transparent;
-          border-left: 27px solid #0076b2;
-          border-bottom: 102px solid transparent;
-          filter: drop-shadow(0px 0px 18px -1px rgba(0,0,0,0.37));
+          top: 1px;
+          left: 12px;
+          width: 100%;
+          height: 50.1%;
+          background: #0076b2;;
+          transform: skew(13deg, 0deg);
+        }
+        &:after {
+          bottom: 0;
+          top: auto;
+          background: #0076b2;;
+          transform: skew(-13deg, 0deg);
         }
         .global__item-style {
           border-color: #0076b2;
@@ -57,18 +64,23 @@
       &:nth-child(6),
       &:nth-child(7) {
         &:hover {
+          &:after,
           &:before {
             content: "";
             position: absolute;
-            right: auto;
-            width: 0;
-            height: 0;
-            border-top: 102px solid transparent;
-            border-left: 27px solid #0076b2;
-            border-bottom: 102px solid transparent;
-            left: -27px;
-            transform: rotate(-180deg);
-            filter: drop-shadow(0px 0px 18px -1px rgba(0,0,0,0.37));
+            top: 0;
+            left: auto;
+            right: 14px;
+            width: 100%;
+            height: 50.1%;
+            background: #0076b2;;
+            transform: skew(-13deg, 0deg);
+          }
+          &:after {
+            bottom: 0;
+            top: auto;
+            background: #0076b2;;
+            transform: skew(13deg, 0deg);
           }
         }
       }
@@ -100,7 +112,6 @@
     right: 0;
     top: 0;
     bottom: 0;
-    // display: flex;
     align-items: flex-end;
     justify-content: center;
     padding: 0px 20px 20px 20px;
@@ -181,7 +192,7 @@
 
 .how-to-play__symbols-breakdown {
   background: #222534;
-  margin: 0 -20px;
+  margin: 0 -20px 60px -20px;
   padding: 40px 20px 0 20px;
   border-bottom : 20px solid #f9c780;
   color: #b8cde1;
@@ -199,26 +210,19 @@
         background: #0076b2;
         box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.37);
         color: #fff;
+        &:after,
         &:before {
           content: "";
           position: absolute;
+          top: 14px;
+          width: 50.1%;
+          height: 100%;
+          background: #0076b2;
+          transform: skew(0deg, 13deg);
+        }
+        &:after {
           right: 0;
-          left: 0;
-          width: 0;
-          height: 0;
-          bottom: -133px;
-          transform: rotate(90deg);
-          margin: auto;
-          border-top: 122px solid transparent;
-          border-left: 25px solid #0076b2;
-          border-bottom: 122px solid transparent;
-          filter: drop-shadow(0px 0px 18px -1px rgba(0,0,0,0.37));
-          z-index: 1;
-          @include media('>319px','<768px') {
-            bottom: -121px;
-            border-top: 109px solid transparent;
-            border-bottom: 109px solid transparent;
-          }
+          transform: skew(0deg, -13deg);
         }
         .global__item-style {
           border-color: #0076b2;
@@ -247,6 +251,10 @@
       margin: 0 5px;
       padding: 0 0 30px 0;
       width: 230px !important;
+      opacity: 0.3;
+    }
+    .slick-active {
+      opacity: 1;
     }
   }
   .title-h3 {
@@ -255,6 +263,9 @@
   img {
     margin: 0 0 -7px 0;
   }
+}
+.mobile__tabs--area {
+  margin-bottom: 30px;
 }
 .mobile__tabs-paylines {
   display: none;
@@ -287,26 +298,20 @@
       background: #0076b2;
       box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.37);
       color: #fff;
+      position: relative;
+      &:after,
       &:before {
         content: "";
         position: absolute;
+        top: 14px;
+        width: 50.1%;
+        height: 100%;
+        background: #0076b2;
+        transform: skew(0deg, 13deg);
+      }
+      &:after {
         right: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-        bottom: -133px;
-        transform: rotate(90deg);
-        margin: auto;
-        border-top: 122px solid transparent;
-        border-left: 25px solid #0076b2;
-        border-bottom: 122px solid transparent;
-        filter: drop-shadow(0px 0px 18px -1px rgba(0,0,0,0.37));
-        z-index: 1;
-        @include media('>319px','<768px') {
-          bottom: -121px;
-          border-top: 109px solid transparent;
-          border-bottom: 109px solid transparent;
-        }
+        transform: skew(0deg, -13deg);
       }
       .global__item-style {
         border-color: #0076b2;

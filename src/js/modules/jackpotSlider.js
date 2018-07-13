@@ -16,7 +16,6 @@ let jackpotSlider = {
     });
     var clock2 = $('.mega-moolah2').FlipClock(4141373, {
       clockFace: 'Counter',
-      // countdown: true,
       autoStart: true,
       countdown: true,
       callbacks: {
@@ -32,7 +31,6 @@ let jackpotSlider = {
 
     var clock3 = $('.mega-fortune1').FlipClock(3721879, {
       clockFace: 'Counter',
-      // countdown: true,
       autoStart: true,
       countdown: true,
       callbacks: {
@@ -48,7 +46,6 @@ let jackpotSlider = {
 
     var clock4 = $('.mega-fortune2').FlipClock(3721879, {
       clockFace: 'Counter',
-      // countdown: true,
       autoStart: true,
       countdown: true,
       callbacks: {
@@ -64,7 +61,6 @@ let jackpotSlider = {
 
     var clock5 = $('.golden-seven1').FlipClock(2198218, {
       clockFace: 'Counter',
-      // countdown: true,
       autoStart: true,
       countdown: true,
       callbacks: {
@@ -80,7 +76,6 @@ let jackpotSlider = {
 
     var clock6 = $('.golden-seven2').FlipClock(2198218, {
       clockFace: 'Counter',
-      // countdown: true,
       autoStart: true,
       countdown: true,
       callbacks: {
@@ -94,13 +89,8 @@ let jackpotSlider = {
       }
     });
 
-    // $('.jackpot-area').on('init', function(event, slick){
-    //   console.log('slider was initialized');
-    // });
-
     $('.jackpot-area').slick({
      dots: true,
-    //  infinite: true,
      arrows: false,
      slidesToShow: 3,
      slidesToScroll: 1,
@@ -116,7 +106,6 @@ let jackpotSlider = {
           slidesToShow: 3,
           slidesToScroll: 1,
           centerMode: true,
-          // mobileFirst: true,
         }
       },
       {
@@ -125,28 +114,25 @@ let jackpotSlider = {
           slidesToShow: 2,
           slidesToScroll: 1,
           centerMode: true,
-          // mobileFirst: true,
+          variableWidth: false,
         }
       },
       {
-        breakpoint: 319,
+        breakpoint: 479,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: false,
-          // variableWidth: false,
-          // mobileFirst: true,
+          centerMode: true,
+          variableWidth: false,
         }
       },
      ]
     });
 
-    // console.log($('.slick-center').prev('.slick-active').find('.jackpot-area--item'));
     $('.slick-center').prev('.slick-active').find('.jackpot-area--item').addClass('jackpot-area--item-active');
 
     // On swipe event
     $('.jackpot-area').on('swipe', function(event, slick, direction){
-      // console.log(direction);
       $('.jackpot-area--item').removeClass('jackpot-area--item-active');
       $('.slick-center').prev('.slick-active').find('.jackpot-area--item').addClass('jackpot-area--item-active');
     });
@@ -159,7 +145,6 @@ let jackpotSlider = {
 
     // On before slide change
     $('.jackpot-area').on('afterChange', function(event, slick, currentSlide, nextSlide){
-      // console.log(nextSlide);
       $('.jackpot-area--item').removeClass('jackpot-area--item-active');
       $('.slick-center').prev('.slick-active').find('.jackpot-area--item').addClass('jackpot-area--item-active');
     });

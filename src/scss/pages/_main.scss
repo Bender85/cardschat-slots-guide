@@ -5,9 +5,9 @@
   position: relative;
 }
 .inner__container {
-  padding: 0 20px 60px 20px;
+  padding: 0 20px 0 20px;
   @include media('>319px','<768px') {
-    padding: 0 20px 60px 20px;
+    padding: 0 20px 0 20px;
   }
 }
 .center__bottom {
@@ -32,6 +32,9 @@
   font-size: 24px;
   font-weight: 900;
   text-align: center;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 1;
   @include media('>319px','<768px') {
     font-size: 16px;
   }
@@ -41,6 +44,7 @@
 .title-h4 {
   color: #222533;
   margin-bottom: 40px;
+  letter-spacing: 2px;
 }
 .title-h3 {
   font-size: 18px;
@@ -54,12 +58,22 @@
   font-weight: 900;
 }
 
+.small-letter {
+  font-size: 18px;
+  @include media('>319px','<768px') {
+    font-size: 12px;
+  }
+}
+
 .global__item-style,
 .global__item-style-invert {
+  position: relative;
   border: 1px solid #eef2f3;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
+  width: 100%;
   &--title {
     color: #222533;
     font-size: 14px;
@@ -182,7 +196,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 40px;
   @include media('>319px','<768px') {
     margin-bottom: 0;
   }
@@ -191,11 +204,7 @@
     display: flex;
     @include media('>319px','<768px') {
       flex: 0 0 100%;
-    }
-    &:not(:last-child) {
-      @include media('>319px','<768px') {
-        margin-bottom: 20px;
-      }
+      margin-bottom: 20px;
     }
   }
   &--text {
@@ -204,7 +213,7 @@
       min-height: 293px
     }
     @include media('>319px','<768px') {
-      min-height: 293px
+      min-height: auto;
     }
   }
   .center__bottom {
@@ -216,21 +225,33 @@
   }
 }
 
+.bottom__margin-panel {
+  margin-bottom: 60px;
+  @include media('>319px','<768px') {
+    margin-bottom: 40px;
+  }
+}
+
 .go-to-bottom {
+  cursor: pointer;
   background: url('../images/mouse_icon.png') no-repeat;
   width: 22px;
   height: 49px;
-  margin: 20px auto 0;
+  margin: 0 auto 30px;
+  display: block;
+  @include media('>319px','<768px') {
+   margin-top: 30px;
+  }
 }
 
 .in-this-guide {
   position: absolute;
   right: 0;
   width: 320px;
-  background: #ccc;
+  background: #fff;
   padding: 40px;
   z-index: 999;
-  // display: none;
+  display: none;
   .title-h3 {
     margin-bottom: 10px;
     position: relative;

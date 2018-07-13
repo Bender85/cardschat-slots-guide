@@ -29,7 +29,7 @@
       padding: 20px;
       position: relative;
       background: #f3f3f3;
-      flex: 0 0 806px;
+      flex: 0 0 786px;
       flex-wrap: wrap;
       margin-left: -20px;
       @include media('>319px','<768px') {
@@ -85,6 +85,9 @@
     overflow: hidden;
     @include media('>319px','<768px') {
       justify-content: center;
+    }
+    @include media('>319px','<768px', 'landscape') {
+      justify-content: space-between;
     }
     &--item {
       flex: 0 0 235px;

@@ -17,8 +17,8 @@ import jackpotSlider from './modules/jackpotSlider';
   $(() => {
     // calculator.calc();
     customSelect.selectFunc();
-    onlineGameSlider.gameSlider();
     jackpotSlider.slider();
+    onlineGameSlider.gameSlider();
     main.mainFunc();
   });
 

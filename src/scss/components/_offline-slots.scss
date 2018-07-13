@@ -31,6 +31,13 @@
       }
     }
   }
+  .global__item-style {
+    &--title {
+      @include media('>319px','<768px') {
+        padding: 0;
+       }
+    }
+  }
 }
 
 .slots-play__vegas {

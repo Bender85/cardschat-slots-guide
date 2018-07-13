@@ -68,6 +68,7 @@ $select-height: 48px;
   padding: 0;
   list-style: none;
   background-color: $select-background;
+  border-bottom: 1px solid darken($select-background, 10);
   li {
     margin: 0;
     padding: 12px 0;

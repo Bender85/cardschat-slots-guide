@@ -1,0 +1,78 @@
+.game__giudes {
+  padding-top: 60px;
+}
+.our__other-casino {
+  display: flex;
+  justify-content: space-between;
+  &--item {
+    &:nth-child(1) {
+      background: url('../images/roulette__game__guide.jpg') no-repeat;
+    }
+    &:nth-child(2) {
+      background: url('../images/bkackjack_game_guide.jpg') no-repeat;
+    }
+    &:nth-child(3) {
+      background: url('../images/baccarat_game_guide.jpg') no-repeat;
+    }
+    &:nth-child(4) {
+      background: url('../images/video_poker_guide.jpg') no-repeat;
+    }
+    cursor: pointer;
+    width: 235px;
+    height: 233px;
+    padding: 20px 15px 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
+    color: #b8cde1;
+    &:hover {
+      .hide {
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+    }
+  }
+  .hide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .show {
+    display: none;
+    .title-h4 {
+      font-size: 13px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .play-game {
+      padding: 16px 0;
+      letter-spacing: 2px;
+    }
+  }
+  .game__icon {
+    width: 128px;
+    height: 128px;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--title {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .slick-slide {
+    width: 235px;
+    margin-right: 20px;
+  }
+}

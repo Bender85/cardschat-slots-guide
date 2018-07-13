@@ -1,4 +1,5 @@
 .slot-tournament {
+  padding-top: 40px;
   .global__item-style {
     &--title {
       @include media('>319px','<768px') {
@@ -11,14 +12,14 @@
   background: #f3f3f3;
   margin: 0 -20px;
   padding: 40px 20px 20px 20px;
-  p {
-    margin: 0;
-  }
   .slots-play__similar {
     &--area {
       background: url('../images/tournament_bg.jpg') no-repeat;
       background-size: cover;
       margin-bottom: 40px;
+      p {
+        margin: 0;
+      }
     }
     &--item {
       align-items: flex-start;

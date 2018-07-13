@@ -4,10 +4,10 @@
 
 module.exports = [
   './node_modules/jquery/dist/jquery.js',
+  './node_modules/flipclock/dist/flipclock.js',
   './node_modules/slick-carousel/slick/slick.js',
   './node_modules/tooltipster/dist/js/tooltipster.main.js',
   './node_modules/tooltipster/dist/js/tooltipster.bundle.js',
   './node_modules/fixto/dist/fixto.js',
-  './node_modules/flipclock/dist/flipclock.js',
   // './src/js/modules/clubs.js'
 ];

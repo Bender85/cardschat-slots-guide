@@ -1,4 +1,9 @@
 .slots-tips {
+  padding: 60px 20px 30px 20px;
+  @include media('>319px','<768px') {
+    padding: 30px 20px 30px 20px;
+    margin-bottom: 30px;
+  }
   .global__item-style {
     padding: 0;
     &:not(:last-child) {
@@ -8,6 +13,7 @@
   .recomendation__area {
     &--item {
       flex-direction: column;
+      margin-bottom: 20px;
     }
   }
 }
@@ -21,7 +27,7 @@
     height: 927px !important;
     padding: 90px 0px !important;
     @include media('>319px','<768px') {
-      height: auto !important;
+      height: 166px !important;
       padding: 0 0 !important;
     }
   }
@@ -46,6 +52,8 @@
     left: 0;
     margin: auto;
     z-index: 100;
+    width: 25px;
+    height: 25px;
     &:after,
     &:before {
       color: rgba(89,95,104, 0.60);
@@ -112,7 +120,6 @@
   }
 
 }
-// .slick-slider { display: table; table-layout: fixed; width: 100%; }
 .slots-tips__online-strategy {
   .global__item-style {
     &--title {
@@ -121,13 +128,13 @@
   }
   .recomendation__area {
     &--text {
-      min-height: 120px;
+      min-height: 121px;
     }
   }
 }
 
 .slots-tips__online-tips {
-  margin-bottom: 40px;
+  padding: 30px 20px 30px 20px;
   .img-area {
     margin-right: 20px;
     flex: 0 0 auto;
@@ -136,6 +143,27 @@
     padding: 20px;
     flex-direction: row;
     min-height: 302px;
+  }
+  .recomendation__area {
+    &--item {
+      flex-direction: column;
+      margin-bottom: 20px;
+      @include media('>319px','<768px') {
+        &:nth-child(1) {
+          order: 1;
+
+        }
+        &:nth-child(2) {
+          order: 3;
+        }
+        &:nth-child(3) {
+          order: 2;
+        }
+        &:nth-child(4) {
+          order: 4;
+        }
+      }
+    }
   }
 }
 
@@ -160,6 +188,25 @@
     &--text {
       min-height: 146px;
     }
+    &--item {
+      flex-direction: column;
+      margin-bottom: 20px;
+      @include media('>319px','<768px') {
+        &:nth-child(1) {
+          order: 1;
+
+        }
+        &:nth-child(2) {
+          order: 3;
+        }
+        &:nth-child(3) {
+          order: 2;
+        }
+        &:nth-child(4) {
+          order: 4;
+        }
+      }
+    }
   }
   .slots-tips__offline-tips {
     margin-top: 60px;
@@ -180,4 +227,7 @@
       }
     }
   }
+}
+.slots-tips__types-tournaments {
+  margin-bottom: 40px;
 }

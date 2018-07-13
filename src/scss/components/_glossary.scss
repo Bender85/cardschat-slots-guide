@@ -2,6 +2,9 @@
   background: #222533;
   color: #b8cde1;
   padding: 60px 20px 60px 20px;
+  @include media('>319px','<768px') {
+    padding: 30px 20px 30px 20px;
+  }
   &__area,
   .mobile-more {
     display: flex;

@@ -1,7 +1,17 @@
 .bonus-games {
+  padding-top: 60px;
+  @include media('>319px','<768px') {
+    padding: 30px 20px 30px 20px;
+    margin-bottom: 30px;
+  }
   .recomendation__area {
     &--text {
       min-height: 147px;
+    }
+    &--game {
+      @include media('>319px','<768px', 'landscape') {
+        text-align: center;
+      }
     }
   }
   .global__item-style {
@@ -12,6 +22,7 @@
 }
 .bonus-games__slots {
   .recomendation__area {
+    margin-bottom: 30px;
     &--text {
       min-height: 220px;
       @include media('>=768px','<=1024px') {

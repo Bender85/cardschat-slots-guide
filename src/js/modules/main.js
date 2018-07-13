@@ -11,7 +11,18 @@ var main = {
     });
     $('.tooltip').tooltipster({
       theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
-      side: 'bottom'
+      side: 'bottom',
+      trigger:"custom",
+      triggerOpen: {
+        click: true,  // For mouse
+        tap: true,    // For touch device
+        mouseenter: true
+      },
+      triggerClose: {
+        click: true,  // For mouse
+        tap: true,   // For touch device
+        mouseleave: true
+      }
     });
     // tab
     $(".tab__container--content").hide();
@@ -98,7 +109,16 @@ var main = {
         variableWidth: true,
         arrows: false,
         infinite: true,
-        // centerMode: true,
+        swipeToSlide: true
+      });
+      $('.our__other-casino').slick({
+        slidesToShow: 1,
+        dots: false,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: false,
+        infinite: true,
+        swipeToSlide: true
       });
 
       $('.glossary__area--items').hide();
@@ -113,31 +133,7 @@ var main = {
     } else {
       $(".mobile__tab--content-paylines").show();
       $('.glossary__area--items').show();
-      // $('.tab-carousel').slick({
-      //   settings: 'unslick'
-      // });
     }
-
-    // $('.qwerty__slide').slick({
-    //   slidesToShow: 1,
-    //   dots: true,
-    //   slidesToScroll: 1,
-    //   variableWidth: true,
-    //   arrows: false,
-    //   // centerMode: true,
-    // });
-
-  //   trigger showHide
-    // $('.openTrigger').on('click', function () {
-    //   $('.expandBox').toggleClass('expandBoxActive');
-    // });
-
-    // $('.tooltip').tooltipster({
-    //   animation: 'fade',
-    //   delay: 200,
-    //   theme: 'tooltipster-light',
-    //   side: ['bottom']
-    // });
 
     $(".under-list:first").show();
     $('.in-this-guide-list-title').on('click', function(e) {
@@ -148,7 +144,6 @@ var main = {
       if($(this).hasClass('center__bottom--line')) {
         $(this).toggleClass('center__bottom--line-active');
       }
-      // $('.this').find('.center__bottom--line').toggleClass('center__bottom--line-active');
       $(this).siblings('.in-this-guide-list').slideToggle();
       $(this).find('.fa-angle-down').toggleClass('fa-angle-down-active');
     });

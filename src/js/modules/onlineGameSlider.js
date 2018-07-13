@@ -36,29 +36,10 @@ let onlineGameSlider = {
       slidesToScroll: 1,
       verticalSwiping: true,
       centerMode: true,
-      // mobileFirst: true,
-      draggable: true,
-      autoplay:true,
-      autoplaySpeed:1500,
+      mobileFirst: true,
       responsive: [
-        // {
-        //   breakpoint: 1024,
-        //   settings: {
-        //     infinite: true,
-        //     arrows: true,
-        //     vertical: true,
-        //     slidesToShow: 2,
-        //     slidesToScroll: 1,
-        //     verticalSwiping: true,
-        //     centerMode: true,
-        //     mobileFirst: true,
-        //     draggable: true,
-        //     autoplay:true,
-        //     autoplaySpeed:1500,
-        //   }
-        // },
         {
-          breakpoint: 768,
+          breakpoint: 767,
           settings: {
             infinite: true,
             slidesToShow: 1,
@@ -70,12 +51,12 @@ let onlineGameSlider = {
           }
         },
         {
-          breakpoint: 320,
+          breakpoint: 319,
           settings: {
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            verticalSwiping: false,
+            verticalSwiping: true,
             vertical: false,
             arrows: false,
             centerMode: false,
@@ -85,14 +66,6 @@ let onlineGameSlider = {
         },
       ]
     });
-
-    // $(window).resize(function(){
-    //   $('.game-slider').slick('resize');
-    // });
-
-    // $(window).on('orientationchange', function() {
-    //   $('.game-slider').slick('reinit');
-    // });
   }
 };
 
