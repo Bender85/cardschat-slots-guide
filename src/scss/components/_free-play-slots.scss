@@ -129,3 +129,21 @@
     }
   }
 }
+
+//  balackjack
+.anatomy-blackjack {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  &--item {
+    flex: 0 0 24%;
+    display: flex;
+    padding: 20px;
+    border:1px solid #eef2f3;
+    align-items: center;
+    .sprite {
+      margin-right: 20px;
+      flex: 0 0 auto;
+    }
+  }
+}

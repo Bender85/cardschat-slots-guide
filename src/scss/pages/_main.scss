@@ -299,3 +299,60 @@
     padding: 0 0 0 19px;
   }
 }
+
+//  srite setting
+.sprite {
+  background: url('../images/sprite.png') no-repeat;
+  display: block;
+}
+.sprite-mouse-icon {
+  width: 22px;
+  height: 49px;
+  background-position: 0 -7px;
+  margin: 40px auto;
+}
+.sprite-icon-1 {
+  width: 57px;
+  height: 64px;
+  background-position: -31px 0;
+}
+.sprite-icon-2 {
+  width: 65px;
+  height: 65px;
+  background-position: -578px 0;
+}
+.sprite-icon-3 {
+  width: 56px;
+  height: 64px;
+  background-position: -171px 0;
+}
+.sprite-icon-4 {
+  width: 54px;
+  height: 65px;
+  background-position: -236px 0;
+}
+.sprite-icon-5 {
+  width: 64px;
+  height: 34px;
+  background-position: -299px -16px;
+}
+.sprite-icon-6 {
+  width: 64px;
+  height: 64px;
+  background-position: -372px -1px;
+}
+.sprite-icon-7 {
+  width: 64px;
+  height: 59px;
+  background-position: -445px -3px;
+}
+.sprite-icon-8 {
+  width: 51px;
+  height: 64px;
+  background-position: -518px 0;
+}
+.sprite-icon-9 {
+  width: 64px;
+  height: 61px;
+  background-position: -652px -2px;
+}

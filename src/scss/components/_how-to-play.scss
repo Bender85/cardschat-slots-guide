@@ -4,6 +4,183 @@
     margin: 0 -20px 60px -20px;
     padding: 40px 20px;
   }
+  // blackjack
+  &__blackjack-game-objectives {
+    margin: 0 -20px 0 -20px;
+    padding: 40px 20px 40px 20px;
+    background: url('../images/2_game_objectives.png') no-repeat;
+    background-size: cover;
+    color: #fff;
+    .title-h3 {
+      color: #fff;
+      margin-bottom: 0;
+    }
+    > p {
+      font-size: 18px;
+      margin-bottom: 0;
+      > span {
+        color: #b8cde1;
+      }
+    }
+  }
+  &__regular-gameplay {
+    margin: 0 -20px 0 -20px;
+    padding: 40px 20px 20px 20px;
+    background: #f3f3f3;
+    > p {
+      text-align: left;
+    }
+    .recomendation__area {
+      &--item {
+        box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.26);
+        padding: 20px;
+        margin-bottom: 20px;
+        background: #fff;
+        .regular-gameplay {
+          position: relative;
+          img {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+  &__rules-play {
+    background: #222534;
+    margin: 0 -20px 0 -20px;
+    padding: 40px 20px 20px 20px;
+    text-align: left;
+    color: #b8cde1;
+    .title-h3 {
+      color: #fff;
+    }
+    .recomendation__area {
+      margin-bottom: 20px;
+      &--item {
+        background: #fff;
+        color: #595f68;
+      }
+    }
+    .dealer-play {
+      margin-bottom: 20px;
+      > p {
+        margin-bottom: 0;
+      }
+      .title-h4 {
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      .global__item-style {
+        &--title {
+          color: #fff;
+        }
+      }
+      .center__bottom {
+        &--line {
+          &:after {
+            background: #333542;
+            margin: 8px auto 0;
+          }
+        }
+      }
+    }
+    .dealer-top-panel {
+      background: #373946;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 52px;
+      > p {
+        margin-bottom: 0;
+      }
+    }
+    .dealer-table {
+      background: url('../images/table_01.png') no-repeat;
+      background-size: contain;
+      height: 251px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+      .dealer,
+      .dealer-player1,
+      .dealer-player2,
+      .dealer-player3,
+      .dealer-player4 {
+        position: relative;
+      }
+      .dealer {
+        top: -25px;
+        z-index: 1;
+        &:before {
+          content: '';
+          width: 2px;
+          height: 50px;
+          background: #373946;
+          display: block;
+          position: absolute;
+          top: -28px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          z-index: -1;
+        }
+      }
+      .dealer-player1 {
+        left: 64px;
+        top: -40px;
+      }
+      .dealer-player2 {
+        right: 34px;
+        top: 14px;
+      }
+      .dealer-player3 {
+        left: 30px;
+        top: 14px;
+      }
+      .dealer-player4 {
+        right: 64px;
+        top: -40px;
+      }
+    }
+    .players-info {
+      display: flex;
+      justify-content: space-between;
+      &--item {
+        background: #373946;
+        padding: 20px;
+        flex: 0 0 24%;
+        display: flex;
+        flex-direction: column;
+        .center__bottom {
+          &--line {
+            &:after {
+              background: #333542;
+              margin: 8px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .players {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .global__list {
+      &--item {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .dealer-play {
+      padding: 20px;
+      border: 1px solid #373946;
+    }
+  }
+  // end
   .elemen__area {
     display: flex;
     justify-content: space-between;
@@ -331,3 +508,25 @@
     }
   }
 }
+
+.how-to-play-blackjack {
+  margin-bottom: 60px;
+  text-align: center;
+  .step__work {
+    text-align: left;
+    &--item {
+      height: 186px;
+      background: #fff;
+      &:after,
+      &:before {
+        background: #fff;
+        border-color: #f2f5f6;
+      }
+      &:nth-child(1),
+      &:nth-child(3) {
+        border-color: #f2f5f6;
+      }
+    }
+  }
+}
+
