@@ -6,16 +6,16 @@
   justify-content: space-between;
   &--item {
     &:nth-child(1) {
-      background: url('../images/roulette__game__guide.jpg') no-repeat;
+      background: url('../images/image_01.jpg') no-repeat;
     }
     &:nth-child(2) {
-      background: url('../images/bkackjack_game_guide.jpg') no-repeat;
+      background: url('../images/image_02.jpg') no-repeat;
     }
     &:nth-child(3) {
-      background: url('../images/baccarat_game_guide.jpg') no-repeat;
+      background: url('../images/image_03.jpg') no-repeat;
     }
     &:nth-child(4) {
-      background: url('../images/video_poker_guide.jpg') no-repeat;
+      background: url('../images/image_04.jpg') no-repeat;
     }
     cursor: pointer;
     width: 235px;

@@ -231,3 +231,53 @@
 .slots-tips__types-tournaments {
   margin-bottom: 40px;
 }
+
+.betting-options {
+  background: #f3f3f3;
+  // margin: 0 -20px 0 -20px;
+  padding: 40px 20px 0;
+  &__area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &--items {
+      flex: 0 0 49%;
+      display: flex;
+      background: #fff;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+      &:hover {
+        .global__item-style-hover {
+          transform: translateY(0);
+          transition: all .3s ease-in-out;
+        }
+      }
+      .global__item-style {
+        padding: 20px;
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+      .global__item-style-hover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #0076b2;
+        z-index: 1;
+        color: #ffffff;
+        padding: 50px;
+        transform: translateY(221px);
+        transition: all .3s ease-in-out;
+      }
+      .recomendation__area {
+        &--text {
+          min-height: auto;
+        }
+      }
+    }
+  }
+}

@@ -85,13 +85,15 @@
     }
   }
   .center__bottom {
-    &:after {
-      content: "";
-      background: #0076b2;
-      height: 2px;
-      width: 60px;
-      display: block;
-      margin: 20px 0 0;
+    &--line {
+      &:after {
+        content: "";
+        background: #0076b2;
+        height: 2px;
+        width: 60px;
+        display: block;
+        margin: 20px 0 0;
+      }
     }
   }
 }
