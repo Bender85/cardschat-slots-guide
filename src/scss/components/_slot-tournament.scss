@@ -29,3 +29,93 @@
     }
   }
 }
+
+//
+
+.basic-strategy {
+  &__area {
+    padding: 40px 20px;
+    margin: 0 -20px;
+    background: url('../images/4_basic_strategy.png') no-repeat;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    &--item {
+      background: #fff;
+      padding: 20px 50px 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 0 0 530px;
+    }
+    &--text {
+      max-width: 310px;
+    }
+  }
+}
+
+.top-blackjack-tips {
+  &__area {
+    margin-bottom: 40px;
+    &--items {
+      .recomendation__area {
+        &--text {
+          min-height: auto;
+        }
+      }
+      .global {
+        &__item-style {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+      img {
+        margin-right: 40px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+//
+
+.strategy-charts {
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    box-shadow: inset 0px -40px 0px 0px rgba(33,36,51,1);
+    height: 40px;
+    margin-top: -40px;
+    position: absolute;
+    width: 100%;
+    left: -20px;
+    z-index: -1;
+  }
+  &:before {
+    left: auto;
+    right: -20px;
+    bottom: 0;
+  }
+  .what {
+    &__video-poker {
+      margin-bottom: 0;
+    }
+  }
+  &__area {
+    margin-bottom: 40px;
+    &--items {
+      border: 1px solid #eef2f3;
+      padding: 40px 20px 20px 20px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__table-area {
+
+  }
+}

@@ -210,3 +210,23 @@
     }
   }
 }
+
+//
+
+.blackjack-varients {
+  background: #fff;
+  color: #595f68;
+  .title-h2 {
+    color: #222533;
+  }
+  .recomendation {
+    &__area {
+      &--item {
+        flex-direction: column;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
