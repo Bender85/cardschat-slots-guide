@@ -128,3 +128,58 @@
     }
   }
 }
+
+// new
+
+.history-blackjack {
+  background: #fff;
+  &__timeline {
+    position: relative;
+    border: 1px solid #ecf0f1;
+    padding: 20px 20px 20px 60px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 66px;
+      left: 21px;
+      width: 1px;
+      height: 72.8%;
+      background-color: #ecf0f1;
+    }
+    &--item {
+      position: relative;
+      border: 1px solid #ecf0f1;
+      padding: 65px 40px 10px 40px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    .timeline-year {
+      font-weight: 900;
+      background: #0076b2;
+      color: #fff;
+      letter-spacing: 1px;
+      padding: 8px 15px;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+    }
+    .timeline-point {
+      width: 9px;
+      height: 9px;
+      background: #0076b2;
+      position: absolute;
+      left: -44px;
+      top: 41px;
+      &:before {
+        content: '';
+        background-color: #ecf0f1;
+        width: 34px;
+        height: 1px;
+        position: absolute;
+        right: -34px;
+        top: 4px;
+      }
+    }
+  }
+}

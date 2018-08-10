@@ -116,6 +116,200 @@
     }
   }
   &__table-area {
-
+    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.17);
+    .card-values__container {
+      &--title {
+        text-align: center;
+      }
+      &--title-white {
+        background: #fff;
+        color: #c74342;
+      }
+    }
+    .charts__table-head {
+      display: flex;
+      justify-content: space-between;
+      &-item {
+        background: #595f68;
+        color: #fff;
+        font-weight: 900;
+        text-align: center;
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50px;
+        &:first-child {
+          flex: 0 0 90px;
+          line-height: 1.1em;
+        }
+      }
+    }
+  }
+  .charts__table {
+    //display: inline-block;
+    //vertical-align: top;
+    white-space: nowrap;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+    //overflow-x: auto;
+    display: flex;
+    overflow: hidden;
+    background: none;
+    thead {
+      display: flex;
+      flex-shrink: 0;
+      min-width: min-content;
+    }
+    tbody {
+      overflow-scrolling: touch;
+      display: flex;
+      position: relative;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    tr {
+      display: flex;
+      flex-direction: column;
+      min-width: min-content;
+      flex-shrink: 0;
+      width: 87px;
+      text-align: center;
+    }
+    th,
+    td {
+      display: block;
+      width: 87px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      //padding: 13px 0;
+      &:nth-child(even) {
+        background: #f3f3f3;
+      }
+    }
+    th {
+      font-weight: 900;
+    }
+  }
+  .green-cell {
+    background-color: #53b447 !important;
+    color: #fff;
+  }
+  .dark-green-cell {
+    background-color: #4b9b45 !important;
+    color: #fff;
+  }
+  .pink-cell {
+    background-color: #fbe8d3 !important;
+  }
+  .grey-cell {
+    background-color: #f3f3f3 !important;
+  }
+  .table-left-head {
+    //display: flex;
+    //flex-direction: column;
+    //width: 90px;
+    &--item {
+      width: 90px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      &:nth-child(even) {
+        background: #f3f3f3;
+      }
+      &:nth-child(12) {
+        height: 20px;
+        box-shadow: inset 0px 0px 26px 8px rgba(0,0,0,0.26);
+        background: #fff;
+      }
+      &:last-child {
+        height: 147px;
+        line-height: 147px;
+      }
+    }
+  }
+  .table-footer {
+    margin-top: 20px;
+    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.17);
+    display: flex;
+    //justify-content: space-between;
+    //height: 150px;
+    &--head {
+      width: 87px;
+      flex: 0 0 87px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &--column {
+      display: flex;
+      flex-direction: column;
+      &--item {
+        width: 87px;
+        //flex: 0 0 90px;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #f3f3f3;
+        border-right: 1px solid #f3f3f3;
+      }
+    }
+    &--content {
+      flex: 1 1 auto;
+      &--item {
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+      }
+    }
   }
 }
+
+
+//.test-table {
+//  //display: inline-block;
+//  //vertical-align: top;
+//  //max-width: 100%;
+//  overflow-x: auto;
+//  white-space: nowrap;
+//  border-collapse: collapse;
+//  border-spacing: 0;
+//  width: 868px;
+//  tbody {
+//    overflow-scrolling: touch;
+//    tr {
+//      &:nth-child(odd) {
+//        background: #f3f3f3;
+//      }
+//      &:nth-child(11) {
+//        //height: 20px;
+//        box-shadow: inset 0px 0px 26px 8px rgba(0,0,0,0.26);
+//        background: #fff;
+//        td {
+//          height: 20px;
+//          line-height: initial;
+//        }
+//      }
+//      &:nth-child(12) {
+//        background: #f3f3f3;
+//      }
+//      &:nth-child(13) {
+//        background: #fff;
+//      }
+//      &:last-child {
+//        background: #f3f3f3;
+//      }
+//    }
+//  }
+//  th,
+//  td {
+//    width: 90px;
+//    height: 50px;
+//    text-align: center;
+//    line-height: 47px;
+//  }
+//}

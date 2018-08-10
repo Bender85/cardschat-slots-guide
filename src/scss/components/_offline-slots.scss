@@ -83,3 +83,60 @@
     }
   }
 }
+
+// new
+.blackjack-myth {
+  background: #222533;
+  color: #b8cde1;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  .title-h2,
+  .title-h3 {
+    color: #fff;
+  }
+  &__area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    &--items {
+      flex: 0 0 100%;
+      background: #fff;
+      padding: 20px;
+      color: #595f68;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &--items-panel {
+      display: flex;
+      .sprite {
+        margin-right: 20px;
+      }
+      .sprite-icon-8 {
+        width: 65px;
+        height: 64px;
+        background-position: -513px 0;
+      }
+      .center__bottom {
+        &--line {
+          &:after {
+            margin: 12px 0;
+          }
+        }
+      }
+    }
+    &--items-content {
+      padding-left: 85px;
+      .global {
+        &__list {
+          margin-bottom: 25px;
+          &--item {
+            &:not(:last-child) {
+              margin-bottom: 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

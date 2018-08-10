@@ -79,3 +79,45 @@
     }
   }
 }
+
+// new
+.blackjack-cheats {
+  background: #fff;
+  color: #595f68;
+  .title-h2,
+  .title-h3 {
+    color: #212433;
+  }
+  .cheats__list {
+    &--item {
+      border-width: 1px;
+    }
+  }
+  .slots-cheats {
+    &--text {
+      flex: 0 0 66%;
+    }
+  }
+  .card-values__container {
+    &--title {
+      text-align: center;
+    }
+  }
+  .shoult-bover {
+    padding: 40px 20px 0 20px;
+    border-left: 1px solid #eef2f3;
+    border-right: 1px solid #eef2f3;
+    border-bottom: 1px solid #eef2f3;
+    &__area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+      &--items {
+        flex: 0 0 32%;
+        background: #f3f3f3;
+        padding: 40px 20px 0 20px;
+      }
+  }
+  }
+}
