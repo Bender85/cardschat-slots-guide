@@ -1,5 +1,6 @@
 .bonus-games {
   padding-top: 60px;
+  padding-bottom: 60px;
   @include media('>319px','<768px') {
     padding: 30px 20px 30px 20px;
     margin-bottom: 30px;
@@ -139,20 +140,29 @@
       display: flex;
       justify-content: space-between;
       box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.26);
+      flex-wrap: wrap;
       &--items {
         background: #fff;
         text-align: center;
         padding: 18px 0;
         flex: 1 0 33%;
         transition: all .3s ease-in;
-        &:hover {
-          background: #0076b2;
-          color: #fff;
+        @include media('>319px','<769px') {
+          flex: 1 0 100%;
+          padding: 18px 40px;
+          &:nth-child(2) {
+            border-top: 1px solid #f3f3f3;
+            border-bottom: 1px solid #f3f3f3;
+          }
         }
         &:nth-child(2) {
           border-left: 1px solid #f3f3f3;
           border-right: 1px solid #f3f3f3;
         }
+      }
+      &--items-count-active {
+        background: #0076b2;
+        color: #fff;
       }
     }
   }
@@ -165,6 +175,10 @@
     justify-content: space-between;
     border: 2px solid #373a46;
     padding: 20px 20px 0 20px;
+    margin-bottom: 40px;
+    @include media('>319px','<769px') {
+      padding: 10px 10px 0 10px;
+    }
     &--itmes {
       background: #373a46;
       flex: 0 0 32%;
@@ -176,6 +190,50 @@
       flex-direction: column;
       padding-top: 40px;
       color: #595f68;
+      img {
+        @include media('>319px','<769px') {
+          width: 63px;
+        }
+      }
+      @include media('>319px','<769px') {
+        flex: 0 0 48%;
+        height: auto;
+        margin-bottom: 10px;
+        padding: 20px;
+        font-size: 10px;
+        line-height: 1;
+        text-align: center;
+      }
+      &:nth-child(1) {
+        @include media('>319px','<769px') {
+          order: 1;
+        }
+      }
+      &:nth-child(2) {
+        @include media('>319px','<769px') {
+          order: 3;
+        }
+      }
+      &:nth-child(3) {
+        @include media('>319px','<769px') {
+          order: 5;
+        }
+      }
+      &:nth-child(4) {
+        @include media('>319px','<769px') {
+          order: 2;
+        }
+      }
+      &:nth-child(5) {
+        @include media('>319px','<769px') {
+          order: 3;
+        }
+      }
+      &:nth-child(6) {
+        @include media('>319px','<769px') {
+          order: 6;
+        }
+      }
       &-title {
         text-transform: uppercase;
         color: #fff;
@@ -188,7 +246,6 @@
       }
       &-text {
         font-size: 36px;
-        font-weight: 900;
         color: #b8cde1;
         margin-bottom: 15px;
       }
@@ -207,5 +264,6 @@
   &__area {
     border: 2px solid #373a46;
     height: 560px;
+    margin-bottom: 40px;
   }
 }

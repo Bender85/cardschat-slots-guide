@@ -31,15 +31,76 @@
       text-align: left;
     }
     .recomendation__area {
+      counter-reset: my-counter;
       &--item {
         box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.26);
         padding: 20px;
         margin-bottom: 20px;
         background: #fff;
+        position: relative;
+        &:before {
+          counter-increment: my-counter;
+          content: counter(my-counter);
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: #0076b2;
+          z-index: 1;
+          color: #fff;
+          font-size: 18px;
+          font-weight: 900;
+          line-height: 50px;
+          left: 40px;
+          top: 40px;
+          @include media('>319px','<768px') {
+            left: 30px;
+            top: 30px;
+            font-size: 14px;
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+          }
+        }
         .regular-gameplay {
           position: relative;
           img {
             margin-bottom: 40px;
+          }
+          &-points {
+            position: absolute;
+            display: flex;
+            top: 47%;
+            left: 50%;
+            right: auto;
+            bottom: 0;
+            margin: auto;
+            font-size: 18px;
+            line-height: 100px;
+            color: #595f68;
+            font-weight: 900;
+            text-transform: uppercase;
+            transform: translate(-50%, -50%);
+            @include media('>319px','<768px') {
+              top: 46%;
+              font-size: 12px;
+              line-height: 55px;
+            }
+            &--items {
+              width: 100px;
+              height: 100px;
+              background: #fff;
+              border-radius: 50%;
+              box-shadow: 0 0 25px 6px rgba(0,0,0,0.26);
+              @include media('>319px','<768px') {
+                width: 55px;
+                height: 55px;
+              }
+              &:nth-child(2) {
+                margin-left: 10px;
+                margin-right: 10px;
+              }
+            }
           }
         }
       }
@@ -94,65 +155,83 @@
       }
     }
     .dealer-table {
-      background: url('../images/table_01.png') no-repeat;
+      background: url('../images/table_01_v2.png') no-repeat;
       background-size: contain;
-      height: 251px;
+      height: 283px;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       margin-bottom: 50px;
-      .dealer,
-      .dealer-player1,
-      .dealer-player2,
-      .dealer-player3,
-      .dealer-player4 {
-        position: relative;
+      @include media('>319px','<768px') {
+        background: url('../images/table_01_v2_mobile.png') no-repeat;
+        //height: 216px;
+        position: absolute;
+        width: 100%;
+        background-size: 100%;
       }
-      .dealer {
-        top: -25px;
-        z-index: 1;
-        &:before {
-          content: '';
-          width: 2px;
-          height: 50px;
-          background: #373946;
-          display: block;
-          position: absolute;
-          top: -28px;
-          left: 0;
-          right: 0;
-          margin: auto;
-          z-index: -1;
-        }
-      }
-      .dealer-player1 {
-        left: 64px;
-        top: -40px;
-      }
-      .dealer-player2 {
-        right: 34px;
-        top: 14px;
-      }
-      .dealer-player3 {
-        left: 30px;
-        top: 14px;
-      }
-      .dealer-player4 {
-        right: 64px;
-        top: -40px;
-      }
+      //display: flex;
+      //flex-direction: column;
+      //align-items: center;
+      //justify-content: center;
+      //margin-bottom: 50px;
+      //.dealer,
+      //.dealer-player1,
+      //.dealer-player2,
+      //.dealer-player3,
+      //.dealer-player4 {
+      //  position: relative;
+      //}
+      //.dealer {
+      //  top: -25px;
+      //  z-index: 1;
+      //  &:before {
+      //    content: '';
+      //    width: 2px;
+      //    height: 50px;
+      //    background: #373946;
+      //    display: block;
+      //    position: absolute;
+      //    top: -28px;
+      //    left: 0;
+      //    right: 0;
+      //    margin: auto;
+      //    z-index: -1;
+      //  }
+      //}
+      //.dealer-player1 {
+      //  left: 64px;
+      //  top: -40px;
+      //}
+      //.dealer-player2 {
+      //  right: 34px;
+      //  top: 14px;
+      //}
+      //.dealer-player3 {
+      //  left: 30px;
+      //  top: 14px;
+      //}
+      //.dealer-player4 {
+      //  right: 64px;
+      //  top: -40px;
+      //}
     }
     .players-info {
       display: flex;
       justify-content: space-between;
+      &--box {
+        flex: 0 0 24%;
+        width: 225px;
+        display: flex;
+      }
       &--item {
         background: #373946;
         padding: 20px;
-        flex: 0 0 24%;
         display: flex;
         flex-direction: column;
+        position: relative;
+        @include media('>319px','<768px') {
+          //width: 200px;
+          //margin-left: 12px;
+          //margin-right: 12px;
+        }
         .center__bottom {
           &--line {
             &:after {
@@ -509,22 +588,84 @@
   }
 }
 
+// new
 .how-to-play-blackjack {
   margin-bottom: 60px;
   text-align: center;
   .step__work {
     text-align: left;
+    p {
+      margin-bottom: 0;
+    }
+    &--img {
+      @include media('>319px','<769px') {
+        position: initial;
+        margin-right: 20px;
+      }
+    }
     &--item {
-      height: 186px;
+      height: 172px;
       background: #fff;
+      @include media('>319px','<=768px') {
+        height: auto;
+      }
       &:after,
       &:before {
         background: #fff;
         border-color: #f2f5f6;
+        @include media('>319px','<768px') {
+          border-color: #f2f5f6;
+        }
       }
       &:nth-child(1),
       &:nth-child(3) {
         border-color: #f2f5f6;
+        @include media('>319px','<=768px') {
+          border-color: #f2f5f6;
+        }
+      }
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        &:after,
+        &:before {
+          @include media('>319px','<=768px') {
+            border-color: #f2f5f6;
+          }
+        }
+      }
+      &:nth-child(1) {
+        @include media('>319px','<=768px') {
+          padding: 20px 25px 40px 20px;
+          margin-bottom: 5px;
+        }
+        &:after {
+          @include media('>319px','<=768px') {
+            top: -32px;
+          }
+        }
+        &:before {
+          @include media('>319px','<=768px') {
+            bottom: 32px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        @include media('>319px', '<=768px') {
+          padding: 30px 25px 40px 15px;
+          margin-bottom: -37px;
+        }
+      }
+      &:nth-child(3) {
+        @include media('>319px', '<=768px') {
+          padding: 80px 25px 20px 40px;
+        }
+        &:after,
+        &:before {
+          @include media('>319px','<=768px') {
+            top: 35px;
+          }
+        }
       }
     }
   }

@@ -7,6 +7,25 @@
       }
     }
   }
+  .what__video-poker {
+    &:after {
+      content: none;
+      display: none;
+    }
+  }
+  .fa-sticky-note {
+    position: absolute;
+    font-size: 153px;
+    line-height: 153px;
+    color: #f3f3f3;
+    bottom: 30px;
+    right: 30px;
+    z-index: -1;
+    @include media('>319px','<768px') {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
 }
 .slots-tips__tournaments-work {
   background: #f3f3f3;
@@ -40,13 +59,22 @@
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    @include media('>319px','<768px') {
+      background-size: cover;
+      padding: 20px;
+    }
     &--item {
       background: #fff;
       padding: 20px 50px 20px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       flex: 0 0 530px;
+      @include media('>319px','<768px') {
+        flex: 0 0 100%;
+        padding: 40px 20px;
+      }
     }
     &--text {
       max-width: 310px;
@@ -61,16 +89,27 @@
       .recomendation__area {
         &--text {
           min-height: auto;
+          @include media('>319px','<768px') {
+            order: 1;
+            margin-bottom: 20px;
+          }
         }
       }
       .global {
         &__item-style {
           flex-direction: row;
           align-items: center;
+          @include media('>319px','<768px') {
+            flex-wrap: wrap;
+          }
         }
       }
       img {
         margin-right: 40px;
+        @include media('>319px','<768px') {
+          margin-right: 0;
+          order: 2;
+        }
       }
       &:not(:last-child) {
         margin-bottom: 20px;
@@ -93,7 +132,7 @@
     position: absolute;
     width: 100%;
     left: -20px;
-    z-index: -1;
+    //z-index: -1;
   }
   &:before {
     left: auto;
@@ -103,6 +142,7 @@
   .what {
     &__video-poker {
       margin-bottom: 0;
+      z-index: 1;
     }
   }
   &__area {
@@ -230,6 +270,10 @@
       }
     }
   }
+  .download-pdf {
+    max-width: 330px;
+    margin: 20px auto 0;
+  }
   .table-footer {
     margin-top: 20px;
     box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.17);
@@ -244,8 +288,8 @@
       justify-content: center;
     }
     &--column {
+      //display: flex;
       display: flex;
-      flex-direction: column;
       &--item {
         width: 87px;
         //flex: 0 0 90px;
@@ -255,15 +299,27 @@
         justify-content: center;
         border-left: 1px solid #f3f3f3;
         border-right: 1px solid #f3f3f3;
+        flex: 0 0 auto;
+        @include media('>319px','<769px') {
+          width: 57px;
+        }
       }
     }
     &--content {
-      flex: 1 1 auto;
+      width: 100%;
+      //flex: 0 0 auto;
+      //display: flex;
+      //flex-direction: column;
+      //flex: 0 0 auto;
       &--item {
         min-height: 50px;
         display: flex;
         align-items: center;
         padding-left: 30px;
+        flex: 1 1 auto;
+        @include media('>319px','<769px') {
+          padding-left: 15px;
+        }
       }
     }
   }

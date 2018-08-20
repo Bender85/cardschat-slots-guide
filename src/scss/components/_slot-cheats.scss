@@ -36,8 +36,8 @@
     }
   }
   &--avatar {
-    flex: 1 0 auto;
-    margin-left: 20px;
+    flex: 1 1 auto;
+    margin-left: 40px;
     @include media('>319px','<768px') {
       order: 1;
       margin-left: 0;
@@ -50,7 +50,7 @@
   .cheats__list {
     list-style: none;
     padding: 0;
-    margin: 0 0 60px 0;
+    margin: 0 0 40px 0;
   }
   .cheats__list--item {
     background: #fff;
@@ -84,6 +84,8 @@
 .blackjack-cheats {
   background: #fff;
   color: #595f68;
+  margin-bottom: 0;
+  padding-bottom: 0;
   .title-h2,
   .title-h3 {
     color: #212433;
@@ -91,11 +93,27 @@
   .cheats__list {
     &--item {
       border-width: 1px;
+      @include media('>319px','<769px') {
+        flex-wrap: wrap;
+      }
     }
   }
   .slots-cheats {
     &--text {
-      flex: 0 0 66%;
+      flex: 0 1 66%;
+      @include media('>319px','<769px') {
+        flex: 0 0 100%;
+        order: 1;
+      }
+    }
+    &--avatar {
+      @include media('>319px','<769px') {
+        position: initial;
+        width: auto;
+        height: auto;
+        order: 2;
+        margin-top: 20px;
+      }
     }
   }
   .card-values__container {
@@ -117,6 +135,22 @@
         flex: 0 0 32%;
         background: #f3f3f3;
         padding: 40px 20px 0 20px;
+        @include media('>319px','<769px') {
+          flex: 0 0 100%;
+          padding: 20px 20px 0 20px;
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+        .global__item-style {
+          &--title {
+            text-transform: capitalize;
+            font-size: 18px;
+            @include media('>319px','<769px') {
+              padding: 0;
+            }
+          }
+        }
       }
   }
   }

@@ -7,8 +7,9 @@
 import main from './modules/main';
 // import calculator from './modules/calculator';
 import customSelect from './modules/customSelect';
-import onlineGameSlider from './modules/onlineGameSlider';
-import jackpotSlider from './modules/jackpotSlider';
+import playerSlide from './modules/playerSlide';
+import tableLayoutSlider from './modules/tableLayoutSlider';
+import cardSlideBox from './modules/cardSlide';
 
 ( ($) => {
   'use strict';
@@ -16,9 +17,10 @@ import jackpotSlider from './modules/jackpotSlider';
   // When DOM is ready
   $(() => {
     // calculator.calc();
-    customSelect.selectFunc();
-    jackpotSlider.slider();
-    onlineGameSlider.gameSlider();
+    // customSelect.selectFunc();
+    playerSlide.gameSlider();
+    tableLayoutSlider.slider();
+    cardSlideBox.cardSlide();
     main.mainFunc();
   });
 

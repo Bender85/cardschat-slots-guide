@@ -6,6 +6,45 @@
   }
 }
 .different-varieties__versus {
+  &--box {
+    @include media('>319px','<768px') {
+      display: none;
+    }
+    &-item {
+      padding: 0 40px 40px 40px;
+      @include media('>319px','<768px') {
+        padding: 0 30px 30px 30px;
+      }
+    }
+  }
+  img {
+    margin-bottom: 40px;
+  }
+  .center__bottom {
+    &--line {
+      &:after {
+        @include media('>319px','<768px') {
+          width: 0;
+        }
+      }
+    }
+  }
+  .recomendation__area {
+    &--item {
+      border: 1px solid #eef2f3;
+      &.active {
+        box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.24);
+        .center__bottom {
+          &--line {
+            &:after {
+              width: 60px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
   .global__list {
     padding: 0 0 0 40px;
     &--item {
@@ -15,7 +54,23 @@
     }
   }
   .global__item-style {
-    padding: 40px 40px 30px 40px;
+    &--title {
+      padding: 40px 40px 0 40px;
+      position: relative;
+      @include media('>319px','<768px') {
+        padding: 30px 30px 5px 30px !important;
+        margin: 0;
+      }
+      .fa-chevron-down {
+        position: absolute;
+        right: 30px;
+        margin-top: 5px;
+        display: none;
+        @include media('>319px','<768px') {
+          display: inline-block;
+        }
+      }
+    }
   }
 }
 
@@ -24,9 +79,14 @@
 .offline-blackjack {
   background: #212433;
   color: #b8cde1;
+  padding-top: 60px;
+  padding-bottom: 20px;
   .title-h2,
   .title-h3 {
     color: #fff;
+  }
+  .title-h2 {
+    margin-bottom: 15px;
   }
   &__area {
     display: flex;
@@ -37,18 +97,27 @@
       flex: 0 0 50%;
       text-align: left;
       background: #fff;
+      @include media('>319px','<769px') {
+        flex: 0 0 100%;
+      }
       .card-values__container {
         &--title {
           text-align: center;
+          @include media('>319px','<769px') {
+            display: none;
+          }
         }
       }
     }
   }
   &__content {
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     height: 200px;
+    @include media('>319px','<769px') {
+      height: auto;
+    }
     &:nth-child(2n+1) {
       background: #f3f3f3;
     }
@@ -87,7 +156,8 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      &--items {
+      margin-bottom: 40px;
+      &-box {
         flex: 0 0 25%;
         flex-direction: column;
         display: flex;
@@ -96,6 +166,21 @@
         &:nth-child(3) {
           z-index: 0;
         }
+      }
+      &--items {
+        flex: 0 0 25%;
+        flex-direction: column;
+        display: flex;
+        text-align: center;
+        img {
+          @include media('>319px','<768px') {
+            display: initial;
+          }
+        }
+        //&:nth-child(2),
+        //&:nth-child(3) {
+        //  z-index: 0;
+        //}
         .extra-bold {
           color: #f08e00;
         }
@@ -125,9 +210,55 @@
       &--items50 {
         flex: 0 0 49%;
         margin-bottom: 20px;
+        @include media('>319px','<769px') {
+          flex: 0 0 100%;
+          margin-bottom: 10px;
+        }
       }
       &--items33 {
         flex: 0 0 32%;
+        @include media('>319px','<769px') {
+          flex: 0 0 100%;
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.offline-blackjack-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  align-items: flex-end;
+  @include media('>319px','<769px') {
+    display: flex;
+    height: 60px;
+  }
+  li {
+    width: 50%;
+    color: #fff;
+    font-weight: 900;
+    padding: 13px 20px;
+    text-transform: uppercase;
+    background: #373a46;
+    text-align: center;
+    height: 50px;
+    transition: all 0.3s ease;
+    &.active {
+      background: #0076b2;
+      height: 60px;
+    }
+  }
+}
+.offline-blackjack-tabs-content {
+  @include media('>319px','<769px') {
+    display: none;
+    &.active {
+      @include media('>319px','<769px') {
+        display: block;
       }
     }
   }

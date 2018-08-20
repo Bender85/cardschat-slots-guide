@@ -240,6 +240,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     &--items {
       flex: 0 0 49%;
       display: flex;
@@ -248,16 +249,57 @@
       position: relative;
       overflow: hidden;
       height: 220px;
-      &:hover {
-        .global__item-style-hover {
-          transform: translateY(0);
-          transition: all .3s ease-in-out;
+      @include media('>319px','<768px') {
+        flex: 0 0 100%;
+        height: auto;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+      .fa-chevron-down {
+        display: none;
+        @include media('>319px','<768px') {
+          display: inline-block;
+        }
+      }
+      //&:hover {
+      //  .global__item-style-hover {
+      //    transform: translateY(0);
+      //    transition: all .3s ease-in-out;
+      //  }
+      //}
+      .center__bottom {
+        &--line {
+          &:after {
+            @include media('>319px','<768px') {
+              width: 0;
+              margin: 0;
+            }
+          }
         }
       }
       .global__item-style {
         padding: 20px;
         &:not(:last-child) {
           margin-bottom: 0;
+        }
+        &--title {
+          @include media('>319px','<768px') {
+            padding: 0;
+            margin-bottom: 0;
+          }
+        }
+        &.active {
+          .center__bottom {
+            &--line {
+              &:after {
+                @include media('>319px','<768px') {
+                  width: 60px;
+                  margin: 20px 0 0 0;
+                }
+              }
+            }
+          }
         }
       }
       .global__item-style-hover {
@@ -270,12 +312,16 @@
         z-index: 1;
         color: #ffffff;
         padding: 50px;
-        transform: translateY(221px);
+        transform: translateY(100%);
         transition: all .3s ease-in-out;
       }
       .recomendation__area {
         &--text {
           min-height: auto;
+          @include media('>319px','<768px') {
+            display: none;
+            margin-top: 20px;
+          }
         }
       }
     }

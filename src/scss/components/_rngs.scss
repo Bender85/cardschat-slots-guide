@@ -216,6 +216,8 @@
 .blackjack-varients {
   background: #fff;
   color: #595f68;
+  margin-bottom: 0;
+  padding-bottom: 0;
   .title-h2 {
     color: #222533;
   }
@@ -225,6 +227,13 @@
         flex-direction: column;
         &:not(:last-child) {
           margin-bottom: 20px;
+        }
+        .global__item-style {
+          &--title {
+            @include media('>319px','<=768px') {
+              padding: 0;
+            }
+          }
         }
       }
     }

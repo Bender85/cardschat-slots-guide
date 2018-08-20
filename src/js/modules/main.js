@@ -47,6 +47,79 @@ var main = {
     //   }
     // };
     if(windowWidth < 768) {
+
+      $(".under-list:first").show();
+      $('.in-this-guide-list-title').on('click', function(e) {
+        $(this).siblings('.under-list').slideToggle();
+      });
+
+      $('.this-guide-open-mobile').on('click', function(e) {
+        if($(this).hasClass('center__bottom--line')) {
+          $(this).toggleClass('center__bottom--line-active');
+        }
+        $(this).siblings('.in-this-guide-list').slideToggle();
+        $(this).find('.fa-angle-down').toggleClass('fa-angle-down-active');
+      });
+
+      var hiddenBoxModule = {
+        initWidth: 767,
+        hiddenBoxState: false,
+        viewInitState: false,
+        checkWidth: function () {
+          var winW = $(window).width();
+          winW < this.initWidth ? this.hiddenBoxState = true : this.hiddenBoxState = false;
+        },
+        checkViewInit: function (parentBox) {
+          return $(parentBox).hasClass('mobile');
+        },
+        showHiddenBox: function () {
+          var showBtn = $('.click-btn');
+          var that = this;
+          showBtn.click(function () {
+            var parentBox = $(this).parent().parent();
+            that.checkWidth();
+            if ((that.hiddenBoxState && that.checkViewInit(parentBox)) || !that.checkViewInit(parentBox)) {
+              $(this).toggleClass('active')
+                .next()
+                .slideToggle()
+                .parent()
+                .toggleClass('active')
+                .siblings()
+                .removeClass('active')
+                .find('.click-btn')
+                .removeClass('active')
+                .next()
+                .slideUp();
+            }
+          })
+        }
+      };
+      var tabsMobInit = {
+        initWidth: 1024,
+        tabsState: false,
+        checkWidth: function () {
+          var winW = $(window).width();
+          winW < this.initWidth ? this.tabsState = true : this.tabsState = false;
+        },
+        tabsInit: function () {
+          var tabNav = $('.offline-blackjack-tabs li');
+          this.checkWidth();
+          if (this.tabsState) {
+            tabNav.click(function () {
+              var tabs = $(this).parent().next().children();
+              var tabIndex = $(this).data('tabindex');
+              $(this).addClass('active').siblings().removeClass('active');
+              $(tabs[tabIndex]).addClass('active').siblings().removeClass('active');
+            })
+          }
+        }
+
+      };
+      hiddenBoxModule.showHiddenBox();
+      tabsMobInit.tabsInit();
+
+
+
       $(".mobile__tab--content").hide();
       $(".mobile__tab--content:first").show();
 
@@ -128,26 +201,22 @@ var main = {
 
       $('.read__more-btn').on('click', function() {
         $('.glossary__area--items').slideToggle();
+        var text = $('.read__more-btn-text').text();
+        if (text === 'Expand Glossary') {
+          $('.read__more-btn-text').text('Reduce Glossary');
+          $('.read__more-btn').find('.fas').removeClass('fa-chevron-down');
+          $('.read__more-btn').find('.fas').addClass('fa-chevron-up');
+        } else {
+          $('.read__more-btn-text').text('Expand Glossary');
+          $('.read__more-btn').find('.fas').removeClass('fa-chevron-up');
+          $('.read__more-btn').find('.fas').addClass('fa-chevron-down');
+        }
       });
 
     } else {
       $(".mobile__tab--content-paylines").show();
       $('.glossary__area--items').show();
     }
-
-    $(".under-list:first").show();
-    $('.in-this-guide-list-title').on('click', function(e) {
-      $(this).siblings('.under-list').slideToggle();
-    });
-
-    $('.this-guide-open-mobile').on('click', function(e) {
-      if($(this).hasClass('center__bottom--line')) {
-        $(this).toggleClass('center__bottom--line-active');
-      }
-      $(this).siblings('.in-this-guide-list').slideToggle();
-      $(this).find('.fa-angle-down').toggleClass('fa-angle-down-active');
-    });
-
   }
 };
 
