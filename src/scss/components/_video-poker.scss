@@ -141,22 +141,7 @@
     margin-bottom: 40px;
     @include media('>319px','<768px') {
       border: none;
-      padding: 20px 20px 20px 30px;
-    }
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 1px;
-      height: -webkit-calc(100% - 106px);
-      height: calc(100% - 106px);
-      top: 40px;
-      left: 35px;
-      background: #f3f3f3;
-      z-index: 0;
-      @include media('>319px','<768px') {
-        left: 5px;
-      }
+      padding: 20px 0 20px 30px;
     }
     &--item {
       position: relative;
@@ -181,15 +166,23 @@
         content: "";
         display: block;
         position: absolute;
-        width: 10px;
-        height: 10px;
-        background: #0076b2;
-        top: 15px;
-        left: -30px;
-        z-index: 1;
+        width: 1px;
+        height: calc(100% + 19px);
+        top: 24px;
+        left: -26px;
+        background: #f3f3f3;
+        z-index: 0;
+        @include media('>319px', '<768px') {
+          left: -25px;
+        }
       }
       &:not(:last-child) {
         margin-bottom: 20px;
+      }
+      &:last-child {
+        &:before {
+          content: none;
+        }
       }
     }
     .timeline-year-area {
@@ -197,8 +190,23 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       @include media('>319px','<768px') {
         cursor: pointer;
+      }
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #0076b2;
+        top: 15px;
+        left: -65px;
+        z-index: 1;
+        @include media('>319px','<768px') {
+          left: -50px;
+        }
       }
       .fas {
         display: none;

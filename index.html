@@ -226,19 +226,16 @@
               <h4 class="title-h4 center__bottom--line">DEALER</h4>
               <p>The dealer has a hard 17, so they have to stand.</p>
             </div>
-            <div style="position: relative; height: 250px; margin-left: -20px; margin-right: -20px;">
+
+            <div class="dealer-table__holder" style="position: relative; margin-left: -20px; margin-right: -20px;">
               <div class="dealer-table"></div>
             </div>
-            <!--<div class="dealer-table">-->
-              <!--<div class="dealer"><img src="./assets/images/dealer.png" alt=""></div>-->
-              <!--<div class="players">-->
-                  <!--<div class="dealer-player1"><img src="./assets/images/player_1.png" alt=""></div>-->
-                  <!--<div class="dealer-player2"><img src="./assets/images/player_2.png" alt=""></div>-->
-                  <!--<div class="dealer-player3"><img src="./assets/images/player_3.png" alt=""></div>-->
-                  <!--<div class="dealer-player4"><img src="./assets/images/player_4.png" alt=""></div>-->
-              <!--</div>-->
-            <!--</div>-->
-
+            <div class="players-info-pointer">
+              <div><div class="players-info-pointer--item1"></div></div>
+              <div><div class="players-info-pointer--item2"></div></div>
+              <div><div class="players-info-pointer--item3"></div></div>
+              <div><div class="players-info-pointer--item4"></div></div>
+            </div>
             <div class="players-info">
               <div class="players-info--box">
                 <div class="players-info--item">
@@ -712,7 +709,7 @@
               <div class="card-values__container--title">Pair Spliting</div>
               <div class="charts__table-head">
                 <div class="charts__table-head-item"><span>Your</span><span>Cards</span></div>
-                <div class="charts__table-head-item"><span>Dealer’s Upcard</span></div>
+                <div class="charts__table-head-item"><span>Dealer’s Upcard</span><div class="charts__table--mobile"><i class="fas fa-chevron-left"></i><span>Swipe to discover more</span><i class="fas fa-chevron-right"></i></div></div>
               </div>
               <table class="charts__table">
                 <thead>
@@ -894,7 +891,7 @@
               <div class="card-values__container--title">soft tools</div>
               <div class="charts__table-head">
                 <div class="charts__table-head-item"><span>Your</span><span>Cards</span></div>
-                <div class="charts__table-head-item"><span>Dealer’s Upcard</span></div>
+                <div class="charts__table-head-item"><span>Dealer’s Upcard</span><div class="charts__table--mobile"><i class="fas fa-chevron-left"></i><span>Swipe to discover more</span><i class="fas fa-chevron-right"></i></div></div>
               </div>
               <table class="charts__table">
                 <thead>
@@ -1058,7 +1055,7 @@
               <div class="card-values__container--title">hard totals</div>
               <div class="charts__table-head">
                 <div class="charts__table-head-item"><span>Your</span><span>Cards</span></div>
-                <div class="charts__table-head-item"><span>Dealer’s Upcard</span></div>
+                <div class="charts__table-head-item"><span>Dealer’s Upcard</span><div class="charts__table--mobile"><i class="fas fa-chevron-left"></i><span>Swipe to discover more</span><i class="fas fa-chevron-right"></i></div></div>
               </div>
               <table class="charts__table">
                 <thead>
@@ -1241,7 +1238,7 @@
               <div class="card-values__container--title">hard totals - LATE SURRENDER</div>
               <div class="charts__table-head">
                 <div class="charts__table-head-item"><span>Your</span><span>Cards</span></div>
-                <div class="charts__table-head-item"><span>Dealer’s Upcard</span></div>
+                <div class="charts__table-head-item"><span>Dealer’s Upcard</span><div class="charts__table--mobile"><i class="fas fa-chevron-left"></i><span>Swipe to discover more</span><i class="fas fa-chevron-right"></i></div></div>
               </div>
               <table class="charts__table">
                 <thead>
@@ -1378,13 +1375,13 @@
               </li>
               <li class="card-couting__list--item">
                 <div class="card-couting__list--cards">
-                    <p style="flex: 1 0 610px">Keep track of all the cards being dealt by counting each of them as +1, 0, or -1 as they come out. This is called the “running count” and it tells you when there are more than an average number of 10-point cards left in the deck.</p>
-                    <div class="card-couting__list--cards--item" style="flex: 0 0 auto; margin-left: 30px; margin-bottom: 20px;"><img src="./assets/images/card_values_01.jpg" alt=""><span class="card-couting__list--cards--numbers">+2</span></div>
-                  <div class="card-couting__list--cards--item"><img src="./assets/images/card_count_04.jpg" alt=""><span class="card-couting__list--cards--numbers">+2</span></div>
-                  <div class="card-couting__list--cards--item"><img src="./assets/images/card_count_05.jpg" alt=""><span class="card-couting__list--cards--numbers">0</span></div>
-                  <div class="card-couting__list--cards--item"><img src="./assets/images/card_count_06.jpg" alt=""><span class="card-couting__list--cards--numbers">+1</span></div>
-                  <div class="card-couting__list--cards--item"><img src="./assets/images/card_count_07.jpg" alt=""><span class="card-couting__list--cards--numbers">-2</span></div>
-                  <div class="card-couting__list--cards--item"><img src="./assets/images/card_count_08.jpg" alt=""><span class="card-couting__list--cards--numbers">0</span></div>
+                    <p>Keep track of all the cards being dealt by counting each of them as +1, 0, or -1 as they come out. This is called the “running count” and it tells you when there are more than an average number of 10-point cards left in the deck.</p>
+                    <div class="card-couting__list--cards--item card-couting__list--cards--item-mult card-couting__list--cards--item-first"><img src="./assets/images/card_values_01.jpg" alt=""><span class="card-couting__list--cards--numbers">+2</span></div>
+                  <div class="card-couting__list--cards--item card-couting__list--cards--item-mult"><img src="./assets/images/card_count_04.jpg" alt=""><span class="card-couting__list--cards--numbers">+2</span></div>
+                  <div class="card-couting__list--cards--item card-couting__list--cards--item-mult"><img src="./assets/images/card_count_05.jpg" alt=""><span class="card-couting__list--cards--numbers">0</span></div>
+                  <div class="card-couting__list--cards--item card-couting__list--cards--item-mult"><img src="./assets/images/card_count_06.jpg" alt=""><span class="card-couting__list--cards--numbers">+1</span></div>
+                  <div class="card-couting__list--cards--item card-couting__list--cards--item-mult"><img src="./assets/images/card_count_07.jpg" alt=""><span class="card-couting__list--cards--numbers">-2</span></div>
+                  <div class="card-couting__list--cards--item card-couting__list--cards--item-mult"><img src="./assets/images/card_count_08.jpg" alt=""><span class="card-couting__list--cards--numbers">0</span></div>
                 </div>
               </li>
               <li class="card-couting__list--item">
@@ -1439,7 +1436,7 @@
         <div class="taking-insurance__area--itmes">
           <span class="taking-insurance__area--itmes-title taking-insurance__area--itmes-title-black">dealer has blackjack</span>
           <span class="taking-insurance__area--itmes-text taking-insurance__area--itmes-text-blue">&dollar;<span class="extra-bold">20</span></span>
-          <span>win on insurance bet</span>
+          <span class="bottom-text">win on insurance bet</span>
         </div>
         <div class="taking-insurance__area--itmes">
           <span class="taking-insurance__area--itmes-title">player’s hand</span>
@@ -1452,7 +1449,7 @@
         <div class="taking-insurance__area--itmes">
           <span class="taking-insurance__area--itmes-title taking-insurance__area--itmes-title-black">dealer without blackjack</span>
           <span class="taking-insurance__area--itmes-text taking-insurance__area--itmes-text-blue">&dollar;<span class="extra-bold">40</span>&nbsp;&#8211;&nbsp;&dollar;<span class="extra-bold">50</span></span>
-          <span>depending on player hand</span>
+          <span class="bottom-text">depending on player hand</span>
         </div>
       </div>
       <p>For advanced players who count cards, however, insurance is one of the most powerful bets. That’s because when the count favors the player, it means there are more tens than usual in the deck. That means that when the dealer is showing an ace he’s way more likely to make a blackjack.</p>

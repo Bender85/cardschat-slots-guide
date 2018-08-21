@@ -117,14 +117,77 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        >p {
+          flex: 1 0 610px;
+          @include media('>319px','<768px') {
+            flex: 1 1 auto;
+          }
+        }
         &--item {
           padding: 20px;
           border: 1px solid #eef2f3;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          @include media('>319px','<768px') {
+            flex: 0 0 100%;
+          }
+          &:not(:last-child) {
+            @include media('>319px','<768px') {
+              margin-bottom: 10px;
+            }
+          }
           img {
             margin-right: 15px;
+            @include media('>319px','<768px') {
+              width: 67px;
+            }
+          }
+          &:nth-child(1) {
+            img {
+              margin-right: 15px;
+              @include media('>319px','<768px') {
+                width: 111px;
+              }
+            }
+          }
+          &:nth-child(2) {
+            img {
+              margin-right: 15px;
+              @include media('>319px','<768px') {
+                width: 67px;
+              }
+            }
+          }
+          &:nth-child(3) {
+            img {
+              margin-right: 15px;
+              @include media('>319px','<768px') {
+                width: 111px;
+              }
+            }
+          }
+          &-mult {
+            width: 169px;
+            padding: 20px 15px;
+            &:nth-child(3) {
+              img {
+                margin-right: 15px;
+                @include media('>319px','<768px') {
+                  width: 67px;
+                }
+              }
+            }
+          }
+          &-first {
+            flex: 0 0 auto;
+            margin-left: 30px;
+            margin-bottom: 20px;
+            @include media('>319px','<768px') {
+              flex: 1 1 auto;
+              margin-left: 0;
+              margin-bottom: 10px;
+            }
           }
         }
         &--numbers {
@@ -163,6 +226,9 @@
       &--items-count-active {
         background: #0076b2;
         color: #fff;
+        .extra-bold {
+          color: #fff;
+        }
       }
     }
   }
@@ -195,11 +261,16 @@
           width: 63px;
         }
       }
+      .bottom-text {
+        @include media('>319px','<769px') {
+          font-size: 12px;
+        }
+      }
       @include media('>319px','<769px') {
         flex: 0 0 48%;
         height: auto;
         margin-bottom: 10px;
-        padding: 20px;
+        padding: 10px;
         font-size: 10px;
         line-height: 1;
         text-align: center;
@@ -212,11 +283,29 @@
       &:nth-child(2) {
         @include media('>319px','<769px') {
           order: 3;
+          .taking-insurance {
+            &__area {
+              &--itmes {
+                &-text {
+                  font-size: 23px;
+                }
+              }
+            }
+          }
         }
       }
       &:nth-child(3) {
         @include media('>319px','<769px') {
           order: 5;
+          .taking-insurance {
+            &__area {
+              &--itmes {
+                &-text {
+                  font-size: 23px;
+                }
+              }
+            }
+          }
         }
       }
       &:nth-child(4) {
@@ -227,11 +316,29 @@
       &:nth-child(5) {
         @include media('>319px','<769px') {
           order: 3;
+          .taking-insurance {
+            &__area {
+              &--itmes {
+                &-text {
+                  font-size: 23px;
+                }
+              }
+            }
+          }
         }
       }
       &:nth-child(6) {
         @include media('>319px','<769px') {
           order: 6;
+          .taking-insurance {
+            &__area {
+              &--itmes {
+                &-text {
+                  font-size: 23px;
+                }
+              }
+            }
+          }
         }
       }
       &-title {
@@ -248,9 +355,15 @@
         font-size: 36px;
         color: #b8cde1;
         margin-bottom: 15px;
+        .extra-bold {
+          color: #b8cde1;
+        }
       }
       &-text-blue {
         color: #0865a0;
+        .extra-bold {
+          color: #0865a0;
+        }
       }
       &:nth-child(3n) {
         background: #fff;

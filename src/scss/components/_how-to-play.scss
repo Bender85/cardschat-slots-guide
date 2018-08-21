@@ -149,77 +149,211 @@
       background: #373946;
       padding: 20px;
       text-align: center;
-      margin-bottom: 52px;
+      margin-bottom: 32px;
+      position: relative;
       > p {
         margin-bottom: 0;
       }
+      &:after {
+        content: "";
+        width: 2px;
+        height: 100px;
+        background: #373946;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
     }
     .dealer-table {
+      &__holder {
+        height: auto;
+        @include media('>319px','<768px') {
+          height: auto;
+          margin-bottom: 79%;
+        }
+      }
       background: url('../images/table_01_v2.png') no-repeat;
       background-size: contain;
       height: 283px;
       position: relative;
-      margin-bottom: 50px;
+      margin-bottom: 37px;
+      background-position: center top;
+      z-index: 1;
       @include media('>319px','<768px') {
         background: url('../images/table_01_v2_mobile.png') no-repeat;
-        //height: 216px;
         position: absolute;
         width: 100%;
         background-size: 100%;
       }
-      //display: flex;
-      //flex-direction: column;
-      //align-items: center;
-      //justify-content: center;
-      //margin-bottom: 50px;
-      //.dealer,
-      //.dealer-player1,
-      //.dealer-player2,
-      //.dealer-player3,
-      //.dealer-player4 {
-      //  position: relative;
-      //}
-      //.dealer {
-      //  top: -25px;
-      //  z-index: 1;
-      //  &:before {
-      //    content: '';
-      //    width: 2px;
-      //    height: 50px;
-      //    background: #373946;
-      //    display: block;
-      //    position: absolute;
-      //    top: -28px;
-      //    left: 0;
-      //    right: 0;
-      //    margin: auto;
-      //    z-index: -1;
-      //  }
-      //}
-      //.dealer-player1 {
-      //  left: 64px;
-      //  top: -40px;
-      //}
-      //.dealer-player2 {
-      //  right: 34px;
-      //  top: 14px;
-      //}
-      //.dealer-player3 {
-      //  left: 30px;
-      //  top: 14px;
-      //}
-      //.dealer-player4 {
-      //  right: 64px;
-      //  top: -40px;
-      //}
     }
     .players-info {
       display: flex;
       justify-content: space-between;
+      &-pointer {
+        display: none;
+        @include media('>319px','<768px') {
+          display: block;
+          height: 60px;
+          width: 200px;
+        }
+        .slick-list {
+          height: 100%;
+        }
+        &--item1,
+        &--item2,
+        &--item3,
+        &--item4 {
+          //background: #373946;
+          background: red;
+          width: 2px;
+          height: 25px;
+          //margin: 35px 90px 0;
+          position: absolute;
+          left: 20%;
+          right: 0;
+          margin: auto;
+          &:after {
+            content: '';
+            background: #373946;
+            height: calc(100% + 76px);
+            display: inline-block;
+            transform: rotate(90deg);
+            position: absolute;
+            right: 24px;
+            top: -38px;
+            width: 100%;
+            left: -37px;
+          }
+          &:before {
+            content: '';
+            background: #373946;
+            height: 39px;
+            width: 2px;
+            display: inline-block;
+            position: absolute;
+            right: 24px;
+            top: -38px;
+            left: -74px;
+          }
+        }
+        &--item2 {
+          &:after {
+            height: calc(100% + 10px);
+            right: 24px;
+            top: -4px;
+            left: -4px;
+          }
+          &:before {
+            height: 39px;
+            right: 24px;
+            top: -38px;
+            left: -8px;
+          }
+        }
+        &--item3 {
+          &:after {
+            height: calc(100% + 66px);
+            right: 24px;
+            top: -32px;
+            left: 32px;
+          }
+          &:before {
+            height: 39px;
+            right: 24px;
+            top: -38px;
+            left: 63px;
+          }
+        }
+        &--item4 {
+          &:after {
+            height: calc(100% + 132px);
+            right: 24px;
+            top: -65px;
+            left: 65px;
+          }
+          &:before {
+            height: 39px;
+            right: 24px;
+            top: -38px;
+            left: 130px;
+          }
+        }
+      }
       &--box {
         flex: 0 0 24%;
         width: 225px;
         display: flex;
+        position: relative;
+        &:nth-child(1) {
+          &:after {
+            content: "";
+            background: url("../images/player1_point.png") no-repeat;
+            width: 34px;
+            height: 90px;
+            background-size: contain;
+            position: absolute;
+            top: -90px;
+            left: 23px;
+            right: 0;
+            margin: auto;
+            @include media('>319px','<768px') {
+              content: none;
+            }
+          }
+        }
+        &:nth-child(2) {
+          &:after {
+            content: "";
+            background: url("../images/player2_point.png") no-repeat;
+            width: 43px;
+            height: 42px;
+            background-size: contain;
+            position: absolute;
+            top: -42px;
+            left: -57px;
+            right: 0;
+            margin: auto;
+            @include media('>319px','<768px') {
+              content: none;
+            }
+          }
+        }
+        &:nth-child(3) {
+          &:after {
+            content: "";
+            background: url("../images/player3_point.png") no-repeat;
+            width: 43px;
+            height: 42px;
+            background-size: contain;
+            position: absolute;
+            top: -42px;
+            left: 57px;
+            right: 0;
+            margin: auto;
+            @include media('>319px','<768px') {
+              content: none;
+            }
+          }
+        }
+        &:nth-child(4) {
+          &:after {
+            content: "";
+            background: url("../images/player4_point.png") no-repeat;
+            width: 30px;
+            height: 94px;
+            background-size: contain;
+            position: absolute;
+            top: -94px;
+            left: -21px;
+            right: 0;
+            margin: auto;
+            @include media('>319px','<768px') {
+              content: none;
+            }
+          }
+        }
       }
       &--item {
         background: #373946;
@@ -228,9 +362,9 @@
         flex-direction: column;
         position: relative;
         @include media('>319px','<768px') {
-          //width: 200px;
-          //margin-left: 12px;
-          //margin-right: 12px;
+          width: 200px;
+          height: 210px;
+          margin-right: 12px;
         }
         .center__bottom {
           &--line {
