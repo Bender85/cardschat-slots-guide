@@ -210,7 +210,7 @@
       }
       .fas {
         display: none;
-        @include media('>319px','<768px') {
+        @include media('>319px','<769px') {
           display: block;
         }
       }
@@ -226,7 +226,7 @@
       top: 0;
     }
     .timeline-content {
-      @include media('>319px','<768px') {
+      @include media('>319px','<769px') {
         display: none;
       }
     }

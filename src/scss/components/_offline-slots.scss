@@ -111,13 +111,13 @@
     }
     &--items-panel {
       display: flex;
-      @include media('>319px','<768px') {
+      @include media('>319px','<769px') {
         align-items: center;
         justify-content: space-between;
       }
       .fa-chevron-down {
         display: none;
-        @include media('>319px','<768px') {
+        @include media('>319px','<769px') {
           display: block;
         }
       }
@@ -142,7 +142,7 @@
     }
     &--items-content {
       padding-left: 85px;
-      @include media('>319px','<768px') {
+      @include media('>319px','<769px') {
         display: none;
         padding-left: 0;
       }

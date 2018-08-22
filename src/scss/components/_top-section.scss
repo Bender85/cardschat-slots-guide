@@ -15,5 +15,8 @@
   }
   &--text-area {
     text-align: left;
+    @include media('>319px','<769px') {
+      margin-top: 150px;
+    }
   }
 }

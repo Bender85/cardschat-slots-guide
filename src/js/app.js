@@ -5,8 +5,6 @@
 
 // import DE from './modules/helpers';
 import main from './modules/main';
-// import calculator from './modules/calculator';
-import customSelect from './modules/customSelect';
 import playerSlide from './modules/playerSlide';
 import tableLayoutSlider from './modules/tableLayoutSlider';
 import cardSlideBox from './modules/cardSlide';
@@ -16,8 +14,6 @@ import cardSlideBox from './modules/cardSlide';
 
   // When DOM is ready
   $(() => {
-    // calculator.calc();
-    // customSelect.selectFunc();
     playerSlide.gameSlider();
     tableLayoutSlider.slider();
     cardSlideBox.cardSlide();

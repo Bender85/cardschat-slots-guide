@@ -7,8 +7,10 @@ let cardSlideBox = {
         slidesToShow: 1,
         slidesToScroll: 1,
         mobileFirst: true,
-        arrows: false,
-        dots: false
+        arrows: true,
+        dots: false,
+        nextArrow: '<i class="fas fa-chevron-right"></i>',
+        prevArrow: '<i class="fas fa-chevron-left"></i>',
       });
     }
   }

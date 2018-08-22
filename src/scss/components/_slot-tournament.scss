@@ -128,7 +128,7 @@
     display: block;
     box-shadow: inset 0px -40px 0px 0px rgba(33,36,51,1);
     height: 40px;
-    margin-top: -40px;
+    margin-top: -39px;
     position: absolute;
     width: 100%;
     left: -20px;
@@ -136,7 +136,7 @@
   &:before {
     left: auto;
     right: -20px;
-    bottom: 0;
+    bottom: -1px;
   }
   .what {
     &__video-poker {

@@ -108,12 +108,13 @@
       }
     }
     &--avatar {
+      flex: 0 1 302px;
       @include media('>319px','<769px') {
         position: initial;
         width: auto;
         height: auto;
         order: 2;
-        margin-top: 20px;
+        margin: 20px auto 0 auto;
       }
     }
   }

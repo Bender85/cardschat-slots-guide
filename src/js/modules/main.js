@@ -37,22 +37,11 @@ var main = {
       $(this).addClass("recomendation__area--item-active");
     });
 
-    // window.onresize = function(event) {
-    //   console.log(event);
-    //   if(windowWidth <= 768) {
-    //     $(".mobile__tab--content").hide();
-    //     $(".mobile__tab--content:first").show();
-    //   } else {
-    //     $(".mobile__tab--content").show();
-    //   }
-    // };
-    if(windowWidth < 768) {
-
-      $(".under-list:first").show();
-      $('.in-this-guide-list-title').on('click', function(e) {
-        $(this).siblings('.under-list').slideToggle();
-      });
-
+    $(".under-list:first").show();
+    $('.in-this-guide-list-title').on('click', function(e) {
+      $(this).siblings('.under-list').slideToggle();
+    });
+    if(windowWidth < 769) {
       $('.this-guide-open-mobile').on('click', function(e) {
         if($(this).hasClass('center__bottom--line')) {
           $(this).toggleClass('center__bottom--line-active');
@@ -62,11 +51,12 @@ var main = {
       });
 
       var hiddenBoxModule = {
-        initWidth: 767,
+        initWidth: 769,
         hiddenBoxState: false,
         viewInitState: false,
         checkWidth: function () {
           var winW = $(window).width();
+          console.log(winW);
           winW < this.initWidth ? this.hiddenBoxState = true : this.hiddenBoxState = false;
         },
         checkViewInit: function (parentBox) {
@@ -76,6 +66,7 @@ var main = {
           var showBtn = $('.click-btn');
           var that = this;
           showBtn.click(function () {
+            console.log(1);
             var parentBox = $(this).parent().parent();
             that.checkWidth();
             if ((that.hiddenBoxState && that.checkViewInit(parentBox)) || !that.checkViewInit(parentBox)) {
@@ -91,7 +82,7 @@ var main = {
                 .next()
                 .slideUp();
             }
-          })
+          });
         }
       };
       var tabsMobInit = {
@@ -110,7 +101,7 @@ var main = {
               var tabIndex = $(this).data('tabindex');
               $(this).addClass('active').siblings().removeClass('active');
               $(tabs[tabIndex]).addClass('active').siblings().removeClass('active');
-            })
+            });
           }
         }
 
@@ -162,12 +153,6 @@ var main = {
         variableWidth: true,
         focusOnSelect: true,
         asNavFor: '.tab__container',
-        // responsive: [
-        //   {
-        //     breakpoint: 768,
-        //     settings: 'unslick'
-        //   }
-        // ]
       });
       $('.tab-carousel').on('swipe', function(event, slick, direction){
         // console.log(direction);

@@ -142,7 +142,7 @@
     padding: 20px;
     border:1px solid #eef2f3;
     align-items: center;
-    @include media('>319px','<768px') {
+    @include media('>319px','<769px') {
       flex: 0 0 100%;
       &:not(:last-child) {
         margin-bottom: 10px;
@@ -164,8 +164,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @include media('>319px','<768px') {
+    @include media('>319px','<769px') {
       justify-content: center;
+      width: 280px;
+      margin: auto;
     }
     &--item {
       width: 235px;
@@ -179,7 +181,7 @@
       &:nth-child(4),
       &:nth-child(5),
       &:nth-child(6) {
-        @include media('>319px','<768px') {
+        @include media('>319px','<769px') {
           display: none;
         }
       }
@@ -199,16 +201,20 @@
       height: 200px;
     }
   }
+  &__game-table-box {
+    max-width: 489px;
+  }
   &__game-table {
     background: url("../images/table_layout.jpg") no-repeat;
     background-size: 100%;
     width: 489px;
     min-height: 366px;
     margin-bottom: 20px;
-    @include media('>319px','<768px') {
+    @include media('>319px','<769px') {
       background: url("../images/table_layout_mobile.jpg") no-repeat;
-      height: 240px;
-      width: 320px;
+      min-height: 210px;
+      width: 280px;
+      background-size: contain;
     }
   }
   &__marker {
@@ -240,7 +246,7 @@
   }
   &__mobile-slider {
     display: none;
-    @include media('>319px','<768px') {
+    @include media('>319px','<769px') {
       display: block;
     }
     &--item {
@@ -251,7 +257,7 @@
       display: none;
       margin-left: 10px;
       margin-right: 10px;
-      @include media('>319px','<768px') {
+      @include media('>319px','<769px') {
         display: block;
       }
       .global__item-style {
@@ -271,12 +277,15 @@
   &__mobile-marker {
     position: absolute;
     width: 100%;
-    height: 47%;
-    top: 126px;
+    height: 100%;
+    top: 0;
     left: 0;
     display: none;
-    @include media('>319px','<768px') {
+    @include media('>319px','<769px') {
       display: block;
+      width: 280px;
+      margin: auto;
+      //background: darkgoldenrod;
     }
     .slick-list,
     .slick-track {
@@ -287,8 +296,8 @@
       height: 35%;
       background: #595f68;
       position: absolute;
-      bottom: -2px;
-      left: 128px;
+      bottom: -59px;
+      left: 108px;
       &:after {
         content: "";
         width: 2px;
@@ -306,8 +315,8 @@
       height: 34%;
       background: #595f68;
       position: absolute;
-      bottom: -2px;
-      left: 128px;
+      bottom: -62px;
+      left: 108px;
       &:after {
         content: "";
         width: 2px;
@@ -326,8 +335,8 @@
       height: 34%;
       background: #595f68;
       position: absolute;
-      bottom: -2px;
-      left: 128px;
+      bottom: -54px;
+      left: 109px;
       &:after {
         content: "";
         width: 2px;
@@ -345,8 +354,8 @@
       height: 34%;
       background: #595f68;
       position: absolute;
-      bottom: 4px;
-      left: 54px;
+      bottom: -33px;
+      left: 34px;
       &:after {
         content: "";
         width: 2px;
@@ -365,8 +374,8 @@
       height: 34%;
       background: #595f68;
       position: absolute;
-      bottom: -10px;
-      left: 163px;
+      bottom: -47px;
+      left: 143px;
       &:after {
         content: "";
         width: 2px;
@@ -378,6 +387,12 @@
         top: -52px;
         left: 50px;
       }
+    }
+  }
+  &__mobile {
+    @include media('>319px','<769px') {
+      width: 280px;
+      margin: auto;
     }
   }
 }
@@ -392,12 +407,12 @@
   &--item {
     flex: 0 0 50%;
     padding: 20px;
-    @include media('>319px','<768px') {
+    @include media('>319px','<769px') {
       flex: 0 0 100%;
     }
     &:first-child {
       border-right: 2px solid #3f4656;
-      @include media('>319px','<768px') {
+      @include media('>319px','<769px') {
         border: none;
       }
     }
@@ -415,7 +430,7 @@
       flex: 0 0 32%;
       border: 1px solid #f3f3f3;
       margin-bottom: 20px;
-      @include media('>319px','<768px') {
+      @include media('>319px','<769px') {
         flex: 0 0 100%;
         &:not(:last-child) {
           margin-bottom: 10px;
@@ -542,12 +557,12 @@
     height: 434px;
     padding: 20px;
     align-items: flex-start;
-    @include media('>319px','<=768px') {
+    @include media('>319px','<768px') {
       height: auto;
       background-size: cover;
     }
     &--items {
-      padding: 40px;
+      padding: 30px;
       color: #fff;
       flex: 0 0 32%;
       height: 185px;
@@ -816,7 +831,7 @@
       color: #595f68;
       padding: 30px 20px;
       text-align: center;
-      @include media('>319px','<768px') {
+      @include media('>319px','<769px') {
         flex: 0 0 48%;
         &:not(:last-child) {
           margin-bottom: 10px;

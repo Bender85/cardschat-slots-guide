@@ -119,7 +119,7 @@
         flex-wrap: wrap;
         >p {
           flex: 1 0 610px;
-          @include media('>319px','<768px') {
+          @include media('>319px','<769px') {
             flex: 1 1 auto;
           }
         }
@@ -129,24 +129,24 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          @include media('>319px','<768px') {
+          @include media('>319px','<769px') {
             flex: 0 0 100%;
           }
           &:not(:last-child) {
-            @include media('>319px','<768px') {
+            @include media('>319px','<769px') {
               margin-bottom: 10px;
             }
           }
           img {
             margin-right: 15px;
-            @include media('>319px','<768px') {
+            @include media('>319px','<769px') {
               width: 67px;
             }
           }
           &:nth-child(1) {
             img {
               margin-right: 15px;
-              @include media('>319px','<768px') {
+              @include media('>319px','<769px') {
                 width: 111px;
               }
             }
@@ -154,7 +154,7 @@
           &:nth-child(2) {
             img {
               margin-right: 15px;
-              @include media('>319px','<768px') {
+              @include media('>319px','<769px') {
                 width: 67px;
               }
             }
@@ -162,7 +162,7 @@
           &:nth-child(3) {
             img {
               margin-right: 15px;
-              @include media('>319px','<768px') {
+              @include media('>319px','<769px') {
                 width: 111px;
               }
             }
@@ -173,7 +173,7 @@
             &:nth-child(3) {
               img {
                 margin-right: 15px;
-                @include media('>319px','<768px') {
+                @include media('>319px','<769px') {
                   width: 67px;
                 }
               }
@@ -183,7 +183,7 @@
             flex: 0 0 auto;
             margin-left: 30px;
             margin-bottom: 20px;
-            @include media('>319px','<768px') {
+            @include media('>319px','<769px') {
               flex: 1 1 auto;
               margin-left: 0;
               margin-bottom: 10px;

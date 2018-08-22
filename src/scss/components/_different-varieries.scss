@@ -144,7 +144,7 @@
   .expected__table {
     position: relative;
     border: 2px solid #373a46;
-    padding: 140px 20px 20px;
+    padding: 175px 20px 20px;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
@@ -155,6 +155,9 @@
       left: 0;
       width: 100%;
       height: 251px;
+      @include media('>319px','<769px') {
+        //background-size: 195% 86%;
+      }
     }
     &--cards {
       display: flex;
@@ -181,10 +184,6 @@
             display: initial;
           }
         }
-        //&:nth-child(2),
-        //&:nth-child(3) {
-        //  z-index: 0;
-        //}
         .extra-bold {
           color: #f08e00;
         }
@@ -192,6 +191,17 @@
           flex: 1 0 auto;
           height: 90px;
         }
+      }
+      .slick-arrow {
+        position: absolute;
+        bottom: 16px;
+        color: #373a46;
+      }
+      .fa-chevron-left {
+        left: 0;
+      }
+      .fa-chevron-right {
+        right: 0;
       }
     }
     &-info-box {
@@ -272,8 +282,13 @@
   .recomendation__area {
     &--item {
       border: 1px solid #eef2f3;
+      @include media('>319px','<769px') {
+        margin-bottom: 10px;
+      }
       &:not(:last-child) {
-        margin-bottom: 20px;
+        @include media('>319px','<769px') {
+          margin-bottom: 10px;
+        }
       }
     }
   }
