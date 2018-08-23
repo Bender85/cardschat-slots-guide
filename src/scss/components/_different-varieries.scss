@@ -156,7 +156,6 @@
       width: 100%;
       height: 251px;
       @include media('>319px','<769px') {
-        //background-size: 195% 86%;
       }
     }
     &--cards {

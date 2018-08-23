@@ -285,7 +285,6 @@
       display: block;
       width: 280px;
       margin: auto;
-      //background: darkgoldenrod;
     }
     .slick-list,
     .slick-track {
@@ -472,7 +471,6 @@
           }
           display: flex;
           font-size: 36px;
-          //font-weight: 900;
           color: #0865a0;
           margin-bottom: 20px;
           @include media('>319px','<768px') {
@@ -480,7 +478,6 @@
           }
         }
         &:last-child {
-          // background: #0865a0;
           width: 135px;
           align-self: flex-end;
           margin-right: 33px;
@@ -500,11 +497,9 @@
       > div {
         &:first-child,
         &:last-child {
-          // background: #0865a0;
           width: 100%;
           align-self: flex-start;
           margin-right: 0;
-          // height: 150px;
         }
       }
     }
@@ -739,7 +734,6 @@
           &:before {
             background: #fff;
             border-color: #fff;
-            // left: -15px;
           }
           .step__work--content {
             color: #222533;
