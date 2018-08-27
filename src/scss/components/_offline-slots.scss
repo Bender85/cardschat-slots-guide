@@ -89,8 +89,8 @@
 .blackjack-myth {
   background: #222533;
   color: #b8cde1;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  padding-top: 60px !important;
+  padding-bottom: 10px !important;
   .title-h2,
   .title-h3 {
     color: #fff;
@@ -107,6 +107,11 @@
       color: #595f68;
       &:not(:last-child) {
         margin-bottom: 20px;
+      }
+      .global__item-style {
+        &--title {
+          margin-bottom: 0;
+        }
       }
     }
     &--items-panel {
@@ -129,7 +134,10 @@
         height: 64px;
         background-position: -513px 0;
         @include media('>319px','<768px') {
-          width: 103px;
+          width: 118px;
+        }
+        @include media('>319px','<768px', 'landscape') {
+          width: 62px;
         }
       }
       .center__bottom {

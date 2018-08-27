@@ -24,6 +24,9 @@
     }
   }
 }
+a {
+  color: #006fae;
+}
 .title-h1,
 .title-h2,
 .title-h3,
@@ -182,7 +185,7 @@
   @include media('>319px','<769px') {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 18px 30px;
   }
 }
@@ -353,64 +356,67 @@
 }
 
 //  srite setting
-.sprite {
+.sprite-videopoker {
   background: url('../images/sprite.png') no-repeat;
   display: block;
 }
-.sprite-mouse-icon {
-  width: 22px;
-  height: 49px;
-  background-position: 0 -7px;
-  margin: 40px auto;
-  @include media('>319px','<768px') {
-    margin: 20px auto 10px auto;
-  }
-}
-.sprite-icon-1 {
+
+.sprite-videopoker-icon-1 {
   width: 57px;
-  height: 64px;
-  background-position: -31px 0;
+  height: 57px;
+  background-position: 0 0;
 }
-.sprite-icon-2 {
-  width: 69px;
-  height: 65px;
-  background-position: -578px 0;
+
+.sprite-videopoker-icon-2 {
+  width: 45px;
+  height: 62px;
+  background-position: -65px -4px;
 }
-.sprite-icon-3 {
-  width: 56px;
-  height: 64px;
-  background-position: -171px 0;
+
+.sprite-videopoker-icon-3 {
+  width: 67px;
+  height: 67px;
+  background-position: -118px -4px;
 }
-.sprite-icon-4 {
-  width: 54px;
-  height: 65px;
-  background-position: -236px 0;
+
+.sprite-videopoker-icon-4 {
+  width: 44px;
+  height: 56px;
+  background-position: -205px -7px;
 }
-.sprite-icon-5 {
-  width: 64px;
-  height: 34px;
-  background-position: -299px -16px;
-}
-.sprite-icon-6 {
-  width: 64px;
-  height: 64px;
-  background-position: -372px -1px;
-}
-.sprite-icon-7 {
-  width: 64px;
-  height: 59px;
-  background-position: -445px -3px;
-}
-.sprite-icon-8 {
-  width: 51px;
-  height: 64px;
-  background-position: -518px 0;
-}
-.sprite-icon-9 {
-  width: 64px;
+
+.sprite-videopoker-icon-5 {
+  width: 55px;
   height: 61px;
-  background-position: -652px -2px;
-  @include media('>319px','<768px') {
-    width: 103px;
-  }
+  background-position: -257px -7px;
+}
+
+.sprite-videopoker-icon-6 {
+  width: 53px;
+  height: 49px;
+  background-position: -320px -13px;
+}
+
+.sprite-videopoker-icon-7 {
+  width: 56px;
+  height: 56px;
+  background-position: -381px -6px;
+}
+
+.sprite-videopoker-icon-8 {
+  width: 68px;
+  height: 76px;
+  background-position: -381px -83px;
+}
+
+.sprite-videopoker-icon-9 {
+  width: 71px;
+  height: 69px;
+  background-position: 0 -150px;
+}
+
+.sprite-videopoker-icon-10 {
+  width: 65px;
+  height: 71px;
+  background-position: -86px -155px;
 }

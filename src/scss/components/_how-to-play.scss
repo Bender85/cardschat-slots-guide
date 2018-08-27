@@ -27,8 +27,13 @@
     margin: 0 -20px 0 -20px;
     padding: 40px 20px 20px 20px;
     background: #f3f3f3;
-    > p {
+    p {
       text-align: left;
+    }
+    img {
+      @include media('>319px','<768px') {
+        margin-bottom: 20px !important;
+      }
     }
     .recomendation__area {
       counter-reset: my-counter;
@@ -123,7 +128,12 @@
       }
     }
     .dealer-play {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 1px solid #373946;
+      @include media('>319px','<768px') {
+        margin: 0 -20px 35px;
+      }
       > p {
         margin-bottom: 0;
       }
@@ -171,7 +181,6 @@
         height: auto;
         @include media('>319px','<768px') {
           height: auto;
-          //margin-bottom: 79%;
         }
       }
       background: url('../images/table_01_v2.png') no-repeat;
@@ -183,7 +192,6 @@
       z-index: 1;
       @include media('>319px','<768px') {
         background: url('../images/table_01_v2_mobile.png') no-repeat;
-        //position: absolute;
         background-position: center;
         width: 320px;
         height: 216px;
@@ -207,8 +215,6 @@
           display: block;
           height: 60px;
           width: 320px;
-          //margin: auto;
-          //background: #0076b2;
           position: absolute;
           bottom: -45px;
           z-index: 0;
@@ -221,7 +227,6 @@
         &--item3,
         &--item4 {
           background: #373946;
-          //background: red;
           width: 2px;
           height: 25px;
           position: absolute;
@@ -404,13 +409,6 @@
         &:not(:last-child) {
           margin-bottom: 0;
         }
-      }
-    }
-    .dealer-play {
-      padding: 20px;
-      border: 1px solid #373946;
-      @include media('>319px','<768px') {
-        margin: 0 -20px;
       }
     }
   }
@@ -826,3 +824,264 @@
   }
 }
 
+// video poker style
+
+.video-poker-container {
+  .how-to-play {
+    &__step {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &--content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        //justify-content: space-between;
+        .sprite-videopoker {
+          flex: 0 0 auto;
+          margin-right: 22px;
+        }
+        &-num {
+          font-size: 18px;
+          display: inline-block;
+          color: #000;
+          font-weight: 900;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+      &--item {
+        //flex: 0 0 33%;
+        max-width: 330px;
+        flex: 1 0 auto;
+        height: 110px;
+        margin-bottom: 20px;
+        position: relative;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          transform: skewX(20deg);
+          height: 55px;
+          width: 100%;
+          max-width: 100%;
+          border: 2px solid #eef2f3;
+          border-bottom: none;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          transition: all 0.3s ease;
+          @include media('>319px','<769px') {
+            width: 50%;
+            max-width: 160px;
+            height: 200px;
+            transform: skewY(19deg);
+            left: 0;
+            top: -13px;
+            border: 2px solid #eef2f3;
+            border-right: none;
+          }
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          transform: skewX(-20deg);
+          height: 55px;
+          width: 100%;
+          max-width: 100%;
+          top: 55px;
+          left: 0;
+          border: 2px solid #eef2f3;
+          border-top: none;
+          z-index: 0;
+          transition: all 0.3s ease;
+          @include media('>319px','<769px') {
+            width: 50%;
+            max-width: 160px;
+            height: 200px;
+            transform: skewY(-19deg);
+            right: 1px;
+            top: -13px;
+            border: 2px solid #eef2f3;
+            border-left: none;
+          }
+        }
+        &:hover {
+          &:after,
+          &:before {
+            background: #0076b2;
+            border-color: #0076b2;
+          }
+          .ovh-left,
+          .ovh-right {
+            border-color: #0076b2;
+          }
+          .how-to-play__step {
+            &--content {
+              &-num {
+                color: #fff;
+              }
+            }
+          }
+          .sprite-videopoker-icon-1 {background-position: 0 -77px;}
+          .sprite-videopoker-icon-2 {background-position: -65px -77px;}
+          .sprite-videopoker-icon-3 {background-position: -118px -77px;}
+          .sprite-videopoker-icon-4 {background-position: -193px -83px;}
+          .sprite-videopoker-icon-5 {background-position: -257px -83px;}
+          .sprite-videopoker-icon-6 {background-position: -320px -84px;}
+          .how-to-play__step {
+            &--content {
+              color: #fff;
+            }
+          }
+        }
+        &:nth-child(1),
+        &:nth-child(4){
+          &:after,
+          &:before {
+            left: -12px;
+          }
+          .how-to-play__step {
+            &--content {
+              &-num {
+                left: -14px;
+                bottom: -21px;
+              }
+            }
+          }
+        }
+        &:nth-child(2),
+        &:nth-child(5){
+          padding-left: 40px;
+          &:after,
+          &:before {
+            left: 10px;
+            width: 94%;
+            max-width: 94%;
+          }
+          .how-to-play__step {
+            &--content {
+              &-num {
+                left: -23px;
+                bottom: -21px;
+              }
+            }
+          }
+        }
+        &:nth-child(3),
+        &:nth-child(6){
+          padding-left: 40px;
+          &:after,
+          &:before {
+            left: 12px;
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+        &:nth-child(3) {
+          .how-to-play__step {
+            &--content {
+              &-num {
+                left: -22px;
+                bottom: -16px;
+              }
+            }
+          }
+        }
+        &:nth-child(6) {
+          .how-to-play__step {
+            &--content {
+              &-num {
+                left: -22px;
+                bottom: -26px;
+              }
+            }
+          }
+        }
+      }
+      .ovh-left {
+        overflow: hidden;
+        border-left: 2px solid #eef2f3;
+      }
+      .ovh-right {
+        overflow: hidden;
+        border-right: 2px solid #eef2f3;
+      }
+    }
+  }
+  .game-screen {
+    border-top: 1px solid #ecf0f1;
+    margin: 0 -20px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    background: #f3f3f3;
+    &--main-game {
+      background: #fff url("../images/game_screen.jpg") no-repeat;
+      width: 100%;
+      height: 663px;
+      padding: 20px;
+      background-position: center center;
+      box-shadow: 0 0 32px -1px rgba(0,0,0,0.34);
+      position: relative;
+      margin-bottom: 30px;
+    }
+    &__game {
+      position: absolute;
+      &:nth-child(1) {
+        left: 30px;
+        top: 34px;
+      }
+      &:nth-child(2) {
+        left: 30px;
+        bottom: 260px;
+      }
+      &:nth-child(3) {
+        right: 119px;
+        bottom: 260px;
+      }
+      &:nth-child(4) {
+        left: 103px;
+        bottom: 83px;
+      }
+      &:nth-child(5) {
+        right: 238px;
+        bottom: 111px;
+      }
+      &--circle {
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+        color: #030303;
+        font-weight: 900;
+        transition: all 0.3s ease;
+        box-shadow: 2px 2px 14px 0 rgba(0,0,0,0.21);
+        &:hover {
+          background: #0076b2;
+          color: #fff;
+          &__game {
+            &--content {
+              display: block !important;
+            }
+          }
+        }
+      }
+      &--content {
+        background: #fff;
+        padding: 30px;
+        display: none;
+      }
+    }
+  }
+}

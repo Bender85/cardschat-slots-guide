@@ -67,6 +67,9 @@
           transform: skew(0deg, 12deg);
           border-right: 0;
         }
+        @include media('>319px','<769px', 'landscape') {
+          bottom: 26px;
+        }
       }
       &:after {
         @include media('>319px','<769px') {
@@ -78,6 +81,9 @@
           border-top: 0;
           border-left: 0;
           border-right: 2px solid #373a46;
+        }
+        @include media('>319px','<769px', 'landscape') {
+          top: -26px;
         }
       }
     }
@@ -169,7 +175,7 @@
       }
     }
     &:before {
-      bottom: 0;
+      bottom: 1px;
       top: auto;
       transform: skew(-13deg, 0deg);
       border-bottom: 2px solid #373a46;
@@ -218,6 +224,9 @@
   color: #595f68;
   margin-bottom: 0;
   padding-bottom: 0;
+  @include media('>319px','<=768px') {
+    padding: 40px 20px;
+  }
   .title-h2 {
     color: #222533;
   }

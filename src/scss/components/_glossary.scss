@@ -24,6 +24,18 @@
       }
     }
   }
+  &__area {
+    overflow: hidden;
+    transition: all 0.5s ease;
+    @include media('>319px','<768px') {
+      height: 56px;
+    }
+    &-active {
+      @include media('>319px','<768px') {
+        height: auto;
+      }
+    }
+  }
   .mobile-more {
     flex: 0 1 74%;
   }

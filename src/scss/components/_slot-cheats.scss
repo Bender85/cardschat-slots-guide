@@ -134,27 +134,30 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 40px;
-      &--items {
-        flex: 0 0 32%;
-        background: #f3f3f3;
-        padding: 40px 20px 0 20px;
-        @include media('>319px','<769px') {
-          flex: 0 0 100%;
-          padding: 20px 20px 0 20px;
-          &:not(:last-child) {
-            margin-bottom: 10px;
-          }
+    @include media('>319px','<769px') {
+      margin-bottom: 33px;
+    }
+    &--items {
+      flex: 0 0 32%;
+      background: #f3f3f3;
+      padding: 40px 20px 0 20px;
+      @include media('>319px','<769px') {
+        flex: 0 0 100%;
+        padding: 20px 20px 0 20px;
+        &:not(:last-child) {
+          margin-bottom: 10px;
         }
-        .global__item-style {
-          &--title {
-            text-transform: capitalize;
-            font-size: 18px;
-            @include media('>319px','<769px') {
-              padding: 0;
-            }
+      }
+      .global__item-style {
+        &--title {
+          text-transform: capitalize;
+          font-size: 18px;
+          @include media('>319px','<769px') {
+            padding: 0;
           }
         }
       }
+    }
   }
   }
 }

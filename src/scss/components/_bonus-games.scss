@@ -75,6 +75,9 @@
         border-left: 2px solid #373a46;
         border-right: 2px solid #373a46;
         border-bottom: 2px solid #373a46;
+        @include media('>319px','<769px') {
+          padding: 10px;
+        }
       }
     }
   }
@@ -110,7 +113,53 @@
         p {
           margin-left: 75px;
           margin-top: 14px;
-          margin-bottom: 35px;
+          margin-bottom: 25px;
+        }
+        &:nth-child(1) {
+          .card-couting__list {
+            &--cards {
+              &--item {
+                @include media('>319px','<769px') {
+                  flex: 0 0 100%;
+                }
+              }
+            }
+          }
+        }
+        &:nth-child(2) {
+          .card-couting__list {
+            &--cards {
+              &--item {
+                @include media('>319px','<769px') {
+                  flex: 0 0 48%;
+                  padding: 10px;
+                  img {
+                    width: 56px;
+                    margin-right: 5px;
+                  }
+                  &:nth-child(2) {
+                    margin-bottom: 0;
+                    order: 6;
+                  }
+                  &:nth-child(3) {
+                    order: 1;
+                  }
+                  &:nth-child(4) {
+                    order: 2;
+                  }
+                  &:nth-child(5) {
+                    order: 3;
+                  }
+                  &:nth-child(6) {
+                    order: 4;
+                  }
+                  &:nth-child(7) {
+                    order: 5;
+                  }
+                }
+              }
+            }
+          }
         }
       }
       &--cards {
@@ -130,7 +179,7 @@
           justify-content: space-between;
           align-items: center;
           @include media('>319px','<769px') {
-            flex: 0 0 100%;
+            flex: 0 0 48%;
           }
           &:not(:last-child) {
             @include media('>319px','<769px') {
@@ -194,6 +243,9 @@
           font-size: 24px;
           font-weight: 900;
           color: #222533;
+          @include media('>319px','<769px') {
+            font-size: 18px;
+          }
         }
       }
     }

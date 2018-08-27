@@ -142,6 +142,7 @@
     @include media('>319px','<768px') {
       border: none;
       padding: 20px 0 20px 30px;
+      margin-bottom: 10px;
     }
     &--item {
       position: relative;
