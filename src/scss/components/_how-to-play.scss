@@ -976,7 +976,9 @@
             }
           }
           &.ovh-left {
-            overflow: inherit;
+            @include media('>319px','<769px') {
+              overflow: inherit;
+            }
           }
         }
         &:nth-child(2),
@@ -1047,8 +1049,10 @@
             }
           }
           &.ovh-right {
-            overflow: inherit;
-            border-bottom: none;
+            @include media('>319px','<769px') {
+              overflow: inherit;
+              border-bottom: none;
+            }
           }
         }
         &:nth-child(6) {
