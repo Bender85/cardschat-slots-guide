@@ -1,0 +1,39 @@
+.paytables-explained {
+  padding-top: 60px;
+  &--image {
+    margin-bottom: 30px;
+  }
+  &__differ {
+    background: #f3f3f3;
+    margin: 0 -20px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &__differ-container {
+    margin-bottom: 35px;
+    &--items {
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      img {
+        margin-right: 40px;
+      }
+      .center {
+        &__bottom {
+          &--line {
+            &:after {
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

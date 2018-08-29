@@ -329,3 +329,115 @@
     }
   }
 }
+
+// video poker style
+
+.video-poker-container {
+  .video-poker-betting {
+    background: #fff;
+    padding-top: 60px;
+    border-top: 1px solid #ecf0f1;
+    &__step {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &--items {
+        position: relative;
+        width: 235px;
+        height: 200px;
+        flex: 1 0 auto;
+        padding: 20px;
+        display: flex;
+        //justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        //background: #373a46;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          transform: skewX(12deg);
+          height: 100px;
+          width: 100%;
+          max-width: 100%;
+          border: 2px solid #eef2f3;
+          border-bottom: none;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          transition: all 0.3s ease;
+          @include media('>319px','<769px') {
+            width: 50%;
+            max-width: 160px;
+            height: 200px;
+            transform: skewY(11deg);
+            left: 0;
+            top: -13px;
+            border: 2px solid #eef2f3;
+            border-right: none;
+          }
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          transform: skewX(-12deg);
+          height: 100px;
+          width: 100%;
+          max-width: 100%;
+          top: 100px;
+          left: 0;
+          border: 2px solid #eef2f3;
+          border-top: none;
+          z-index: 0;
+          transition: all 0.3s ease;
+          @include media('>319px','<769px') {
+            width: 50%;
+            max-width: 160px;
+            height: 200px;
+            transform: skewY(-11deg);
+            right: 1px;
+            top: -13px;
+            border: 2px solid #eef2f3;
+            border-left: none;
+          }
+        }
+        &:nth-child(1) {
+          &:after,
+          &:before {
+            left: -13px;
+          }
+        }
+        &:nth-child(2) {
+          padding: 20px 45px;
+          &:after,
+          &:before {
+            left: 10px;
+            width: 92%;
+            max-width: 92%;
+          }
+        }
+        &:nth-child(3) {
+          padding: 20px 45px;
+          &:after,
+          &:before {
+            left: 10px;
+            width: 92%;
+            max-width: 92%;
+          }
+        }
+        &:nth-child(4) {
+          padding: 20px 45px;
+          &:after,
+          &:before {
+            left: 13px;
+          }
+        }
+        .sprite-videopoker {
+          margin-bottom: 20px;
+          height: 62px;
+        }
+      }
+    }
+  }
+}

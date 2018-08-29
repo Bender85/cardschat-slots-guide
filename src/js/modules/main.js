@@ -9,6 +9,15 @@ var main = {
       // if (win.height() >= 820) { /* ... */ }
       // if (win.width() >= 1280) { /* ... */ }
     });
+
+    $('.sprite-mouse-icon').click(function (e) {
+      e.preventDefault();
+      var divID =  $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(divID).offset().top
+      }, 2000);
+    });
+
     $('.tooltip').tooltipster({
       theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
       side: 'bottom',
@@ -201,6 +210,12 @@ var main = {
     } else {
       $(".mobile__tab--content-paylines").show();
       $('.glossary__area--items').show();
+      $('.game-screen__game--circle').on('mouseover', function() {
+        $('.game-screen__game--circle').removeClass('game-screen__game--circle-active');
+        $('.game-screen__game--content').hide();
+        $(this).siblings('.game-screen__game--content').show();
+        $(this).addClass('game-screen__game--circle-active');
+      });
     }
   }
 };

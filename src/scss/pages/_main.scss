@@ -26,6 +26,7 @@
 }
 a {
   color: #006fae;
+  text-decoration: none;
 }
 .title-h1,
 .title-h2,
@@ -59,7 +60,7 @@ a {
 }
 
 .extra-bold {
-  font-weight: 900;
+  font-weight: 900 !important;
   color: #212433;
 }
 
@@ -419,4 +420,12 @@ a {
   width: 65px;
   height: 71px;
   background-position: -86px -155px;
+}
+
+.move-to {
+  background: url("../images/mouse_icon.png");
+  display: block;
+  width: 22px;
+  height: 49px;
+  margin: 20px auto 0;
 }

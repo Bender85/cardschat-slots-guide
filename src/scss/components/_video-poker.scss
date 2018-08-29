@@ -235,3 +235,86 @@
     }
   }
 }
+
+// video poker style
+.video-poker-container {
+  .video-poker-strategy {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: #212433;
+    color: #b8cde1;
+    .title-h2,
+    .title-h3 {
+      color: #fff;
+    }
+    .strategy-charts {
+      &__area {
+        background: #fff;
+        padding: 20px;
+        color: #595f68;
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 40px;
+        }
+        .play-game {
+          max-width: 323px;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .strategy-cards {
+      padding: 20px;
+      border: 2px solid #373a46;
+      margin-bottom: 40px;
+      .center {
+        &__bottom {
+          &--line {
+            &:after {
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+      .global {
+        &__item-style {
+          &--title {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .video-poker-tips {
+      &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        &--items {
+          flex: 0 0 32%;
+          background: #fff;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          color: #595f68;
+          img {
+            margin-bottom: 30px;
+            height: 193px;
+          }
+          .center {
+            &__bottom {
+              &--line {
+                &:after {
+                  margin: 20px 0;
+                }
+              }
+            }
+          }
+          &-text {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

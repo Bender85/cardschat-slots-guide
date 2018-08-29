@@ -432,3 +432,70 @@
     margin-bottom: 40px;
   }
 }
+
+.video-poker-container {
+  .bonus-games {
+    background: #fff;
+    margin-bottom: 40px;
+    padding-bottom: 0;
+    .different-types {
+      margin-bottom: 40px;
+      &--item {
+        padding: 20px;
+        border: 1px solid #ecf0f1;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        img {
+          margin-right: 40px;
+        }
+      }
+      &--box {
+        display: flex;
+        align-items: center;
+        background: #f3f3f3;
+        padding: 10px;
+        .global {
+          &__item-style {
+            &--title {
+              text-transform: capitalize;
+            }
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 30px;
+          background: #fff;
+          padding: 0;
+          .global {
+            &__item-style {
+              &--title {
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+        &--item {
+          flex: 0 0 50%;
+        }
+        .global {
+          &__list {
+            &--item {
+              &:not(:last-child) {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+      .center {
+        &__bottom {
+          &--line {
+            &:after {
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
