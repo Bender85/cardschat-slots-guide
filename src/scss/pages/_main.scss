@@ -8,7 +8,7 @@
 .inner__container {
   padding: 0 20px 0 20px;
   @include media('>319px','<768px') {
-    padding: 0 20px 0 20px;
+    padding: 0 10px 0 10px;
   }
 }
 .center__bottom {
@@ -420,6 +420,17 @@ a {
   width: 65px;
   height: 71px;
   background-position: -86px -155px;
+}
+
+.sprite-videopoker-icon-22 {
+  background: url("../images/choose_icon.png") no-repeat;
+  background-position: 0 11px;
+  width: 51px;
+  height: 82px;
+  display: block;
+  @include media('>319px','<769px') {
+    width: 170px;
+  }
 }
 
 .move-to {

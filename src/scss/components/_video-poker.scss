@@ -254,12 +254,29 @@
         color: #595f68;
         display: flex;
         align-items: center;
+        @include media('>319px','<769px') {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
         img {
           margin-right: 40px;
+          @include media('>319px','<769px') {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
         }
         .play-game {
           max-width: 323px;
           text-transform: capitalize;
+        }
+        .center {
+          &__bottom {
+            &--line {
+              &:after {
+                margin: 20px 0;
+              }
+            }
+          }
         }
       }
     }
@@ -297,6 +314,13 @@
           flex-direction: column;
           padding: 20px;
           color: #595f68;
+          @include media('>319px','<769px') {
+            flex: 0 0 240px;
+            width: 240px !important;
+            margin-right: 15px;
+            padding: 10px;
+            height: 530px;
+          }
           img {
             margin-bottom: 30px;
             height: 193px;

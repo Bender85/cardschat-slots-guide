@@ -6,7 +6,10 @@
   padding: 35px;
   margin-bottom: 60px;
   @include media('>319px','<768px') {
-   padding: 30px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
   }
   &--info {
     font-size: 18px;

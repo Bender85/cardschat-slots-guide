@@ -50,6 +50,18 @@
       color: #fff;
       margin-bottom: 10px;
     }
+    .center {
+      &__bottom {
+        &--line {
+          &:after {
+            margin: 8px auto;
+          }
+        }
+      }
+    }
+    p {
+      line-height: 16px;
+    }
     .play-game {
       padding: 16px 0;
       letter-spacing: 2px;

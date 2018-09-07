@@ -19,11 +19,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include media('>319px','<769px') {
+        flex-direction: column;
+      }
       &:not(:last-child) {
         margin-bottom: 20px;
       }
       img {
         margin-right: 40px;
+        @include media('>319px','<769px') {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
       .center {
         &__bottom {
@@ -32,6 +39,23 @@
               margin: 20px 0;
             }
           }
+        }
+      }
+    }
+  }
+}
+.video-poker-container {
+  .paytables-explained {
+    @include media('>319px','<769px') {
+      padding-top: 60px;
+    }
+    &__differ-container {
+      &--items {
+        @include media('>319px','<769px') {
+          width: 220px !important;
+          height: 435px;
+          padding: 10px;
+          margin-right: 15px;
         }
       }
     }

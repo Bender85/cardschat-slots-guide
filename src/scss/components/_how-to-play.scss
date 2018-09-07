@@ -837,7 +837,6 @@
         z-index: 1;
         display: flex;
         align-items: center;
-        //justify-content: space-between;
         .sprite-videopoker {
           flex: 0 0 auto;
           margin-right: 22px;
@@ -853,7 +852,6 @@
         }
       }
       &--item {
-        //flex: 0 0 33%;
         max-width: 330px;
         flex: 1 0 auto;
         height: 110px;
@@ -865,13 +863,14 @@
         @include media('>319px','<769px') {
           max-width: 100%;
           flex: 0 0 100%;
+          height: 160px !important;
         }
         &:after {
           content: "";
           display: block;
           position: absolute;
           transform: skewX(20deg);
-          height: 55px;
+          height: 55.5px;
           width: 100%;
           max-width: 100%;
           border: 2px solid #eef2f3;
@@ -879,12 +878,11 @@
           top: 0;
           left: 0;
           z-index: 0;
-          transition: all 0.3s ease;
           @include media('>319px','<769px') {
-            width: 50%;
+            width: 50.1%;
             max-width: 320px;
-            height: 110px;
-            transform: skewY(-7deg);
+            height: 160px;
+            transform: skewY(-3deg);
             left: 0;
             top: -13px;
             border: 2px solid #eef2f3;
@@ -896,20 +894,19 @@
           display: block;
           position: absolute;
           transform: skewX(-20deg);
-          height: 55px;
+          height: 55.5px;
           width: 100%;
           max-width: 100%;
-          top: 55px;
+          top: 54px;
           left: 0;
           border: 2px solid #eef2f3;
           border-top: none;
           z-index: 0;
-          transition: all 0.3s ease;
           @include media('>319px','<769px') {
-            width: 50%;
+            width: 50.1%;
             max-width: 320px;
-            height: 110px;
-            transform: skewY(7deg);
+            height: 160px;
+            transform: skewY(3deg);
             right: 1px;
             top: -13px;
             border: 2px solid #eef2f3;
@@ -921,6 +918,8 @@
           &:before {
             background: #0076b2;
             border-color: #0076b2;
+            border-left: none !important;
+            border-right: none !important;
           }
           .ovh-left,
           .ovh-right {
@@ -947,24 +946,26 @@
         }
         &:nth-child(1),
         &:nth-child(4){
+          &:hover {
+            border-left: none !important;
+          }
           &:after,
           &:before {
             left: -12px;
             @include media('>319px','<769px') {
-              width: 50%;
-              max-width: 50%;
+              width: 50.1%;
+              max-width: 50.1%;
               left: auto;
               right: 0;
               border-left: none;
               border-right: 2px solid #eef2f3;
-              top: 10px;
+              top: 4px;
             }
           }
           &:before {
             @include media('>319px','<769px') {
               left: 0;
               border-right: none;
-              //border-left: 2px solid #eef2f3;
             }
           }
           .how-to-play__step {
@@ -981,6 +982,34 @@
             }
           }
         }
+        &:nth-child(1) {
+          @include media('>319px','<769px') {
+            border-left: none;
+            &:hover {
+              background: #0076b2;
+              border-color: #0076b2;
+              border-top: none !important;
+              border-left: none !important;
+            }
+          }
+          &:after {
+            @include media('>319px','<769px') {
+              border-top: none;
+              border-left: none;
+            }
+          }
+          &:before {
+            @include media('>319px','<769px') {
+              border-left: 2px solid #eef2f3;
+              border-top: none;
+            }
+          }
+          &.ovh-left {
+            @include media('>319px','<769px') {
+              border-top: 2px solid #eef2f3;
+            }
+          }
+        }
         &:nth-child(2),
         &:nth-child(5){
           padding-left: 40px;
@@ -990,13 +1019,13 @@
             width: 94%;
             max-width: 94%;
             @include media('>319px','<769px') {
-              width: 50%;
-              max-width: 50%;
+              width: 50.1%;
+              max-width: 50.1%;
               left: auto;
               right: 0;
               border-left: none;
               border-right: 2px solid #eef2f3;
-              top: 6px;
+              top: 9px;
             }
           }
           &:before {
@@ -1018,6 +1047,9 @@
         &:nth-child(3),
         &:nth-child(6){
           padding-left: 40px;
+          &:hover {
+            border-color: #0076b2;
+          }
           &:after,
           &:before {
             left: 12px;
@@ -1025,9 +1057,9 @@
             max-width: 100%;
             @include media('>319px','<769px') {
               left: auto;
-              width: 50%;
+              width: 50.1%;
               right: 0;
-              top: 10px;
+              top: 9px;
               border-left: none;
             }
           }
@@ -1040,6 +1072,9 @@
           }
         }
         &:nth-child(3) {
+          &:after {
+            border-right: 2px solid #eef2f3;
+          }
           .how-to-play__step {
             &--content {
               &-num {
@@ -1052,10 +1087,38 @@
             @include media('>319px','<769px') {
               overflow: inherit;
               border-bottom: none;
+              border-right: none;
             }
           }
         }
         &:nth-child(6) {
+          @include media('>319px','<769px') {
+            border-right: none;
+          }
+          &:after,
+          &:before {
+            left: 12px;
+            width: 100%;
+            max-width: 100%;
+            @include media('>319px','<769px') {
+              left: auto;
+              width: 50.1%;
+              right: 0;
+              top: 9px;
+              border-left: none;
+              border-bottom: none;
+            }
+          }
+          &:after {
+            border-right: 2px solid #eef2f3;
+          }
+          &:before {
+            @include media('>319px','<769px') {
+              left: 0;
+              border-right: none;
+              border-left: 2px solid #eef2f3;
+            }
+          }
           .how-to-play__step {
             &--content {
               &-num {
@@ -1071,9 +1134,6 @@
   .ovh-left {
     overflow: hidden;
     border-left: 2px solid #eef2f3;
-    //@include media('>319px','<769px') {
-    //  border-bottom: 2px solid #eef2f3;
-    //}
   }
   .ovh-right {
     overflow: hidden;
@@ -1090,10 +1150,6 @@
     padding-right: 20px;
     padding-bottom: 30px;
     background: #f3f3f3;
-    @include media('>319px','<769px') {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
     &--main-game {
       padding: 20px;
       box-shadow: 0 0 32px -1px rgba(0,0,0,0.34);
@@ -1104,20 +1160,73 @@
         padding: 10px;
       }
     }
+    &--main-game-mobile {
+      display: none;
+      counter-reset: item;
+      margin-bottom: 30px;
+      @include media('>319px','<769px') {
+        display: block;
+      }
+      &--items {
+        background: #fff;
+        padding: 15px;
+        box-shadow: 0 0 13px 1px rgba(0,0,0,0.20);
+        position: relative;
+        &:before {
+          counter-increment: item;
+          content: counter(item);
+          width: 35px;
+          height: 35px;
+          background: #eeeeee;
+          text-align: center;
+          border-radius: 50%;
+          font-size: 18px;
+          line-height: 35px;
+          font-weight: 900;
+          color: #030303;
+          display: block;
+          right: 15px;
+          position: absolute;
+        }
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        &:first-child {
+          &:before {
+            color: #fff;
+            background: #0076b2;
+          }
+        }
+        .global__item-style {
+          &--title {
+            text-transform: capitalize;
+          }
+        }
+        .center {
+          &__bottom {
+            &--line {
+              &:after {
+                margin: 20px 0;
+              }
+            }
+          }
+        }
+      }
+    }
     &__game {
       position: absolute;
       &:nth-child(2) {
-        left: 30px;
-        top: 31px;
+        left: 3%;
+        top: 5%;
       }
       &:nth-child(3) {
-        left: 30px;
-        bottom: 260px;
+        left: 3%;
+        bottom: 39.5%;
         z-index: 1;
       }
       &:nth-child(4) {
-        right: 103px;
-        bottom: 260px;
+        right: 10.5%;
+        bottom: 39.1%;
         .game-screen {
           &__game {
             &--content {
@@ -1128,13 +1237,20 @@
         }
       }
       &:nth-child(5) {
-        left: 101px;
-        bottom: 85px;
-        z-index: 0;
+        left: 10.1%;
+        bottom: 12.5%;
+        z-index: 2;
+        .game-screen {
+          &__game {
+            &--content {
+              top: -143px;
+            }
+          }
+        }
       }
       &:nth-child(6) {
-        right: 248px;
-        bottom: 110px;
+        right: 24.8%;
+        bottom: 16.5%;
         .game-screen {
           &__game {
             &--content {
@@ -1146,7 +1262,7 @@
       }
       &--content {
         background: #fff;
-        padding: 30px;
+        padding: 25px;
         display: none;
         position: absolute;
         width: 410px;
@@ -1156,6 +1272,13 @@
         @include media('>319px','<769px') {
           display: none;
         }
+        .global {
+          &__item-style {
+            &--title {
+              text-transform: capitalize;
+            }
+          }
+        }
         .center {
           &__bottom {
             &--line {
@@ -1164,6 +1287,12 @@
               }
             }
           }
+        }
+      }
+      .show-hide {
+        display: block;
+        @include media('>319px','<769px') {
+          display: none;
         }
       }
       &--circle {
@@ -1180,6 +1309,11 @@
         box-shadow: 2px 2px 14px 0 rgba(0,0,0,0.21);
         z-index: 2;
         position: relative;
+        @include media('>319px','<769px') {
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+        }
         &-active {
           background: #0076b2;
           color: #fff;
@@ -1191,6 +1325,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-bottom: 30px;
+      @include media('>319px','<769px') {
+        justify-content: center;
+      }
       &--item {
         flex: 0 0 49%;
         background: #fff;
@@ -1199,6 +1336,7 @@
         @include media('>319px','<769px') {
           flex: 0 0 100%;
           padding: 10px;
+          max-width: 450px;
           &:not(:last-child) {
             margin-bottom: 15px;
           }
@@ -1219,11 +1357,19 @@
         @include media('>319px','<769px') {
           flex: 0 0 100%;
         }
+        &:first-child {
+          @include media('>319px','<769px') {
+            display: none;
+          }
+        }
       }
       .card-values {
         &__container {
           &--title {
             text-align: center;
+            @include media('>319px','<769px') {
+              display: none;
+            }
           }
         }
       }
@@ -1234,7 +1380,6 @@
       margin: 0;
       border-right: 2px solid #f3f3f3;
       &--items {
-        //padding: 40px 0;
         height: 105px;
         text-align: center;
         display: flex;
@@ -1244,6 +1389,23 @@
         text-transform: uppercase;
         font-weight: 900;
         color: #595f68;
+        @include media('>319px','<769px') {
+          flex-direction: column;
+          height: auto;
+          padding: 20px;
+        }
+        &-title {
+          font-size: 18px;
+          text-transform: uppercase;
+          font-weight: 900;
+          color: #595f68;
+          margin-bottom: 15px;
+          display: none;
+          @include media('>319px','<769px') {
+            display: block;
+            font-size: 14px;
+          }
+        }
         &:not(:last-child) {
           border-bottom: 2px solid #f3f3f3;
         }

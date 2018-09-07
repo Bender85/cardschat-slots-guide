@@ -14,9 +14,9 @@ import cardSlideBox from './modules/cardSlide';
 
   // When DOM is ready
   $(() => {
-    playerSlide.gameSlider();
-    tableLayoutSlider.slider();
-    cardSlideBox.cardSlide();
+    // playerSlide.gameSlider();
+    // tableLayoutSlider.slider();
+    // cardSlideBox.cardSlide();
     main.mainFunc();
   });
 
