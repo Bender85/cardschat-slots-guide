@@ -1413,3 +1413,79 @@
     }
   }
 }
+
+// Baccarat page
+
+.baccarat__guide-container {
+  background: #f3f3f3;
+  .global {
+    &__list {
+      counter-reset: list-counter;
+      padding-left: 0;
+      margin-bottom: 20px;
+      &--item {
+        margin-bottom: auto;
+        &:before {
+          counter-increment: list-counter;
+          content: counter(list-counter) " - ";
+          color: #00679d;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+
+  .drawing-rules {
+    background: #fff;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 43px;
+    .center {
+      &__bottom {
+        &--line {
+          &:after {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+    .strategy-charts {
+      &__area {
+        margin: 0 -20px;
+      }
+    }
+    .strategy-charts {
+      &__table-area {
+        max-width: 957px;
+      }
+    }
+  }
+
+  .accustomed-table {
+    border: 1px solid #373946;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .how-to-play {
+    &__rules-play {
+      .table-container {
+        height: auto;
+        box-shadow: none;
+        &__col-left {
+          width: calc(100% / 3);
+          font-weight: 900;
+        }
+        &__col-right-wrap {
+          width: calc((100% / 3) * 2);
+          .col-item {
+            width: calc(100% / 2);
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}

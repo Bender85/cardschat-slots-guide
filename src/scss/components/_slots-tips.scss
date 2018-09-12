@@ -519,3 +519,77 @@
     }
   }
 }
+
+// baccarat page
+
+.baccarat__guide-container {
+  .video-poker-betting {
+    background: #212433;
+    color: #b8cde1;
+    padding-bottom: 60px;
+    .title-h2,
+    .title-h3 {
+      color: #fff;
+    }
+  }
+  .baccarat-basic-strategy {
+    &__area {
+      margin-bottom: 40px;
+      &--item {
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        color: #595f68;
+        @include media('>319px','<769px') {
+          flex-direction: column;
+          width: 220px !important;
+        }
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        img {
+          margin-right: 40px;
+          @include media('>319px','<769px') {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+        .center {
+          &__bottom {
+            &--line {
+              &:after {
+                margin: 15px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .baccarat-tips {
+    &__area {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      &--item {
+        background: #fff;
+        padding: 20px;
+        width: 320px;
+        color: #595f68;
+        img {
+          margin-bottom: 40px;
+        }
+        .center {
+          &__bottom {
+            &--line {
+              &:after {
+                margin: 15px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

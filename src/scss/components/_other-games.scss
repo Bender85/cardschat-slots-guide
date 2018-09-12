@@ -48,19 +48,11 @@
     .title-h4 {
       font-size: 13px;
       color: #fff;
-      margin-bottom: 10px;
-    }
-    .center {
-      &__bottom {
-        &--line {
-          &:after {
-            margin: 8px auto;
-          }
-        }
-      }
     }
     p {
-      line-height: 16px;
+      height: 67px;
+      overflow: hidden;
+      color: #fff;
     }
     .play-game {
       padding: 16px 0;

@@ -486,7 +486,7 @@
           &__bottom {
             &--line {
               &:after {
-                margin: 20px 0;
+                margin: 15px 0;
               }
             }
           }
@@ -503,6 +503,38 @@
         img {
           @include media('>319px','<769px') {
             margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.baccarat__guide-container {
+  .slot-tournament {
+    background: #fff;
+  }
+  .types-of-Baccarat {
+    &__area {
+      margin-bottom: 40px;
+      &--item {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #ecf0f1;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        img {
+          margin-right: 40px;
+        }
+        .center {
+          &__bottom {
+            &--line {
+              &:after {
+                margin: 15px 0;
+              }
+            }
           }
         }
       }

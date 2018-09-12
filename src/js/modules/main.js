@@ -50,6 +50,30 @@ var main = {
     $('.in-this-guide-list-title').on('click', function(e) {
       $(this).siblings('.under-list').slideToggle();
     });
+
+    var tabsDescInit = {
+      // initWidth: 1024,
+      tabsState: true,
+      // checkWidth: function () {
+      //   var winW = $(window).width();
+      //   winW < this.initWidth ? this.tabsState = true : this.tabsState = false;
+      // },
+      tabsInit: function () {
+        var tabNav = $('.player-cards-table-tabs li');
+        // this.checkWidth();
+        if (this.tabsState) {
+          tabNav.click(function () {
+            var tabs = $(this).parent().next().children();
+            var tabIndex = $(this).data('tabindex');
+            $(this).addClass('active').siblings().removeClass('active');
+            $(tabs[tabIndex]).addClass('active').siblings().removeClass('active');
+          });
+        }
+      }
+
+    };
+    tabsDescInit.tabsInit();
+
     if(windowWidth < 769) {
       $('.this-guide-open-mobile').on('click', function(e) {
         if($(this).hasClass('center__bottom--line')) {
@@ -129,6 +153,7 @@ var main = {
           if (this.tabsState) {
             tabNav.click(function () {
               var tabs = $(this).parent().next().children();
+              console.log(tabs);
               var tabIndex = $(this).data('tabindex');
               $(this).addClass('active').siblings().removeClass('active');
               $(tabs[tabIndex]).addClass('active').siblings().removeClass('active');
