@@ -481,3 +481,47 @@
     }
   }
 }
+
+//baccarat page
+.baccarat__guide-container {
+  .offline-blackjack {
+    background: #212433;
+    color: #b8cde1;
+    padding-bottom: 0 !important;
+    .title-h2,
+    .title-h3 {
+      color: #fff;
+    }
+    .main-differences {
+      background: #212433;
+      color: #b8cde1;
+    }
+  }
+  .expected-area {
+    .expected-container {
+      &--items {
+        flex: 0 0 23.5%;
+        .global {
+          &__item-style {
+            &--title {
+              padding-right: 40px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+        .extra-bold {
+          color: #f08e00;
+        }
+        .sprite-videopoker {
+          background: transparent;
+        }
+      }
+    }
+  }
+  .video-poker-tournaments {
+    &:before,
+    &:after {
+      height: 40px;
+    }
+  }
+}

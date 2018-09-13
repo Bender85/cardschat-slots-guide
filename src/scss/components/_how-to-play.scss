@@ -1488,4 +1488,72 @@
       }
     }
   }
+
+  .card-values {
+    &__area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      &--item {
+        flex: 1 0 20%;
+        padding-top: 20px;
+        &:nth-child(2) {
+          flex: 0 0 490px;
+          margin: 0 40px;
+          background: #fff;
+          padding-top: 0;
+          .card {
+            &__content {
+              display: flex;
+              &--item-title {
+                height: 60px;
+                text-align: center;
+                color: #fff;
+                background: #0076b2;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .extra-bold {
+                  color: #fff;
+                }
+              }
+              &--item {
+                flex: 0 1 100%;
+                &:first-child {
+                  .card {
+                    &__content {
+                      &--box {
+                        &:nth-child(2) {
+                          display: flex;
+                          justify-content: space-between;
+                          padding: 0 14px;
+                        }
+                      }
+                    }
+                  }
+                }
+                &:last-child {
+                  font-weight: 900;
+                  flex: 0 1 44.5%;
+                }
+              }
+              &--box {
+                height: 70px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #595f68;
+                font-weight: 400;
+                &:not(:last-child) {
+                  border-bottom: 1px solid #f3f3f3;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
