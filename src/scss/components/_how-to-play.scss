@@ -10,6 +10,9 @@
     padding: 40px 20px 40px 20px;
     background: url('../images/2_game_objectives.png') no-repeat;
     background-size: cover;
+    @include media('>319px','<769px') {
+      text-align: center;
+    }
     color: #fff;
     .title-h3 {
       color: #fff;
@@ -1421,11 +1424,14 @@
   .global {
     &__list {
       counter-reset: list-counter;
-      padding-left: 0;
+      padding-left: 20px;
       margin-bottom: 20px;
       &--item {
         margin-bottom: auto;
+        position: relative;
         &:before {
+          position: absolute;
+          left: -20px;
           counter-increment: list-counter;
           content: counter(list-counter) " - ";
           color: #00679d;
@@ -1477,9 +1483,15 @@
         &__col-left {
           width: calc(100% / 3);
           font-weight: 900;
+          @include media('>319px','<769px') {
+            width: 50%;
+          }
         }
         &__col-right-wrap {
           width: calc((100% / 3) * 2);
+          @include media('>319px','<769px') {
+            width: 50%;
+          }
           .col-item {
             width: calc(100% / 2);
             background: #fff;
@@ -1498,11 +1510,18 @@
       &--item {
         flex: 1 0 20%;
         padding-top: 20px;
+        @include media('>319px','<769px') {
+          flex: 0 0 100%;
+        }
         &:nth-child(2) {
           flex: 0 0 490px;
           margin: 0 40px;
           background: #fff;
           padding-top: 0;
+          @include media('>319px','<769px') {
+            margin: 40px 0 20px 0;
+            flex: 0 0 100%;
+          }
           .card {
             &__content {
               display: flex;
@@ -1517,6 +1536,9 @@
                 .extra-bold {
                   color: #fff;
                 }
+                @include media('>319px','<769px') {
+                  display: none;
+                }
               }
               &--item {
                 flex: 0 1 100%;
@@ -1524,10 +1546,19 @@
                   .card {
                     &__content {
                       &--box {
+                        padding: 0 14px;
                         &:nth-child(2) {
                           display: flex;
                           justify-content: space-between;
-                          padding: 0 14px;
+                          @include media('>319px','<769px') {
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                          }
+                        }
+                        &:nth-child(4) {
+                          @include media('>319px','<769px') {
+                            justify-content: flex-start;
+                          }
                         }
                       }
                     }
@@ -1546,6 +1577,11 @@
                 justify-content: center;
                 color: #595f68;
                 font-weight: 400;
+                &:nth-child(2) {
+                  @include media('>319px','<769px') {
+                    height: 130px;
+                  }
+                }
                 &:not(:last-child) {
                   border-bottom: 1px solid #f3f3f3;
                 }

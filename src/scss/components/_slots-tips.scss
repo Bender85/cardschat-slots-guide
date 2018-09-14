@@ -550,6 +550,9 @@
         @include media('>319px','<769px') {
           flex-direction: column;
           width: 220px !important;
+          margin-right: 15px;
+          height: 585px;
+          padding: 10px;
         }
         &:not(:last-child) {
           margin-bottom: 20px;
@@ -583,6 +586,13 @@
         padding: 20px;
         width: 320px;
         color: #595f68;
+        @include media('>319px','<769px') {
+          flex-direction: column;
+          width: 220px !important;
+          margin-right: 15px;
+          height: 458px;
+          padding: 10px;
+        }
         img {
           margin-bottom: 40px;
         }

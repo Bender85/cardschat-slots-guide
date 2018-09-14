@@ -68,27 +68,26 @@
   .paytables-explained {
     background: #fff;
     padding-bottom: 60px;
+    .table-container-item-prev {
+      left: calc(50% - 63px);
+    }
     .table-container {
       height: auto;
       &__col-left {
         width: calc(100% / 3);
         font-weight: 900;
         @include media('>319px','<769px') {
-          width: 50%;
+          width: 25%;
         }
       }
       &__col-right-wrap {
         width: calc((100% / 3) * 2);
         @include media('>319px','<769px') {
-          width: 50%;
+          width: 75%;
         }
         .col-item {
           width: calc(100% / 2);
           background: #fff;
-          //@include media('>319px','<769px') {
-          //  width: 50%;
-          //  width: calc((100% / 3) * 2);
-          //}
         }
       }
     }
@@ -98,8 +97,15 @@
     border: 1px solid #eef2f3;
     text-align: center;
     margin-bottom: 20px;
+    .table-container-item-prev {
+      left: calc(50% + 4px);
+    }
     .table-container {
       height: auto;
+      @include media('>319px','<769px') {
+        margin: 0 -20px 20px -20px;
+        width: auto;
+      }
       &__col-left {
         width: calc(100% / 4);
         font-weight: 900;
@@ -124,8 +130,6 @@
     }
   }
   .player-cards-table-tabs-area {
-    //padding: 20px;
-    //border: 1px solid #eef2f3;
     .player-cards-table-tabs {
       display: flex;
       height: 80px;
@@ -152,13 +156,19 @@
         height: 50px;
         @include media('>319px','<769px') {
           width: 100%;
-          height: auto;
+          height: 80px;
+          color: #0076b2;
         }
         &.active {
           background: #fff;
           height: 80px;
           line-height: 80px;
           border-color: #eef2f3;
+          @include media('>319px','<769px') {
+            line-height: inherit;
+            height: 80px;
+            color: initial;
+          }
         }
       }
     }
@@ -168,10 +178,33 @@
       border-right: 1px solid #eef2f3;
       border-bottom: 1px solid #eef2f3;
       margin-bottom: 40px;
+      @include media('>319px','<769px') {
+        padding: 0;
+      }
+      .table-container-item-prev {
+        @include media('>319px','<769px') {
+          left: calc(50% - 65px);
+        }
+      }
+      .table-container {
+        .table-container {
+          &__col-left {
+            @include media('>319px','<769px') {
+              width: 25%;
+            }
+          }
+          &__col-right-wrap {
+            @include media('>319px','<769px') {
+              width: 75%;
+            }
+          }
+        }
+      }
       &--item {
-        display: none;
+        height: 0;
+        overflow: hidden;
         &.active {
-          display: block;
+          height: auto;
         }
       }
     }

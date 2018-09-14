@@ -523,11 +523,27 @@
         align-items: center;
         padding: 20px;
         border: 1px solid #ecf0f1;
+        @include media('>319px','<769px') {
+          flex-direction: column;
+          width: 224px !important;
+          margin-right: 15px;
+          height: 544px;
+          padding: 10px;
+        }
         &:not(:last-child) {
           margin-bottom: 20px;
         }
         img {
           margin-right: 40px;
+          @include media('>319px','<769px') {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+        p {
+          @include media('>319px','<769px') {
+            height: 196px;
+          }
         }
         .center {
           &__bottom {
@@ -539,6 +555,11 @@
           }
         }
       }
+    }
+  }
+  .table-container {
+    .thead {
+      text-transform: capitalize;
     }
   }
 }

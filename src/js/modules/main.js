@@ -282,7 +282,7 @@ var main = {
         infinite: true,
         swipeToSlide: true
       });
-      $('.our__other-casino').slick({
+      $('.our__other-casino, .baccarat-basic-strategy__area, .baccarat-tips__area, .types-of-Baccarat__area').slick({
         slidesToShow: 1,
         dots: false,
         slidesToScroll: 1,

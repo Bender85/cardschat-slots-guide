@@ -439,4 +439,7 @@ a {
   width: 22px;
   height: 49px;
   margin: 20px auto 0;
+  @include media('>319px','<769px') {
+    display: none;
+  }
 }
