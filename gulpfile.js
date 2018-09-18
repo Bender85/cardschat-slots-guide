@@ -256,7 +256,7 @@
           `${cfg.task.buildStylesVendors}`,
           `${cfg.task.htmlHint}`,
           `${cfg.task.jsHint}`,
-          `${cfg.task.imageMin}`
+          // `${cfg.task.imageMin}`
         ],
         `${cfg.task.copyFolders}`,
         `${cfg.task.copyFoldersProduction}`

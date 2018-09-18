@@ -69,7 +69,7 @@
     background: #fff;
     padding-bottom: 60px;
     .table-container-item-prev {
-      left: calc(50% - 63px);
+      left: calc(50% - 53px);
     }
     .table-container {
       height: auto;
@@ -77,13 +77,13 @@
         width: calc(100% / 3);
         font-weight: 900;
         @include media('>319px','<769px') {
-          width: 25%;
+          width: 30%;
         }
       }
       &__col-right-wrap {
         width: calc((100% / 3) * 2);
         @include media('>319px','<769px') {
-          width: 75%;
+          width: 70%;
         }
         .col-item {
           width: calc(100% / 2);
@@ -173,7 +173,7 @@
       }
     }
     .player-cards-table-tabs__container {
-      padding: 20px;
+      //padding: 20px;
       border-left: 1px solid #eef2f3;
       border-right: 1px solid #eef2f3;
       border-bottom: 1px solid #eef2f3;
@@ -205,6 +205,11 @@
         overflow: hidden;
         &.active {
           height: auto;
+          padding: 20px;
+          @include media('>319px','<769px') {
+            padding: 0;
+            overflow: inherit;
+          }
         }
       }
     }
@@ -232,6 +237,9 @@
         }
         .col-item {
           width: calc(100% / 10);
+          @include media('>319px','<769px') {
+            width: 93px !important;
+          }
           background: #fff;
           .row {
             &:nth-child(2n+2) {

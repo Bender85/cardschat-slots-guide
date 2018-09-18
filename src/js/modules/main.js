@@ -1,5 +1,5 @@
 // 'use strict';
-
+// jshint ignore: start
 var main = {
   mainFunc: function () {
     var windowWidth = $(window).width();
@@ -10,7 +10,7 @@ var main = {
       // if (win.width() >= 1280) { /* ... */ }
     });
 
-    $('.sprite-mouse-icon').click(function (e) {
+    $('.sprite-mouse-icon, .move-to').click(function (e) {
       e.preventDefault();
       var divID =  $(this).attr('href');
       $('html, body').animate({
@@ -186,13 +186,13 @@ var main = {
               pauseOnHover: false,
               pauseOnFocus: false,
               edgeFriction: 0
-            })
+            });
           }
           prev.click(function () {
-            slider.slick('slickPrev')
+            slider.slick('slickPrev');
           });
           next.click(function () {
-            slider.slick('slickNext')
+            slider.slick('slickNext');
           });
         },
         sliderInit: function (slider) {
@@ -207,6 +207,54 @@ var main = {
       swipeTables.each(function () {
         swipeTable.sliderInit($(this));
       });
+
+      var swipeTable3 = {
+        initWidth: 769,
+        sliderInitState: false,
+        checkWidth: function () {
+          var winW = $(window).width();
+          winW < this.initWidth ? this.sliderInitState = true : this.sliderInitState = false;
+        },
+        sliderCreate: function (slider) {
+          var prev = slider.parents('.table-container').find('.table-container-item-prev');
+          var next = slider.parents('.table-container').find('.table-container-item-next');
+          if (this.sliderInitState) {
+            slider.slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              infinite: false,
+              autoplay: false,
+              fade: false,
+              autoplaySpeed: 1000,
+              speed: 500,
+              dots: false,
+              pauseOnHover: false,
+              pauseOnFocus: false,
+              edgeFriction: 0,
+              variableWidth: true,
+            });
+          }
+          prev.click(function () {
+            slider.slick('slickPrev');
+          });
+          next.click(function () {
+            slider.slick('slickNext');
+          });
+        },
+        sliderInit: function (slider) {
+          this.checkWidth();
+          if (this.sliderInitState) {
+            this.sliderCreate(slider);
+          }
+        }
+      };
+
+      var swipeTabless = $('.table-container-slider3');
+      swipeTabless.each(function () {
+        swipeTable3.sliderInit($(this));
+      });
+
 
       var swipeBoxes = {
         initWidth: 769,
@@ -225,7 +273,7 @@ var main = {
               arrows: false,
               infinite: true,
               swipeToSlide: true
-            })
+            });
           }
         },
         sliderInit: function (slider) {

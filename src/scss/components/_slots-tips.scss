@@ -252,7 +252,7 @@
         flex: 0 0 100%;
         height: auto;
         &:first-child {
-          height: 250px;
+          height: 230px !important;
         }
         &:not(:last-child) {
           margin-bottom: 10px;
@@ -264,15 +264,6 @@
           display: inline-block;
         }
       }
-      //&:hover {
-      //  .global__item-style-hover {
-      //    //transform: translateY(0);
-      //    transition: all .3s ease-in-out;
-      //    @include media('>319px','<768px') {
-      //      transform: translateY(100%);
-      //    }
-      //  }
-      //}
       .center__bottom {
         &--line {
           &:after {
