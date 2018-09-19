@@ -10,6 +10,43 @@ var main = {
       // if (win.width() >= 1280) { /* ... */ }
     });
 
+    var bar = new ProgressBar.Circle(circleprogress, {
+      color: '#f08e00',
+      // This has to be the same size as the maximum width to
+      // prevent clipping
+      strokeWidth: 10,
+      trailWidth: 10,
+      easing: 'easeInOut',
+      duration: 1400,
+      text: {
+        autoStyleContainer: false
+      },
+      from: { color: '#f9d299', width: 10 },
+      to: { color: '#f08e00', width: 10 },
+      // Set default step function for all animate calls
+      step: function(state, circle) {
+        circle.path.setAttribute('stroke', state.color);
+        circle.path.setAttribute('stroke-width', state.width);
+
+        var value = Math.round(circle.value() * 100);
+        if (value === 0) {
+          circle.setText('');
+        } else {
+          circle.setText(value + '%');
+        }
+
+      }
+    });
+    bar.text.style.fontSize = '23px';
+    bar.text.style.fontWeight = '900';
+
+    bar.animate(0.95); // Number from 0.0 to 1.0
+
+    // $('.top-slots__filter-overlay, .top-slots__container-overlay').hide();
+    $('.open-close-trigger, .open-close-trigger-overlay').on('click', function() {
+      $(this).siblings('.top-slots__filter-overlay, .top-slots__container-overlay').slideToggle();
+    });
+
     $('.sprite-mouse-icon, .move-to').click(function (e) {
       e.preventDefault();
       var divID =  $(this).attr('href');

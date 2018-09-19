@@ -1,0 +1,15 @@
+.real-money {
+  background: url("../images/1_real_money_intro.png") no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  .top {
+    &__section {
+      &--info {
+        font-size: 18px;
+        color: #b8cde1;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
