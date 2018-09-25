@@ -70,18 +70,7 @@ var main = {
         mouseleave: true
       }
     });
-    // tab
-    $(".tab__container--content").hide();
-    $(".tab__container--content:first").show();
 
-    $('.tab').on('click', function() {
-      $(".tab__container--content").hide();
-      var activeTab = $(this).attr("rel");
-      $("#"+activeTab).fadeIn();
-
-      $('.tab').removeClass("recomendation__area--item-active");
-      $(this).addClass("recomendation__area--item-active");
-    });
 
     $(".under-list:first").show();
     $('.in-this-guide-list-title').on('click', function(e) {
@@ -367,7 +356,8 @@ var main = {
         infinite: true,
         swipeToSlide: true
       });
-      $('.our__other-casino, .baccarat-basic-strategy__area, .baccarat-tips__area, .types-of-Baccarat__area').slick({
+
+      $('.rigged-game__area').slick({
         slidesToShow: 1,
         dots: false,
         slidesToScroll: 1,
@@ -375,6 +365,43 @@ var main = {
         arrows: false,
         infinite: true,
         swipeToSlide: true
+      });
+
+
+      $('.black-list-content').removeClass('active');
+      $('.side-tab__list').slick({
+        slidesToShow: 1,
+        dots: false,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: false,
+        infinite: true,
+        focusOnSelect: true,
+        draggable: false,
+        swipeToSlide: false,
+        touchMove: false,
+        asNavFor: '.black-list__dynamic-container',
+      });
+      $('.black-list__dynamic-container').slick({
+        slidesToShow: 1,
+        dots: false,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: false,
+        infinite: true,
+        focusOnSelect: true,
+        draggable: false,
+        swipeToSlide: false,
+        touchMove: false,
+        asNavFor: '.side-tab__list'
+      });
+      $('.side-tab__list').on('swipe click', function(event, slick, direction){
+        $('.side-tab__list--item').removeClass('active');
+        $('.slick-current').find('.side-tab__list--item').addClass('active');
+      });
+      $('.black-list__dynamic-container').on('swipe click', function(event, slick, direction){
+        $('.side-tab__list--item').removeClass('active');
+        $('.slick-current').find('.side-tab__list--item').addClass('active');
       });
 
 
@@ -395,12 +422,17 @@ var main = {
       });
 
     } else {
-      $(".mobile__tab--content-paylines").show();
-      $('.game-screen__game--circle').on('mouseover', function() {
-        $('.game-screen__game--circle').removeClass('game-screen__game--circle-active');
-        $('.game-screen__game--content').hide();
-        $(this).siblings('.game-screen__game--content').show();
-        $(this).addClass('game-screen__game--circle-active');
+      // tab
+      $(".black-list-content").hide();
+      $(".black-list-content:first").show();
+
+      $('.side-tab__list--item').on('click', function() {
+        $(".black-list-content").hide();
+        var activeTab = $(this).attr("rel");
+        $("#"+activeTab).fadeIn();
+
+        $('.side-tab__list--item').removeClass("active");
+        $(this).addClass("active");
       });
     }
   }

@@ -1,0 +1,46 @@
+.burning-questions {
+  text-align: center;
+  > p {
+    text-align: left;
+  }
+  .burning-questions-top-title {
+    font-size: 18px;
+    color: #595f68;
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -20px;
+    &--items {
+      border: 1px solid #eef2f3;
+      flex: 0 0 100%;
+      max-width: 320px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 10px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      background: url("../images/question_icon.png") no-repeat center center;
+      width: 106px;
+      min-height: 204px;
+      color: #595f68;
+    }
+    &--title {
+      color: #222533;
+      font-weight: 900;
+    }
+    &--link {
+      color: #006fae;
+      font-size: 24px;
+      text-decoration: underline;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
