@@ -73,6 +73,7 @@
   &__info-area {
     &--panel {
       display: flex;
+      justify-content: space-around;
     }
     .circle-progress {
       //margin: 20px;
@@ -139,6 +140,29 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+    .middle-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      background: #ecf0f1;
+      width: 100%;
+      padding: 5px 0;
+    }
+    .middle-panel--item {
+      flex: 0 0 33.33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #595f68;
+      font-weight: 900;
+      text-transform: uppercase;
+      &:nth-child(2) {
+        border-left: 2px solid #cfd3d6;
+        border-right: 2px solid #cfd3d6;
+      }
     }
   }
 }
