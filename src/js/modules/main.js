@@ -100,6 +100,35 @@ var main = {
     };
     tabsDescInit.tabsInit();
 
+    $('.sslider').slick({
+      slidesToShow: 5,
+      dots: false,
+      slidesToScroll: 1,
+      variableWidth: true,
+      arrows: true,
+      infinite: true,
+      swipeToSlide: true,
+      centerMode: true,
+      prevArrow: "<div class='custom-prev-arrow'><i class=\"fas fa-chevron-left\"></i></div>",
+      nextArrow: "<div class='custom-next-arrow'><i class=\"fas fa-chevron-right\"></i></div>",
+    });
+
+    $('.slick-center').siblings('.slick-slide').not('.slick-active').css('opacity', '0.5');
+
+    $('.sslider').on('swipe click', function (event, slick, direction) {
+      $('.slick-center').siblings('.slick-slide').css('opacity', '1');
+      $('.slick-center').siblings('.slick-slide').not('.slick-active').css('opacity', '0.5');
+      var current = $('.slick-active').find('.other-game');
+      $(current).on('click', function() {
+        $('.other-game').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+
+    $(".sslider").on("beforeChange", function () {
+      $('.other-game').removeClass('active');
+    });
+
     if(windowWidth < 769) {
       $('.this-guide-open-mobile').on('click', function(e) {
         if($(this).hasClass('center__bottom--line')) {
@@ -357,7 +386,7 @@ var main = {
         swipeToSlide: true
       });
 
-      $('.rigged-game__area').slick({
+      $('.rigged-game__area, .burning-questions__container, .real-cash__container').slick({
         slidesToShow: 1,
         dots: false,
         slidesToScroll: 1,
