@@ -36,7 +36,7 @@
   }
   &__container {
     display: flex;
-    height: 132px;
+    height: 150px;
     padding-top: 17px;
     padding-bottom: 17px;
     padding-right: 40px;
@@ -92,6 +92,7 @@
         @include media('>319px','<769px') {
           margin-right: 0;
           flex: 0 0 50px;
+          transition: all 0.3s ease-in;
           img {
             width: 50%;
           }
@@ -286,5 +287,64 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+}
+.compare-game {
+  width: 110px;
+  height: 111px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease-in;
+  @include media('>319px','<769px') {
+    width: 160px;
+    height: 50px;
+  }
+  &.active {
+    height: 167px !important;
+    @include media('>319px','<769px') {
+      height: 167px !important;
+    }
+  }
+}
+.compare-game-1 {
+  background: url("../images/compared_game_01.png") no-repeat;
+  @include media('>319px','<769px') {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.compare-game-2 {
+  background: url("../images/game_logo_02.png") no-repeat;
+  @include media('>319px','<769px') {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.compare-game-3 {
+  background: url("../images/game_logo_08.png") no-repeat;
+  @include media('>319px','<769px') {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.compare-game-4 {
+  background: url("../images/game_logo_09.png") no-repeat;
+  @include media('>319px','<769px') {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.compare-game-5 {
+  background: url("../images/game_logo_05.png") no-repeat;
+  @include media('>319px','<769px') {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.reduce-image {
+  &.active {
+    @include media('>319px','<769px') {
+      flex: 0 0 167px !important;
+    }
   }
 }

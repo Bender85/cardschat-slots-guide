@@ -42,9 +42,13 @@ var main = {
 
     bar.animate(0.95); // Number from 0.0 to 1.0
 
-    // $('.top-slots__filter-overlay, .top-slots__container-overlay').hide();
     $('.open-close-trigger, .open-close-trigger-overlay').on('click', function() {
       $(this).siblings('.top-slots__filter-overlay, .top-slots__container-overlay').slideToggle();
+      $(this).parents('.casino-review__area').find('.top-slots__container-overlay').slideToggle();
+      $(this).find('.fa-chevron-up').toggleClass('rotate');
+      $(this).find('.fa-chevron-down').toggleClass('rotate');
+      $(this).parent().find('.reduce-image').toggleClass('active');
+      $(this).parent().find('.compare-game').toggleClass('active');
     });
 
     $('.sprite-mouse-icon, .move-to').click(function (e) {
@@ -111,6 +115,23 @@ var main = {
       centerMode: true,
       prevArrow: "<div class='custom-prev-arrow'><i class=\"fas fa-chevron-left\"></i></div>",
       nextArrow: "<div class='custom-next-arrow'><i class=\"fas fa-chevron-right\"></i></div>",
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            mobileFirst: true,
+          }
+        },
+        {
+          breakpoint: 319,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+      ]
     });
 
     $('.slick-center').siblings('.slick-slide').not('.slick-active').css('opacity', '0.5');
@@ -118,6 +139,10 @@ var main = {
     $('.sslider').on('swipe click', function (event, slick, direction) {
       $('.slick-center').siblings('.slick-slide').css('opacity', '1');
       $('.slick-center').siblings('.slick-slide').not('.slick-active').css('opacity', '0.5');
+      if(windowWidth < 769) {
+        console.log(1);
+        $('.slick-center').css('opacity', '1');
+      }
       var current = $('.slick-active').find('.other-game');
       $(current).on('click', function() {
         $('.other-game').removeClass('active');

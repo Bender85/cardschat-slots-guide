@@ -3,9 +3,21 @@
     display: flex;
     &--item {
       flex: 0 1 100%;
-      background: #3399ff;
+      background: url("../images/map_placeholder.jpg") no-repeat;
+      @include media('>319px','<769px') {
+        flex: 0 0 100%;
+      }
+      &:first-child {
+        @include media('>319px','<769px') {
+          display: block;
+          height: 577px;
+        }
+      }
       &:last-child {
         flex: 0 0 320px;
+        @include media('>319px','<769px') {
+          display: none;
+        }
         .winner__area {
           background: #222533;
           padding: 20px;
@@ -46,7 +58,14 @@
             &:before {
               content: '';
               width: 100%;
-              background: rgba(0, 0, 0, 0.54);
+              background: rgba(0,0,0,0.39);
+              background: -moz-linear-gradient(top, rgba(0,0,0,0.39) 0%, rgba(0,0,0,0.66) 32%, rgba(0,0,0,0.9) 66%, rgba(0,0,0,1) 100%);
+              background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.39)), color-stop(32%, rgba(0,0,0,0.66)), color-stop(66%, rgba(0,0,0,0.9)), color-stop(100%, rgba(0,0,0,1)));
+              background: -webkit-linear-gradient(top, rgba(0,0,0,0.39) 0%, rgba(0,0,0,0.66) 32%, rgba(0,0,0,0.9) 66%, rgba(0,0,0,1) 100%);
+              background: -o-linear-gradient(top, rgba(0,0,0,0.39) 0%, rgba(0,0,0,0.66) 32%, rgba(0,0,0,0.9) 66%, rgba(0,0,0,1) 100%);
+              background: -ms-linear-gradient(top, rgba(0,0,0,0.39) 0%, rgba(0,0,0,0.66) 32%, rgba(0,0,0,0.9) 66%, rgba(0,0,0,1) 100%);
+              background: linear-gradient(to bottom, rgba(0,0,0,0.39) 0%, rgba(0,0,0,0.66) 32%, rgba(0,0,0,0.9) 66%, rgba(0,0,0,1) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
               height: 63px;
               position: absolute;
               left: 0;
