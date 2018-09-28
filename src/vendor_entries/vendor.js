@@ -10,5 +10,6 @@ module.exports = [
   './node_modules/tooltipster/dist/js/tooltipster.bundle.js',
   './node_modules/fixto/dist/fixto.js',
   './node_modules/progressbar.js/dist/progressbar.js',
+  './node_modules/chart.js/dist/Chart.js'
   // './src/js/modules/clubs.js'
 ];

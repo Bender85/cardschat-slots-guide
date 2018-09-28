@@ -19,24 +19,13 @@
 @import 'pages/main';
 
 //* Components *//
+@import 'components/top-slots';
 @import 'components/real-money';
 @import 'components/casino-review';
-@import 'components/top-slots';
 @import 'components/burning-questions';
 @import 'components/real-cash';
 @import 'components/black-list';
 @import 'components/winning-map';
-//@import 'components/how-to-play';
-//@import 'components/free-play-slots';
-//@import 'components/jackpot-slots';
-//@import 'components/slots-tips';
-//@import 'components/slot-tournament';
-//@import 'components/bonus-games';
-//@import 'components/rngs';
-//@import 'components/different-varieries';
-//@import 'components/slot-cheats';
-//@import 'components/offline-slots';
-//@import 'components/video-poker';
-//@import 'components/glossary';
-//@import 'components/other-games';
-//@import 'components/paytables-explained';
+@import 'components/slots-compared';
+@import 'components/win-big-widget';
+@import 'components/real-money-table';

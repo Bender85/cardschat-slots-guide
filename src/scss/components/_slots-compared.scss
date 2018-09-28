@@ -1,0 +1,147 @@
+.slots-compared {
+  //background: darkorange;
+  .top-slots {
+    &__area {
+      position: relative;
+    }
+    &__filter-panel {
+      @include media('>319px','<769px') {
+        display: none;
+      }
+      &--item {
+        &:nth-child(1) {
+          flex: 0 0 95px;
+          align-items: flex-start;
+          text-transform: uppercase;
+        }
+        &:nth-child(2) {
+          flex: 0 0 110px;
+          margin-right: 20px;
+        }
+        &:nth-child(3) {
+          flex: 0 0 160px;
+          margin-right: 20px;
+        }
+        &:nth-child(4) {
+          flex: 0 0 145px;
+          margin-right: 20px;
+        }
+        &:nth-child(5) {
+          flex: 0 0 150px;
+          margin-right: 20px;
+        }
+      }
+    }
+    &__container {
+      border: 2px solid transparent;
+      background: #fff;
+      @include media('>319px','<769px') {
+        height: 85px;
+        padding: 0;
+        position: initial;
+        width: 85px;
+        box-shadow: none;
+      }
+      &:nth-child(even) {
+        background: #f5f5f5;
+        &:hover {
+          background: #fdf3e5;
+          border-color: #f08e00;
+          box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
+        }
+      }
+      &:hover {
+        background: #fdf3e5;
+        border-color: #f08e00;
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
+        @include media('>319px','<769px') {
+          box-shadow: none;
+          border: 0;
+        }
+        .play-game {
+          background: #f08e00;
+          &:hover {
+            color: #fff;
+            border-color: #f08e00;
+          }
+        }
+      }
+      &--item {
+        &:nth-child(1) {
+          border: none;
+          flex: 0 0 125px;
+          @include media('>319px','<769px') {
+            background: transparent;
+            width: 85px;
+            height: auto;
+            position: relative;
+            flex: 0 0 85px;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+    &__container-overlay {
+      &.active {
+        display: flex !important;
+        .play-game {
+          @include media('>319px','<769px') {
+            background: #f08e00;
+          }
+        }
+      }
+      @include media('>319px','<769px') {
+        position: absolute;
+        right: -1px;
+        top: 0;
+        background: #fff;
+        width: 75%;
+        height: 425px;
+        padding: 10px;
+        border: 2px solid #f08e00;
+      }
+      &--item {
+        img {
+          @include media('>319px','<769px') {
+            height: 187px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+        }
+        &:nth-child(1) {
+          flex: 0 0 95px;
+          text-transform: uppercase;
+          @include media('>319px','<769px') {
+            flex: 0 0 47px;
+            height: 47px;
+          }
+        }
+        &:nth-child(2) {
+          flex: 0 0 140px;
+          @include media('>319px','<769px') {
+            flex: 0 0 auto;
+            flex-direction: row;
+            height: 40px;
+          }
+        }
+        &:nth-child(3) {
+          flex: 0 0 150px;
+          @include media('>319px','<769px') {
+            flex: 0 0 auto;
+            flex-direction: row;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+  .table-tab-trigger {
+    &.active {
+      @include media('>319px','<769px') {
+        background: #f08e00;
+      }
+    }
+  }
+}
+
+// top-slots__container--top-slot

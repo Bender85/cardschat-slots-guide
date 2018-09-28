@@ -475,6 +475,16 @@ var main = {
         }
       });
 
+      $('.table-tab-trigger').on('click', function() {
+        $(".table-tab-trigger-content").hide();
+        var activeTab = $(this).attr("rel");
+        $("#"+activeTab).fadeIn();
+
+        $('.table-tab-trigger').removeClass("active");
+        $(this).addClass("active");
+      });
+
+
     } else {
       // tab
       $(".black-list-content").hide();
@@ -488,6 +498,7 @@ var main = {
         $('.side-tab__list--item').removeClass("active");
         $(this).addClass("active");
       });
+
     }
   }
 };

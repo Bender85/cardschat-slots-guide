@@ -4,6 +4,7 @@
 // Feel free with using ES6 here.
 
 // import DE from './modules/helpers';
+import widgetSlideBox from './modules/widget';
 import main from './modules/main';
 import playerSlide from './modules/playerSlide';
 import tableLayoutSlider from './modules/tableLayoutSlider';
@@ -18,6 +19,7 @@ import cardSlideBox from './modules/cardSlide';
     // tableLayoutSlider.slider();
     // cardSlideBox.cardSlide();
     main.mainFunc();
+    widgetSlideBox.init()
   });
 
 })(jQuery);
