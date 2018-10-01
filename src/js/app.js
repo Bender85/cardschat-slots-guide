@@ -6,20 +6,16 @@
 // import DE from './modules/helpers';
 import widgetSlideBox from './modules/widget';
 import main from './modules/main';
-import playerSlide from './modules/playerSlide';
-import tableLayoutSlider from './modules/tableLayoutSlider';
-import cardSlideBox from './modules/cardSlide';
+import freeGame from './modules/free-game';
 
 ( ($) => {
   'use strict';
 
   // When DOM is ready
   $(() => {
-    // playerSlide.gameSlider();
-    // tableLayoutSlider.slider();
-    // cardSlideBox.cardSlide();
     main.mainFunc();
-    widgetSlideBox.init()
+    widgetSlideBox.init();
+    freeGame.init();
   });
 
 })(jQuery);

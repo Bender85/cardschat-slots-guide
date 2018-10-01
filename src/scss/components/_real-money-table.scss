@@ -2,15 +2,18 @@
   .top-slots {
     &__container {
       height: 91px;
-      //&:nth-child(even) {
-      //  background: #f5f5f5;
-      //}
+      @include media('>319px','<769px') {
+        height: auto;
+      }
     }
     &__filter-overlay {
       &--item {
         &:nth-child(2),
         &:nth-child(4) {
           flex: 0 0 150px;
+          @include media('>319px','<769px') {
+            flex: 0 0 auto;
+          }
         }
       }
     }
@@ -20,6 +23,16 @@
         &:nth-child(2),
         &:nth-child(3) {
           flex: 0 0 150px;
+          @include media('>319px','<769px') {
+            flex: 0 0 auto;
+          }
+        }
+        &:nth-child(4) {
+          flex: 0 0 215px;
+          margin-right: 0;
+          @include media('>319px','<769px') {
+            flex: 0 0 auto;
+          }
         }
       }
     }
