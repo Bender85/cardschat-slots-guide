@@ -3,6 +3,9 @@
   .top-slots {
     &__area {
       position: relative;
+      @include media('>319px','<769px') {
+       border-top: 1px solid #f5f5f5;
+      }
     }
     &__filter-panel {
       @include media('>319px','<769px') {
@@ -41,9 +44,16 @@
         position: initial;
         width: 85px;
         box-shadow: none;
+        border: none;
+        &:not(:last-child) {
+          border-bottom: 1px solid #f5f5f5;
+        }
       }
       &:nth-child(even) {
         background: #f5f5f5;
+        @include media('>319px','<769px') {
+          background: #fff;
+        }
         &:hover {
           background: #fdf3e5;
           border-color: #f08e00;
@@ -72,10 +82,12 @@
           flex: 0 0 125px;
           @include media('>319px','<769px') {
             background: transparent;
-            width: 85px;
+            width: 90px;
             height: auto;
             position: relative;
             flex: 0 0 85px;
+            top: 0;
+            left: -2px;
             border-radius: 0;
           }
         }
@@ -84,6 +96,8 @@
     &__container-overlay {
       &.active {
         display: flex !important;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.48);
+        background: #fdf3e5;
         .play-game {
           @include media('>319px','<769px') {
             background: #f08e00;
@@ -94,13 +108,16 @@
         position: absolute;
         right: -1px;
         top: 0;
-        background: #fff;
-        width: 75%;
+        background: #fdf3e5;
+        width: calc(100% - 85px);
         height: 425px;
         padding: 10px;
         border: 2px solid #f08e00;
       }
       &--item {
+        @include media('>319px','<769px') {
+          flex-direction: column;
+        }
         img {
           @include media('>319px','<769px') {
             height: 187px;
@@ -112,8 +129,8 @@
           flex: 0 0 95px;
           text-transform: uppercase;
           @include media('>319px','<769px') {
-            flex: 0 0 47px;
-            height: 47px;
+            flex: 0 0 33px;
+            height: 33px;
           }
         }
         &:nth-child(2) {
@@ -135,10 +152,15 @@
       }
     }
   }
+  .cls-1 {
+    &.active {
+      fill: #fff;
+    }
+  }
   .table-tab-trigger {
     &.active {
       @include media('>319px','<769px') {
-        background: #f08e00;
+        background: #f08e00 !important;
       }
     }
   }

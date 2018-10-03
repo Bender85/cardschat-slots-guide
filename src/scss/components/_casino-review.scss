@@ -35,9 +35,6 @@
       }
     }
   }
-  .rotate {
-    transform: rotate(180deg);
-  }
   &__label {
     background: #222533;
     padding: 20px;
@@ -136,13 +133,16 @@
     .casino-review-read-more {
       color: #006fae;
       font-size: 16px;
+      justify-content: center;
     }
+    .top-trigger-overlay,
     .open-close-trigger-overlay {
       width: 50px;
       height: 50px;
       display: none;
       align-items: center;
       justify-content: center;
+      background: #f5f5f5;
       color: #b8cde1;
       @include media('>319px','<769px') {
         display: flex;
@@ -382,11 +382,11 @@
     @include media('>319px','<769px') {
       flex-direction: column;
       justify-content: center;
-      width: 90px;
+      width: 80px;
       height: 50px;
       border-radius: 5px;
       background: #e3e7e8;
-      margin-left: 15px;
+      margin-left: 8px;
     }
   }
   .star-rating {
@@ -433,10 +433,16 @@
     &__container {
       @include media('>319px','<769px') {
         padding: 0;
+        justify-content: center;
+        box-shadow: none;
+        border: none;
         &:not(:last-child) {
           margin-bottom: 10px;
-          border: none;
+          //border: none;
         }
+      }
+      &.active {
+        border: 2px solid #3399ff;
       }
       &--item {
         &:nth-child(1) {
@@ -468,6 +474,7 @@
             @include media('>319px','<769px') {
               background: #f5f5f5;
               border: 1px solid #ecf0f1;
+              height: 70px;
             }
           }
           .area-item {
@@ -495,7 +502,7 @@
             align-items: center;
             @include media('>319px','<769px') {
               justify-content: center;
-              width: 90px;
+              width: 80px;
               border-radius: 5px;
               border: 1px solid #e3e7e8;
               background: #fff;
@@ -508,8 +515,8 @@
           background: #006fae;
           width: 50px;
           height: 50px;
-          border-top-right-radius: 7px;
-          border-bottom-right-radius: 7px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -561,6 +568,8 @@
           margin-right: 0;
           @include media('>319px','<769px') {
             flex: 0 0 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
           }
           .manufacture,
           .paycard-area {
@@ -584,5 +593,23 @@
         }
       }
     }
+  }
+}
+
+.casino-review-top {
+  .top-trigger-overlay,
+  .open-close-trigger-overlay {
+    &.black {
+      background: #222533;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .top-trigger-overlay {
+    width: 50px;
+    height: 50px;
+  }
+  .hide-in-mobile {
+    display: none !important;
   }
 }

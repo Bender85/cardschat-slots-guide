@@ -1,5 +1,6 @@
 .burning-questions {
   text-align: center;
+  margin-top: 40px;
   > p {
     text-align: left;
   }
@@ -15,6 +16,7 @@
     justify-content: center;
     margin: 0 -20px;
     &--items {
+      cursor: pointer;
       border: 1px solid #eef2f3;
       flex: 0 0 100%;
       max-width: 320px;

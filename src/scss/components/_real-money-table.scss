@@ -4,6 +4,7 @@
       height: 91px;
       @include media('>319px','<769px') {
         height: auto;
+        border: 2px solid transparent;
       }
     }
     &__filter-overlay {

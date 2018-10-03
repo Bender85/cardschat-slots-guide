@@ -17,9 +17,6 @@
         height: 500px;
         margin-right: 15px;
       }
-      .global__item-style--title {
-        height: 70px;
-      }
       .center {
         &__bottom {
           &--line {
@@ -39,6 +36,10 @@
       padding-left: 40px;
       padding-right: 40px;
       padding-bottom: 30px;
+      @include media('>319px','<769px') {
+        padding-left: 20px;
+        height: 260px;
+      }
     }
     &--btn-area {
       padding: 20px;

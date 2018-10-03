@@ -162,7 +162,7 @@ let widgetSlideBox = {
                     }
                 },
                 {
-                    breakpoint: 410,
+                    breakpoint: 420,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
@@ -233,9 +233,9 @@ let widgetSlideBox = {
                             display: false,
                         },
                         ticks: {
-                            beginAtZero: false
+                            beginAtZero: false,
+                            fontColor: 'rgba(255,255,255,0.7)'
                         },
-                        fontColor: 'rgba(255,255,255,0.7)'
                     }],
                     yAxes: [{
                         ticks: {
