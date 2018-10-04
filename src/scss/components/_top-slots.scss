@@ -71,7 +71,7 @@
       }
     }
     &.active {
-      background: #fdf3e5;
+      background: #fdf3e5 !important;
       border-color: #f08e00 !important;
       box-shadow: 0 10px 25px 0 rgba(0,0,0,0.25);
       position: relative;
@@ -345,6 +345,9 @@
   background-size: 235px 147px;
   margin-left: 30px;
   color: #595f68;
+  .play-game {
+    padding: 12px 0;
+  }
   @include media('>319px','<769px') {
     margin-top: 20px;
     flex: 0 0 100%;

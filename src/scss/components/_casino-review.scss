@@ -610,6 +610,9 @@
     height: 50px;
   }
   .hide-in-mobile {
-    display: none !important;
+    display: block;
+    @include media('>319px','<769px') {
+      display: none !important;
+    }
   }
 }

@@ -131,7 +131,6 @@ var main = {
       $('.slick-center').siblings('.slick-slide').css('opacity', '1');
       $('.slick-center').siblings('.slick-slide').not('.slick-active').css('opacity', '0.5');
       if(windowWidth < 769) {
-        console.log(1);
         $('.slick-center').css('opacity', '1');
       }
       var current = $('.slick-active').find('.other-game');
@@ -160,6 +159,7 @@ var main = {
       $('.top-slots__area').find('.top-slots__container:first').find('.fa-chevron-down').addClass('rotate');
       $('.reduce-image:first').addClass('active');
       $('.compare-game:first').addClass('active');
+      $('.hide-in-mobile').hide();
 
       $('.open-close-trigger, .open-close-trigger-overlay').on('click', function() {
         $(this).find('.fa-chevron-up').toggleClass('rotate');
@@ -177,15 +177,41 @@ var main = {
           .removeClass('active')
           .next()
           .slideUp();
-        $(this).next().parent().siblings().find('.reduce-image').removeClass('active');
-        $(this).next().parent().siblings().find('.compare-game').removeClass('active');
+        $(this)
+          .next()
+          .parent()
+          .siblings()
+          .find('.reduce-image')
+          .removeClass('active');
+        $(this)
+          .next()
+          .parent()
+          .siblings()
+          .find('.compare-game')
+          .removeClass('active');
+        $(this)
+          .next()
+          .parent()
+          .siblings()
+          .find('.fa-chevron-up')
+          .removeClass('rotate');
+        $(this)
+          .next()
+          .parent()
+          .siblings()
+          .find('.fa-chevron-down')
+          .removeClass('rotate');
+        var $this = $(this);
+        $('html, body').animate({
+          scrollTop: $this.offset().top - 0
+        }, 1000);
       });
       
       $('.top-trigger-overlay').on('click', function () {
         $(this).parents('.casino-review-top').find('.show-in-mobile').slideToggle();
-        console.log($(this).parents('.casino-review-top').find('.show-in-mobile'));
         $(this).parents('.casino-review-top').find('.play-game').slideToggle();
         $(this).parents('.casino-review-top').find('.top-trigger-container-overlay').slideToggle();
+        $(this).parents('.casino-review-top').find('.fa-chevron-up').toggleClass('rotate');
       });
 
 
@@ -265,7 +291,6 @@ var main = {
           if (this.tabsState) {
             tabNav.click(function () {
               var tabs = $(this).parent().next().children();
-              console.log(tabs);
               var tabIndex = $(this).data('tabindex');
               $(this).addClass('active').siblings().removeClass('active');
               $(tabs[tabIndex]).addClass('active').siblings().removeClass('active');
@@ -530,6 +555,7 @@ var main = {
       $('.compare-game:first').addClass('active');
       $('.cls-1').removeClass('active');
       $('.top-slots__area').find('.top-slots__container:first').find('.fa-chevron-down').removeClass('rotate');
+      $('.hide-in-mobile').show();
       // tab
       $(".black-list-content").hide();
       $(".black-list-content:first").show();
